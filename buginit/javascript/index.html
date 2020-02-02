@@ -12,28 +12,103 @@
 	
 
     
-	<link rel="shortcut icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://rajnishcoder.github.io/b/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://rajnishcoder.github.io/b/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
     
  
 
-	<title>JavaScript Destructuring ES6: The Complete Guide – Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+	<title>JavaScript Destructuring ES6: The Complete Guide - Buginit - HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+
+
+<meta name="description" content="javascript destructuring introduced in ES6. In this guide you can learn all the features of javascript destructuring step by step by examples.">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Destructuring ES6: The Complete Guide - Buginit - HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff">
+<meta property="og:description" content="javascript destructuring introduced in ES6. In this guide you can learn all the features of javascript destructuring step by step by examples.">
+<meta property="og:url" content="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/">
+<meta property="og:site_name" content="Buginit - HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff">
+<meta property="article:tag" content="Guides">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:section" content="JavaScript">
+<meta property="article:published_time" content="2019-10-04T16:24:06+00:00">
+<meta property="og:image" content="https://rajnishcoder.github.io/b/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="javascript destructuring introduced in ES6. In this guide you can learn all the features of javascript destructuring step by step by examples.">
+<meta name="twitter:title" content="JavaScript Destructuring ES6: The Complete Guide - Buginit - HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff">
+<meta name="twitter:image" content="https://rajnishcoder.github.io/b/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer.jpg">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://rajnishcoder.github.io/b/#website",
+            "url": "https://rajnishcoder.github.io/b/",
+            "name": "Buginit - HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://rajnishcoder.github.io/b/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#primaryimage",
+            "url": "https://rajnishcoder.github.io/b/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer.jpg",
+            "width": 1000,
+            "height": 600
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#webpage",
+            "url": "https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/",
+            "inLanguage": "en-US",
+            "name": "JavaScript Destructuring ES6: The Complete Guide - Buginit - HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff",
+            "isPartOf": {
+                "@id": "https://rajnishcoder.github.io/b/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#primaryimage"
+            },
+            "datePublished": "2019-10-04T16:24:06+00:00",
+            "dateModified": "2019-10-04T16:24:06+00:00",
+            "author": {
+                "@id": "https://rajnishcoder.github.io/b/#/schema/person/f1bacd61e34048f6b83068d045b89f55"
+            },
+            "description": "javascript destructuring introduced in ES6. In this guide you can learn all the features of javascript destructuring step by step by examples."
+        },
+        {
+            "@type": [
+                "Person"
+            ],
+            "@id": "https://rajnishcoder.github.io/b/#/schema/person/f1bacd61e34048f6b83068d045b89f55",
+            "name": "Rajnish Rajput",
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https://rajnishcoder.github.io/b/#authorlogo",
+                "url": "http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=96&d=mm&r=g",
+                "caption": "Rajnish Rajput"
+            },
+            "sameAs": []
+        }
+    ]
+}</script>
+
+
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 <link rel="dns-prefetch" href="//s.w.org">
 
 
 
-<link rel="stylesheet" id="wp-block-library-css" href="https://rajnishcoder.github.io/buginit/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="simple-east-bootstrap-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="simple-east-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/style.css" type="text/css" media="all">
-<link rel="stylesheet" id="simple-east-fontawesome-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/custom/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://rajnishcoder.github.io/b/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-bootstrap-style-css" href="https://rajnishcoder.github.io/b/wp-content/themes/buginit/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-style-css" href="https://rajnishcoder.github.io/b/wp-content/themes/buginit/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fontawesome-css" href="https://rajnishcoder.github.io/b/wp-content/themes/buginit/assets/custom/css/font-awesome.min.css" type="text/css" media="all">
 <link rel="stylesheet" id="simple-east-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" type="text/css" media="all">
-<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery.js"></script>
-<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/js/bootstrap.min.js"></script>
-
-
-
+<script type="text/javascript" src="https://rajnishcoder.github.io/b/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/b/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/b/wp-content/themes/buginit/assets/bootstrap/js/bootstrap.min.js"></script>
 
 
 
@@ -56,26 +131,26 @@
                 <div id="primary_menu" class="blue_bg">
 					<div class="container" style="padding: 0">
 						<div id="logo" class="pull-left logo" itemscope itemtype="http://schema.org/Organization">
-							<a href="https://rajnishcoder.github.io/buginit/" itemprop="url" rel="home" style="float:left">
+							<a href="https://rajnishcoder.github.io/b/" itemprop="url" rel="home" style="float:left">
 																<p itemprop="name" class="site-title">
 								Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</p>   
 								<div class="buginitLogoWrap">
-									<img itemprop="logo" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/images/logo.svg">
+									<img itemprop="logo" src="https://rajnishcoder.github.io/b/wp-content/themes/buginit/images/logo.svg">
 								</div>
 							</a>   
 							<h3 itemprop="description" class="site-description"> </h3>						</div>
 						<nav id="primary-menu" class="main-navigation navmenu pull-left" role="navigation">
 								  
 									<ul class="menu clearfix">
-											<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+											<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/b/category/css/">CSS</a>
 </li>
-	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/b/category/html/">HTML</a>
 <ul class="children">
-	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/b/category/html/html-attributes/">HTML Attributes</a>
 </li>
 </ul>
 </li>
-	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/b/category/javascript/">JavaScript</a>
 </li>
 									</ul>
 														</nav>
@@ -91,7 +166,7 @@
             				     
             	<div class="breadcrumbs">
 					<div class="container">
-						<div id="breadcrumbs" itemprop="breadcrumb"><a href="https://rajnishcoder.github.io/buginit">Home</a> » <a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a> » <span class="current">JavaScript Destructuring ES6: The Complete Guide</span></div>                    </div>
+						<div id="breadcrumbs" itemprop="breadcrumb"><a href="https://rajnishcoder.github.io/b">Home</a> » <a href="https://rajnishcoder.github.io/b/category/javascript/">JavaScript</a> » <span class="current">JavaScript Destructuring ES6: The Complete Guide</span></div>                    </div>
                 </div>
            
               
@@ -99,7 +174,7 @@
             <div class="middle_wrapper">
             	<div class="container mainContainer">
                 	<div> 
- <script src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/js/caniuse-embed.min.js"></script>
+ <script src="https://rajnishcoder.github.io/b/wp-content/themes/buginit/js/caniuse-embed.min.js"></script>
 
 	<div class="col-md-8 col-sm-8 postInner">
 	<div id="primary" class="content-area">
@@ -113,7 +188,7 @@
 
 	<header class="entry-header">
   	<h1 class="entry-title" itemprop="headline">JavaScript Destructuring ES6: The Complete Guide</h1>    
-     <span class="category" itemprop="articleSection"><i class="fa fa-bookmark"></i><a href="https://rajnishcoder.github.io/buginit/category/javascript/" rel="category tag">JavaScript</a></span><span class="tags"> <i class="fa fa-tags"></i><a href="https://rajnishcoder.github.io/buginit/tag/guides/" rel="tag">Guides</a>, <a href="https://rajnishcoder.github.io/buginit/tag/javascript/" rel="tag">JavaScript</a></span><span class="date"><i class="fa fa-clock-o"></i><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" title="4:24 pm" rel="bookmark"><time itemprop="datePublished" datetime="2019-10-04T16:24:06+00:00">October 4, 2019</time></a></span><span itemprop="author"><i class="fa fa-user"></i><span class="author"><a href="https://rajnishcoder.github.io/buginit/author/rajnishcoder/" title="View all posts by Rajnish Rajput" rel="">Rajnish Rajput</a></span></span> <span class="comments" itemprop="interactionCount"> <i class="fa fa-comment"></i><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#comments" title="8 Comments" rel="comments">8 Comments</a></span> 
+     <span class="category" itemprop="articleSection"><i class="fa fa-bookmark"></i><a href="https://rajnishcoder.github.io/b/category/javascript/" rel="category tag">JavaScript</a></span><span class="tags"> <i class="fa fa-tags"></i><a href="https://rajnishcoder.github.io/b/tag/guides/" rel="tag">Guides</a>, <a href="https://rajnishcoder.github.io/b/tag/javascript/" rel="tag">JavaScript</a></span><span class="date"><i class="fa fa-clock-o"></i><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/" title="4:24 pm" rel="bookmark"><time itemprop="datePublished" datetime="2019-10-04T16:24:06+00:00">October 4, 2019</time></a></span><span itemprop="author"><i class="fa fa-user"></i><span class="author"><a href="https://rajnishcoder.github.io/b/author/rajnishcoder/" title="View all posts by Rajnish Rajput" rel="">Rajnish Rajput</a></span></span> <span class="comments" itemprop="interactionCount"> <i class="fa fa-comment"></i><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#comments" title="8 Comments" rel="comments">8 Comments</a></span> 
       
                <div id="above_post_add" class="advertisment">
                        </div>
@@ -233,7 +308,7 @@ console.log(b); // 1</pre></div>
 
 
 
-<figure class="wp-block-image"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer.jpg" alt="I got this one JavaScript Destructuring " class="wp-image-156" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer.jpg 1000w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer-300x180.jpg 300w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer-768x461.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px"></figure>
+<figure class="wp-block-image"><img src="https://rajnishcoder.github.io/b/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer.jpg" alt="I got this one JavaScript Destructuring " class="wp-image-156" srcset="https://rajnishcoder.github.io/b/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer.jpg 1000w,https://rajnishcoder.github.io/b/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer-300x180.jpg 300w,https://rajnishcoder.github.io/b/wp-content/uploads/2019/10/i-got-this-one-hold-my-beer-768x461.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px"></figure>
 
 
 
@@ -517,43 +592,43 @@ console.log(z); // 2</pre></div>
 		  <h4>You Might Interested In</h4>
 		  <ul class="relatedPostList">
 			  							<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/" rel="bookmark" title="Permanent Link to 4 Examples of Replace All in JavaScript You Should Know">
+								<a href="https://rajnishcoder.github.io/b/javascript/replace-all-in-javascript/" rel="bookmark" title="Permanent Link to 4 Examples of Replace All in JavaScript You Should Know">
 									4 Examples of Replace All in JavaScript You Should Know								</a>
 							</li>
 														<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" rel="bookmark" title="Permanent Link to 4 ways to remove duplicate array javascript">
+								<a href="https://rajnishcoder.github.io/b/javascript/remove-duplicate-array-javascript/" rel="bookmark" title="Permanent Link to 4 ways to remove duplicate array javascript">
 									4 ways to remove duplicate array javascript								</a>
 							</li>
 														<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" rel="bookmark" title="Permanent Link to 10 Examples of JavaScript Arguments Object">
+								<a href="https://rajnishcoder.github.io/b/javascript/10-examples-javascript-arguments-object/" rel="bookmark" title="Permanent Link to 10 Examples of JavaScript Arguments Object">
 									10 Examples of JavaScript Arguments Object								</a>
 							</li>
 														<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/" rel="bookmark" title="Permanent Link to 4 Examples of JavaScript sort without mutating array">
+								<a href="https://rajnishcoder.github.io/b/javascript/javascript-sort-without-mutating-array/" rel="bookmark" title="Permanent Link to 4 Examples of JavaScript sort without mutating array">
 									4 Examples of JavaScript sort without mutating array								</a>
 							</li>
 														<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/" rel="bookmark" title="Permanent Link to Understanding Try Catch Finally JavaScript">
+								<a href="https://rajnishcoder.github.io/b/javascript/try-catch-finally-javascript/" rel="bookmark" title="Permanent Link to Understanding Try Catch Finally JavaScript">
 									Understanding Try Catch Finally JavaScript								</a>
 							</li>
 														<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/" rel="bookmark" title="Permanent Link to JS try catch Optional catch binding update in ES10/2019">
+								<a href="https://rajnishcoder.github.io/b/javascript/js-try-catch-optional-catch-binding-es10/" rel="bookmark" title="Permanent Link to JS try catch Optional catch binding update in ES10/2019">
 									JS try catch Optional catch binding update in ES10/2019								</a>
 							</li>
 														<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/" rel="bookmark" title="Permanent Link to New Stable Sort Array in Javascript: ES10/2019">
+								<a href="https://rajnishcoder.github.io/b/javascript/stable-sort-array-javascript-es10/" rel="bookmark" title="Permanent Link to New Stable Sort Array in Javascript: ES10/2019">
 									New Stable Sort Array in Javascript: ES10/2019								</a>
 							</li>
 														<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/" rel="bookmark" title="Permanent Link to Well formed JSON stringify JavaScript: ES10/2019">
+								<a href="https://rajnishcoder.github.io/b/javascript/well-formed-json-stringify-javascript-es10/" rel="bookmark" title="Permanent Link to Well formed JSON stringify JavaScript: ES10/2019">
 									Well formed JSON stringify JavaScript: ES10/2019								</a>
 							</li>
 														<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/" rel="bookmark" title="Permanent Link to JavaScript Trim: trimStart and trimEnd method ES10/2019">
+								<a href="https://rajnishcoder.github.io/b/javascript/javascript-trim-trimstart-trimend-method-es10/" rel="bookmark" title="Permanent Link to JavaScript Trim: trimStart and trimEnd method ES10/2019">
 									JavaScript Trim: trimStart and trimEnd method ES10/2019								</a>
 							</li>
 														<li>
-								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/" rel="bookmark" title="Permanent Link to JavaScript fromEntries method ES10">
+								<a href="https://rajnishcoder.github.io/b/javascript/javascript-fromentries-method-es10/" rel="bookmark" title="Permanent Link to JavaScript fromEntries method ES10">
 									JavaScript fromEntries method ES10								</a>
 							</li>
 									  </ul>
@@ -581,7 +656,7 @@ console.log(z); // 2</pre></div>
   
         
         	<div class="post-links">
-               <div class="alignleft"> <i class="fa fa-angle-double-left"></i> <a href="https://rajnishcoder.github.io/buginit/javascript/the-double-not-operator-magic-in-javascript/" rel="next">The Double NOT (!!) operator magic in JavaScript</a></div>               <div class="alignright"><a href="https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/" rel="prev">How to debug JavaScript like a pro.</a> <i class="fa fa-angle-double-right"></i></div>			</div>
+               <div class="alignleft"> <i class="fa fa-angle-double-left"></i> <a href="https://rajnishcoder.github.io/b/javascript/the-double-not-operator-magic-in-javascript/" rel="next">The Double NOT (!!) operator magic in JavaScript</a></div>               <div class="alignright"><a href="https://rajnishcoder.github.io/b/javascript/how-to-debug-javascript-like-a-pro/" rel="prev">How to debug JavaScript like a pro.</a> <i class="fa fa-angle-double-right"></i></div>			</div>
        	 
 			
 <div id="comments" class="comments-area">
@@ -596,7 +671,7 @@ console.log(z); // 2</pre></div>
             <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
             <div class="col-md-10 col-sm-10 no-padding">
                 <h3><cite><b class="fn">cheeks</b> </cite>             </h3>
-            <span><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#comment-4"><time datetime="2019-10-05T16:20:01+00:00">October 5, 2019 at 4:20 pm</time></a></span>
+            <span><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#comment-4"><time datetime="2019-10-05T16:20:01+00:00">October 5, 2019 at 4:20 pm</time></a></span>
                     
                         
             <p> 		</p><p>The opening sentence looks like you left out a word? Maybe?</p>
@@ -604,7 +679,7 @@ console.log(z); // 2</pre></div>
              
             </div>
         </div>
-        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" data-commentid="4" data-postid="154" data-belowelement="comment-4" data-respondelement="respond" aria-label="Reply to cheeks">Reply</a></div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="#comment-4" data-commentid="4" data-postid="154" data-belowelement="comment-4" data-respondelement="respond" aria-label="Reply to cheeks">Reply</a></div>
       <div class="clearfix"></div>
           
        
@@ -619,7 +694,7 @@ console.log(z); // 2</pre></div>
             <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
             <div class="col-md-10 col-sm-10 no-padding">
                 <h3><cite><b class="fn"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></b> <span>Post author</span></cite>             </h3>
-            <span><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#comment-5"><time datetime="2019-10-05T17:14:02+00:00">October 5, 2019 at 5:14 pm</time></a></span>
+            <span><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#comment-5"><time datetime="2019-10-05T17:14:02+00:00">October 5, 2019 at 5:14 pm</time></a></span>
                     
                         
             <p> 		</p><p>Thanks for the comment I think, I missed the <strong>and</strong><em> after compact.</em></p>
@@ -627,7 +702,7 @@ console.log(z); // 2</pre></div>
              
             </div>
         </div>
-        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" data-commentid="5" data-postid="154" data-belowelement="comment-5" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="#comment-5" data-commentid="5" data-postid="154" data-belowelement="comment-5" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
       <div class="clearfix"></div>
           
        
@@ -642,7 +717,7 @@ console.log(z); // 2</pre></div>
             <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/23463b99b62a72f26ed677cc556c44e8?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
             <div class="col-md-10 col-sm-10 no-padding">
                 <h3><cite><b class="fn">cheeks</b> </cite>             </h3>
-            <span><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#comment-6"><time datetime="2019-10-05T19:15:45+00:00">October 5, 2019 at 7:15 pm</time></a></span>
+            <span><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#comment-6"><time datetime="2019-10-05T19:15:45+00:00">October 5, 2019 at 7:15 pm</time></a></span>
                     
                         
             <p> 		</p><p>I dunno . . . it’s still kinda off. Maybe:<br>
@@ -651,7 +726,7 @@ The destructuring assignment syntax is expressive, compact and more readable. It
              
             </div>
         </div>
-        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" data-commentid="6" data-postid="154" data-belowelement="comment-6" data-respondelement="respond" aria-label="Reply to cheeks">Reply</a></div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="#comment-6" data-commentid="6" data-postid="154" data-belowelement="comment-6" data-respondelement="respond" aria-label="Reply to cheeks">Reply</a></div>
       <div class="clearfix"></div>
           
        
@@ -666,7 +741,7 @@ The destructuring assignment syntax is expressive, compact and more readable. It
             <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
             <div class="col-md-10 col-sm-10 no-padding">
                 <h3><cite><b class="fn">Rajnish Rajput</b> <span>Post author</span></cite>             </h3>
-            <span><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#comment-7"><time datetime="2019-10-06T04:21:24+00:00">October 6, 2019 at 4:21 am</time></a></span>
+            <span><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#comment-7"><time datetime="2019-10-06T04:21:24+00:00">October 6, 2019 at 4:21 am</time></a></span>
                     
                         
             <p> 		</p><p>There are only two things.<br>
@@ -679,7 +754,7 @@ but I made the important things bold to make more readable.</p>
              
             </div>
         </div>
-        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" data-commentid="7" data-postid="154" data-belowelement="comment-7" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="#comment-7" data-commentid="7" data-postid="154" data-belowelement="comment-7" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
       <div class="clearfix"></div>
           
        
@@ -700,7 +775,7 @@ but I made the important things bold to make more readable.</p>
             <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/b463de5febb2de15ca11caa2c3c596bd?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/b463de5febb2de15ca11caa2c3c596bd?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
             <div class="col-md-10 col-sm-10 no-padding">
                 <h3><cite><b class="fn">Lcfvs</b> </cite>             </h3>
-            <span><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#comment-8"><time datetime="2019-10-15T17:04:38+00:00">October 15, 2019 at 5:04 pm</time></a></span>
+            <span><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#comment-8"><time datetime="2019-10-15T17:04:38+00:00">October 15, 2019 at 5:04 pm</time></a></span>
                     
                         
             <p> 		</p><p>Have you seen my comment? <a href="https://twitter.com/Lcfvs/status/1183818939673038853" rel="nofollow ugc">https://twitter.com/Lcfvs/status/1183818939673038853</a></p>
@@ -709,7 +784,7 @@ but I made the important things bold to make more readable.</p>
              
             </div>
         </div>
-        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" data-commentid="8" data-postid="154" data-belowelement="comment-8" data-respondelement="respond" aria-label="Reply to Lcfvs">Reply</a></div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="#comment-8" data-commentid="8" data-postid="154" data-belowelement="comment-8" data-respondelement="respond" aria-label="Reply to Lcfvs">Reply</a></div>
       <div class="clearfix"></div>
           
        
@@ -724,7 +799,7 @@ but I made the important things bold to make more readable.</p>
             <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
             <div class="col-md-10 col-sm-10 no-padding">
                 <h3><cite><b class="fn"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></b> <span>Post author</span></cite>             </h3>
-            <span><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#comment-9"><time datetime="2019-10-16T02:00:33+00:00">October 16, 2019 at 2:00 am</time></a></span>
+            <span><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#comment-9"><time datetime="2019-10-16T02:00:33+00:00">October 16, 2019 at 2:00 am</time></a></span>
                     
                         
             <p> 		</p><p>Hi, @Lcfvs Thank you for the suggestion, let’s me see what can I do about it. 🙂</p>
@@ -732,7 +807,7 @@ but I made the important things bold to make more readable.</p>
              
             </div>
         </div>
-        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" data-commentid="9" data-postid="154" data-belowelement="comment-9" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="#comment-9" data-commentid="9" data-postid="154" data-belowelement="comment-9" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
       <div class="clearfix"></div>
           
        
@@ -749,7 +824,7 @@ but I made the important things bold to make more readable.</p>
             <div class=" col-md-2 col-sm-2"><img alt="" src="http://0.gravatar.com/avatar/6967a97bdcbba575ac1282d5606adb9c?s=44&d=mm&r=g" srcset="http://0.gravatar.com/avatar/6967a97bdcbba575ac1282d5606adb9c?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
             <div class="col-md-10 col-sm-10 no-padding">
                 <h3><cite><b class="fn">Boris</b> </cite>             </h3>
-            <span><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#comment-10"><time datetime="2019-10-18T08:25:30+00:00">October 18, 2019 at 8:25 am</time></a></span>
+            <span><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#comment-10"><time datetime="2019-10-18T08:25:30+00:00">October 18, 2019 at 8:25 am</time></a></span>
                     
                         
             <p> 		</p><p>I think, it worths  mentioning destructuring with reducing number of properties, and destructuring both nested objects and nested properties of nested objects.<br>
@@ -763,7 +838,7 @@ console.log(reduced) //  {c:2, d: 3}</p>
              
             </div>
         </div>
-        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" data-commentid="10" data-postid="154" data-belowelement="comment-10" data-respondelement="respond" aria-label="Reply to Boris">Reply</a></div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="#comment-10" data-commentid="10" data-postid="154" data-belowelement="comment-10" data-respondelement="respond" aria-label="Reply to Boris">Reply</a></div>
       <div class="clearfix"></div>
           
        
@@ -778,7 +853,7 @@ console.log(reduced) //  {c:2, d: 3}</p>
             <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
             <div class="col-md-10 col-sm-10 no-padding">
                 <h3><cite><b class="fn"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></b> <span>Post author</span></cite>             </h3>
-            <span><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#comment-11"><time datetime="2019-10-19T03:29:10+00:00">October 19, 2019 at 3:29 am</time></a></span>
+            <span><a href="https://rajnishcoder.github.io/b/javascript/javascript-destructuring-es6-the-complete-guide/#comment-11"><time datetime="2019-10-19T03:29:10+00:00">October 19, 2019 at 3:29 am</time></a></span>
                     
                         
             <p> 		</p><p>Hi Boris, Thank you for the suggestion and I appreciate it, As I gave only one example of every type to make this guide shorter and interesting. I think Nested Destructuring deserves the whole article about it. I have a lot to share about it, I’ll write it soon and will include your example in it.<br>
@@ -787,7 +862,7 @@ Thank you for your response 🙂</p>
              
             </div>
         </div>
-        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" data-commentid="11" data-postid="154" data-belowelement="comment-11" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="#comment-11" data-commentid="11" data-postid="154" data-belowelement="comment-11" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
       <div class="clearfix"></div>
           
        
@@ -804,7 +879,7 @@ Thank you for your response 🙂</p>
 		
 	
 		<div id="respond" class="comment-respond">
-		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://rajnishcoder.github.io/buginit/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/buginit/javascript/javascript-destructuring-es6-the-complete-guide/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://rajnishcoder.github.io/b/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
 <p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
 <p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
 <p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
@@ -822,7 +897,7 @@ Thank you for your response 🙂</p>
  						
     
        <div class="sidebar col-md-4 col-sm-4">
-            <aside id="search-2" class="widget widget_search" itemscope itemtype="http://schema.org/WPSideBar"><form role="search" method="get" class="search-form" action="https://rajnishcoder.github.io/buginit/">
+            <aside id="search-2" class="widget widget_search" itemscope itemtype="http://schema.org/WPSideBar"><form role="search" method="get" class="search-form" action="https://rajnishcoder.github.io/b/">
 				<label>
 					<span class="screen-reader-text">Search for:</span>
 					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
@@ -830,22 +905,22 @@ Thank you for your response 🙂</p>
 				<input type="submit" class="search-submit screen-reader-text" value="Search">
 			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries" itemscope itemtype="http://schema.org/WPSideBar">		<h3 class="widget-title heading" itemprop="about">Recent Posts</h3>		<ul>
 											<li>
-					<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/">4 Examples of Replace All in JavaScript You Should Know</a>
+					<a href="https://rajnishcoder.github.io/b/javascript/replace-all-in-javascript/">4 Examples of Replace All in JavaScript You Should Know</a>
 									</li>
 											<li>
-					<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/">4 ways to remove duplicate array javascript</a>
+					<a href="https://rajnishcoder.github.io/b/javascript/remove-duplicate-array-javascript/">4 ways to remove duplicate array javascript</a>
 									</li>
 											<li>
-					<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/">10 Examples of JavaScript Arguments Object</a>
+					<a href="https://rajnishcoder.github.io/b/javascript/10-examples-javascript-arguments-object/">10 Examples of JavaScript Arguments Object</a>
 									</li>
 											<li>
-					<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/">4 Examples of JavaScript sort without mutating array</a>
+					<a href="https://rajnishcoder.github.io/b/javascript/javascript-sort-without-mutating-array/">4 Examples of JavaScript sort without mutating array</a>
 									</li>
 											<li>
-					<a href="https://rajnishcoder.github.io/buginit/css/center-image-in-div/">CSS Center Image In div example with explanation</a>
+					<a href="https://rajnishcoder.github.io/b/css/center-image-in-div/">CSS Center Image In div example with explanation</a>
 									</li>
 					</ul>
-		</aside><aside id="recent-comments-2" class="widget widget_recent_comments" itemscope itemtype="http://schema.org/WPSideBar"><h3 class="widget-title heading" itemprop="about">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-21">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link">Lacus</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-20">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-23">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link">Johnny</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-22">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/#comment-15">Smooth Scroll CSS</a></li></ul></aside>       </div>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments" itemscope itemtype="http://schema.org/WPSideBar"><h3 class="widget-title heading" itemprop="about">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/b/javascript/10-examples-javascript-arguments-object/#comment-21">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link">Lacus</span> on <a href="https://rajnishcoder.github.io/b/javascript/10-examples-javascript-arguments-object/#comment-20">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/b/javascript/remove-duplicate-array-javascript/#comment-23">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link">Johnny</span> on <a href="https://rajnishcoder.github.io/b/javascript/remove-duplicate-array-javascript/#comment-22">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/b/css/smooth-scroll-css/#comment-15">Smooth Scroll CSS</a></li></ul></aside>       </div>
      
   
 	 	</div> 
@@ -859,25 +934,25 @@ Thank you for your response 🙂</p>
             <div class="container">
 									<div id="footer-widget-area">    
 						<aside id="archives-2" class="widget widget_archive col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Archives</h3>		<ul>
-				<li><a href="https://rajnishcoder.github.io/buginit/2019/12/">December 2019</a></li>
-	<li><a href="https://rajnishcoder.github.io/buginit/2019/11/">November 2019</a></li>
-	<li><a href="https://rajnishcoder.github.io/buginit/2019/10/">October 2019</a></li>
-	<li><a href="https://rajnishcoder.github.io/buginit/2019/09/">September 2019</a></li>
+				<li><a href="https://rajnishcoder.github.io/b/2019/12/">December 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/b/2019/11/">November 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/b/2019/10/">October 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/b/2019/09/">September 2019</a></li>
 		</ul>
 			</div></aside><aside id="categories-2" class="widget widget_categories col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Categories</h3>		<ul>
-				<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+				<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/b/category/css/">CSS</a>
 </li>
-	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/b/category/html/">HTML</a>
 </li>
-	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/b/category/html/html-attributes/">HTML Attributes</a>
 </li>
-	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/b/category/javascript/">JavaScript</a>
 </li>
 		</ul>
 			</div></aside><aside id="meta-2" class="widget widget_meta col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Meta</h3>			<ul>
-						<li><a href="https://rajnishcoder.github.io/buginit/wp-login.php">Log in</a></li>
-			<li><a href="https://rajnishcoder.github.io/buginit/feed/">Entries feed</a></li>
-			<li><a href="https://rajnishcoder.github.io/buginit/comments/feed/">Comments feed</a></li>
+						<li><a rel="nofollow" href="https://rajnishcoder.github.io/b/wp-login.php">Log in</a></li>
+			<li><a href="https://rajnishcoder.github.io/b/feed/">Entries feed</a></li>
+			<li><a href="https://rajnishcoder.github.io/b/comments/feed/">Comments feed</a></li>
 			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
 			</div></aside>						<div class="clearboth"></div>
 					</div>
@@ -889,10 +964,10 @@ Thank you for your response 🙂</p>
 							<div class="col-md-4">
 								<h3>Navigation</h3>
 								<ul itemscope itemtype="https://schema.org/SiteNavigationElement" id="menu-header-menu" class="menu"><li id="menu-item-359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-359"><a href="https://buginit.com/" itemprop="url"><span itemprop="name">Home</span></a></li>
-<li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="https://rajnishcoder.github.io/buginit/about/" itemprop="url"><span itemprop="name">About</span></a></li>
-<li id="menu-item-361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a href="https://rajnishcoder.github.io/buginit/contact-us/" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
-<li id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a href="https://rajnishcoder.github.io/buginit/privacy-policy-2/" itemprop="url"><span itemprop="name">Privacy Policy</span></a></li>
-<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a href="https://rajnishcoder.github.io/buginit/html/" itemprop="url"><span itemprop="name">Learn HTML</span></a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="https://rajnishcoder.github.io/b/about/" itemprop="url"><span itemprop="name">About</span></a></li>
+<li id="menu-item-361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a href="https://rajnishcoder.github.io/b/contact-us/" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
+<li id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a href="https://rajnishcoder.github.io/b/privacy-policy-2/" itemprop="url"><span itemprop="name">Privacy Policy</span></a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a href="https://rajnishcoder.github.io/b/html/" itemprop="url"><span itemprop="name">Learn HTML</span></a></li>
 </ul>							</div>
 							<div class="col-md-4">
 								<h3>Support Us</h3>
@@ -919,7 +994,7 @@ Thank you for your response 🙂</p>
               		</div>
             	</div> 
              
-			<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/menu/script.js"></script>
+			<script type="text/javascript" src="https://rajnishcoder.github.io/b/wp-content/themes/buginit/assets/menu/script.js"></script>
 	     </footer> 	  
 
 	</div>
