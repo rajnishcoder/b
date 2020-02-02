@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Tips &amp; Tricks &#8211; Buginit &#8211; HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+	<atom:link href="https://rajnishcoder.github.io/buginit/tag/tips-tricks/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rajnishcoder.github.io/buginit/</link>
+	<description></description>
+	<lastBuildDate>Sat, 07 Dec 2019 02:48:25 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>4 ways to remove duplicate array javascript</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comments</comments>
+				<pubDate>Sat, 07 Dec 2019 02:48:25 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Arrays]]></category>
+		<category><![CDATA[Tips & Tricks]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=502</guid>
+				<description><![CDATA[In this article, we will learn 4 ways with examples of removing duplicate array in JavaScript. and also how to retrieve duplicate values. Array is a very common concept in any programming language. If you do programming you have to deal it with on a regular basis. Let&#8217;s start with the quick and easy one.<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn 4 ways with examples of removing duplicate array in <a href="https://buginit.com/category/javascript/">JavaScript</a>. and also how to retrieve duplicate values.</p>
+
+
+
+<p><a href="https://buginit.com/tag/arrays/">Array</a> is a very common concept in any programming language. If you do programming you have to deal it with on a regular basis.</p>
+
+
+
+<p>Let&#8217;s  start with the quick and easy one.</p>
+
+
+
+<h2>#1 Using Set Object</h2>
+
+
+
+<p>You can use <code>Set</code> object to remove duplicate array in JavaScript, <strong><code>Set</code> is a global object that allows you to store unique values no matter if they are primitive values or object references.</strong> <a rel="noreferrer noopener" aria-label="mdn (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank">source mdn</a></p>
+
+
+
+<p>See the example below, how we can use the set object to remove duplicate array in <a href="https://buginit.com/category/javascript/">JavaScript</a>.</p>
+
+
+
+<p>Let&#8217;s assume we have a duplicate fruits array <code>var fruits = ["banana", "apple", "orange", "watermelon", "apple", "orange", "grape", "apple"];</code></p>
+
+
+
+<h4>#1.1 Using Array.from with <code>Set</code></h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+var uniqueFruits = Array.from(new Set(fruits));
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<h4>Explanation</h4>
+
+
+
+<p>Set is an object so it returns a new <code>Set</code> object with unique values, that&#8217;s why I used <code>Array.from</code> to convert it to an <a href="https://buginit.com/tag/arrays/">array</a>.</p>
+
+
+
+<p>You can use any technique to convert it, </p>
+
+
+
+<p>In the below example I&#8217;ll show you to do it with <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">spread syntax</a></p>
+
+
+
+<h4>#1.2 Using <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">Spread Syntax</a> with <code>Set</code></h4>
+
+
+
+<p>Here we are going to remove duplicate array in javascript using spread syntax. </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+var uniqueFruits = [...new Set(fruits)];
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<p>If you want to learn about <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">spread syntax here is the guide</a>.</p>
+
+
+
+<h3>#2 Using indexOf</h3>
+
+
+
+<p><code>indexOf</code> is a naive but smart way to remove duplicate array in JavaScript. When I did not know about <code>Set</code> object or have limitations to use the ES5, The first thing came in my mind is <code>indexOf</code> because personally I like this method and use it widely when playing with arrays.</p>
+
+
+
+<h4>#2.1 Using function</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+uniqueFruits = fruits.filter(function(item, pos) {
+    return fruits.indexOf(item) == pos;
+})
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<p>In the above example, I iterate over the <code>fruits</code> array with using <code>filter</code> method and checked if the first position <code>fruits.indexOf(item)</code> of this element in the array is equal to the current position <code>pos</code>. It is obvious that, these two positions are different for duplicate elements.</p>
+
+
+
+<h4>#2.2 Using arrow function</h4>
+
+
+
+<p>Here is the cool and sort way if you can use an <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function</a> instead of a plain function, In the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+uniqueFruits = fruits.filter((item, pos) =&gt; fruits.indexOf(item) == pos)
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<h2>Bonus </h2>
+
+
+
+<h3>Retrieving the duplicate values </h3>
+
+
+
+<p>Also, we can retrieve all the duplicate values using <code>indexOf</code> with <code>filter</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+var duplicates = fruits.filter((item, pos) =&gt; fruits.indexOf(item) != pos)
+console.log(duplicates); 
+// Output: [&quot;apple&quot;, &quot;orange&quot;, &quot;apple&quot;]</pre></div>
+
+
+
+<p>Thanks for reading, share and comment if you liked it. Let me know if I did any mistake in the article and what&#8217;s your favorite way?</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>How To Get Attribute Value using CSS.</title>
+		<link>https://rajnishcoder.github.io/buginit/css/get-attribute-value-css/</link>
+				<comments>https://rajnishcoder.github.io/buginit/css/get-attribute-value-css/#respond</comments>
+				<pubDate>Fri, 15 Nov 2019 01:44:19 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[Tips & Tricks]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=435</guid>
+				<description><![CDATA[In this article, we will learn how to get attribute value using CSS in CSS with some different types of examples. In sort yes we can get Attribute value in CSS using the attr() property of content in CSS let&#8217;s have a look at quick example below See the Pen get css attribute value in<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/css/get-attribute-value-css/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn how to get attribute value using <a href="https://buginit.com/category/css/">CSS</a> in CSS with some different types of examples.</p>
+
+
+
+<p>In sort yes we can get Attribute value in <a href="https://buginit.com/category/css/">CSS</a> using the <code>attr()</code> property of <code>content</code> in CSS let&#8217;s have a look at quick example below</p>
+
+
+
+<p></p>
+
+
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="rajnish_rajput" data-slug-hash="JjjmgGx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="get css attribute value in css">
+  <span>See the Pen <a href="https://codepen.io/rajnish_rajput/pen/JjjmgGx">
+  get css attribute value in css</a> by Rajnish (<a href="https://codepen.io/rajnish_rajput">@rajnish_rajput</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+<p></p>
+
+
+
+<p>In the above example, we are getting the <code>data-foo</code> attribute value and appending in that front of paragraph <code>p</code> tag of <a href="https://buginit.com/category/html/">HTML</a>. As you saw we used the <code>[data-foo]::before</code> selector to select all the <code>data-foo</code> attributes in the page and insert its value before its HTML tag using <code>content: attr(data-foo) " ";</code> and that double quotes is to add a single space in between its tag and the attribute value.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong> The <code>attr()</code> function can be used with any CSS property, but support for properties other than <code>content</code> is experimental, and support for the type-or-unit parameter is sparse. </p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/attr" target="_blank" rel="noreferrer noopener" aria-label="mdn (opens in a new tab)">mdn</a></cite></blockquote>
+
+
+
+<h3>Definition </h3>
+
+
+
+<p>The <code>attr()</code> is actually a CSS function that is used to retrieve the value of an attribute of the selected element and use it inside the <a href="https://buginit.com/category/css/">CSS</a>. You can also use it in the Pseudo-elements like <code>::before</code>, <code>::after</code>, <code>::first-line</code> and more. See some simple and quick examples below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;css&quot;,&quot;mime&quot;:&quot;text/css&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">/* Simple usage */
+attr(data-count);
+attr(title);
+
+/* With type */
+attr(src url);
+attr(data-count number);
+attr(data-width px);
+
+/* With fallback */
+attr(data-count number, 0);
+attr(src url, &quot;&quot;);
+attr(data-width px, inherit);
+attr(data-something, &quot;default&quot;);</pre></div>
+
+
+
+<p></p>
+
+
+
+<blockquote class="wp-block-quote"><p><code>type-or-unit</code> and <code>fallback</code> is an exprimental properties those currently not supported saw on 15 November 2019 see the latest <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/CSS/attr#Browser_compatibility" target="_blank">Browser compatibility table on mdn</a></p></blockquote>
+
+
+
+<h3>Tool Tip Example</h3>
+
+
+
+<p>Here is one more example of <strong>&#8220;get attribute value in css&#8221;</strong>, we are going to build a simple tooltip step-by-step using it <code>attr()</code> CSS function.</p>
+
+
+
+<p>Let&#8217;s create the <a href="https://buginit.com/category/html/">HTML</a> first.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;a href=&quot;https://buginit.com/&quot; 
+   data-tooltip=&quot;This button will take you to the buginit.com where you can learn&quot;&gt;
+  buginit.com
+&lt;/a&gt;</pre></div>
+
+
+
+<p>Now, get the <code>data-tooltip</code> attribute data using the CSS.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;css&quot;,&quot;mime&quot;:&quot;text/css&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">a {
+  position: relative;
+}
+a:hover::after {
+  content: attr(data-tooltip);
+}</pre></div>
+
+
+
+<p>It&#8217;s time to fix the position of our tooltip.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;css&quot;,&quot;mime&quot;:&quot;text/css&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">a {
+  position: relative;
+}
+a:hover::after {
+  content: attr(data-tooltip);
+  /* positioned */
+  position: absolute;
+  top: 20px;
+  left: 100%;
+}</pre></div>
+
+
+
+<p>It is still looking a little weird, let&#8217;s put some style on it to make beautiful.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;css&quot;,&quot;mime&quot;:&quot;text/css&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">a {
+  position: relative;
+}
+a:hover::after {
+  content: attr(data-tooltip);
+  /* positioned */
+  position: absolute;
+  top: 20px;
+  left: 100%;
+  /*  making it little beautiful */
+  width: 150px;
+  padding: 10px;
+  background-color: #00a79d;
+  border-radius: 5px;
+  color: #fff;
+}</pre></div>
+
+
+
+<p>Here we go, we have completed it let&#8217;s take a look at how it looks like.</p>
+
+
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="rajnish_rajput" data-slug-hash="RwweXeG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pure CSS simple Tool Tip">
+  <span>See the Pen <a href="https://codepen.io/rajnish_rajput/pen/RwweXeG">
+  Pure CSS simple Tool Tip</a> by Rajnish (<a href="https://codepen.io/rajnish_rajput">@rajnish_rajput</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<p>The best part of <code>attr()</code> CSS function is, It is also supported by Internet Explorer 8 :D, </p>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;text-align:left;" class="auto-style1">Statement</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td style="text-align:left;">attr()</td>
+    <td>2</td>
+    <td>IE 8 <br> Edge 12</td>
+    <td>1</td>
+    <td>3.1</td>
+    <td>9</td>
+  </tr>
+</tbody></table>
+
+
+
+<p>That&#8217;s all for now, Thanks for reading. Share it with love.</p>
+
+
+
+<p>For more about <a href="https://buginit.com/category/css/">CSS</a> or <a href="https://buginit.com/category/javascript/">JavaScript</a></p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/css/get-attribute-value-css/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>How to debug JavaScript like a pro.</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/#comments</comments>
+				<pubDate>Wed, 02 Oct 2019 14:13:52 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Tips & Tricks]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=133</guid>
+				<description><![CDATA[First of all, I want to tell you, yes there are good and bad ways to console.log in JavaScript that can make your life easier as a JavaScript developer. So let&#8217;s get started on how to debug javascript? Let&#8217;s imagine we have 3 objects to log like below. Bad Code 💩 In the above approach,<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>First of all, I want to tell you, yes there are good and bad ways to <code>console.log</code> in <a href="https://buginit.com/category/javascript/">JavaScript</a> that can make your life easier as a JavaScript developer. So let&#8217;s get started on how to debug javascript?</p>
+
+
+
+<p>Let&#8217;s imagine we have 3 objects to log like below.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>const foo = { name: 'tom',   age: 30, nervous: false };
+const bar = { name: 'dick',  age: 40, nervous: false };
+const baz = { name: 'harry', age: 50, nervous: true };</pre></div>
+
+
+
+<h4>Bad Code <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f4a9.png" alt="💩" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>console.log(foo);
+console.log(bar);
+console.log(baz);</pre></div>
+
+
+
+<p>In the above approach, the problem is we don&#8217;t have the variables name to see which one is which? Inside console.</p>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.log_.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.log_.png" alt="" class="wp-image-135" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.log_.png 753w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.log_-300x78.png 300w" sizes="(max-width: 753px) 100vw, 753px" /></a><figcaption>Normal/basic console.log</figcaption></figure>
+
+
+
+<h4>Good Code <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/2705.png" alt="✅" class="wp-smiley" style="height: 1em; max-height: 1em;" /></h4>
+
+
+
+<p>But there is a trick called <em><strong>Computed Property Names</strong></em> </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>console.log({ foo, bar, baz });</pre></div>
+
+
+
+<p>It reduces the code but also shows exactly which variable defines the data.</p>
+
+
+
+<ul><li>one line of code.</li><li>one console log.</li><li>and all the specified information.</li></ul>
+
+
+
+<p></p>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/computed-log.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/computed-log.png" alt="" class="wp-image-136" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/computed-log.png 751w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/computed-log-300x85.png 300w" sizes="(max-width: 751px) 100vw, 751px" /></a><figcaption> <em><strong>Computed Property Names</strong></em> console.log output</figcaption></figure>
+
+
+
+<p>But guess what? There are already too many console logs and your log is important that you want to make it stand out. So, you can also add some custom CSS styles to your logs by using a percent sign (%).</p>
+
+
+
+<p><code>console.log('%c Here we go!!!', 'color: yellow; font-weight: bold;')</code></p>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/colored-log.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/colored-log.png" alt="" class="wp-image-138" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/colored-log.png 752w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/colored-log-300x84.png 300w" sizes="(max-width: 752px) 100vw, 752px" /></a><figcaption>Colored and bold console.log output</figcaption></figure>
+
+
+
+<p>Now we get that yellow and bold console log.</p>
+
+
+
+<p>One more important thing just to use the <code>console.table()</code> when you have an array of objects. This is very useful when you have to print arrays in the console.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>// Console.table(...)
+console.table([foo, bar, baz])</pre></div>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_.png" alt="" class="wp-image-140" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_.png 908w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_-300x178.png 300w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_-768x456.png 768w" sizes="(max-width: 908px) 100vw, 908px" /></a><figcaption>console.table() output</figcaption></figure>
+
+
+
+<p>Tracking time in console, let&#8217;s imagine you want to know how much time your loop/code is actually taking.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>console.time('loopTime')
+
+let i = 0;
+while (i &lt; 1000000) { i ++ }
+
+console.timeEnd('loopTime')</pre></div>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_.png" alt="" class="wp-image-141" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_.png 908w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_-300x69.png 300w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_-768x178.png 768w" sizes="(max-width: 908px) 100vw, 908px" /></a><figcaption>console.time() output</figcaption></figure>
+
+
+
+<p>I hope you are now a debugging expert. If you find this article helpful share it.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+	</channel>
+</rss>

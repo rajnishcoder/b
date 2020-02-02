@@ -1,0 +1,1348 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ES10/2019 &#8211; Buginit &#8211; HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+	<atom:link href="https://rajnishcoder.github.io/buginit/tag/es10/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rajnishcoder.github.io/buginit/</link>
+	<description></description>
+	<lastBuildDate>Sun, 10 Nov 2019 15:10:37 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>JS try catch Optional catch binding update in ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/#respond</comments>
+				<pubDate>Sun, 10 Nov 2019 15:10:37 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=409</guid>
+				<description><![CDATA[In this article, we will learn about the new feature of JS try catch Optional catch binding. We will understand it with some comparative examples. So, Let&#8217;s start&#8230; First of all, See this to Understand Try Catch Finally JavaScript The JS try catch got an update of Optional catch binding in ES10/2019, If you did<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn about the new feature of <a href="https://buginit.com/category/javascript/">JS</a> try catch Optional catch binding. We will understand it with some comparative examples. So, Let&#8217;s start&#8230;</p>
+
+
+
+<p>First of all, See this to  <a href="https://buginit.com/javascript/try-catch-finally-javascript/">Understand Try Catch Finally JavaScript</a> </p>
+
+
+
+<p>The JS try catch got an update of <em>Optional catch binding</em> in <a href="https://buginit.com/tag/es10/">ES10/2019</a>, If you did not aware of try catch error handling statement you can read here on <a rel="noreferrer noopener" aria-label="MDN (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="_blank">MDN</a> or you can look at this simple example below:</p>
+
+
+
+<h3>Basic example of try-catch</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  nonExistentFunction();
+}
+catch(error) {
+  console.error(error);
+  // expected output: ReferenceError: nonExistentFunction is not defined
+  // Note - error messages will vary depending on browser
+}</pre></div>
+
+
+
+<p>Did you noticed that in the above example <code>catch</code> statement with the binding having <code>error</code> parameter. That <code>error</code> parameter is using to identify which type of error happened in the try statement. But now in the update of <a href="https://buginit.com/tag/es10/">ES10/2019</a>, That binding and parameter are fully optional, which means you don&#8217;t really have to write that binding when using the try catch statement. This is useful if you don’t have a need for the&nbsp;<code>exception</code>&nbsp;object in the code that handles the exception. Like an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  doSomethingThatMightThrow();
+} catch { // → No binding or parameter!
+  handleException();
+}</pre></div>
+
+
+
+<h3>Browser Support </h3>
+
+
+
+<p> Support data as per chrome&nbsp;<a href="https://v8.dev/features/optional-catch-binding#support" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">v8</a>&nbsp;blog </p>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:25%;font-size:16px;text-align:left;">Property</th>
+         <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:15%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:15%;" class="bsSafari" title="Safari"></th>
+         <th style="width:15%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">Optional catch binding</td>
+         <td>66</td>
+         <td>?</td>
+         <td>58</td>
+         <td>yes</td>
+         <td>?</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>That&#8217;s all the update is about. Thank you for reading. Share and follow us for the latest updates!</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>New Stable Sort Array in Javascript: ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/#comments</comments>
+				<pubDate>Sat, 09 Nov 2019 01:25:49 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Arrays]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=403</guid>
+				<description><![CDATA[In this article, we will learn the new functionality of sort array in JavaScript with examples and talk about its stability. Stable sort array in JavaScript means that if two elements in the array have the same sorting value will appear in the original order that we had before sorting. Before ES10/2019 Update , Let&#8217;s<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn the new functionality of sort array in<a href="https://buginit.com/category/javascript/"> JavaScript</a> with examples and talk about its stability.</p>
+
+
+
+<p>Stable sort <a href="https://buginit.com/tag/arrays/">array</a> in JavaScript means that if two elements in the array have the same sorting value will appear in the original order that we had before sorting. Before <a href="https://buginit.com/tag/es10/">ES10/2019 Update</a> , Let&#8217;s say we have an array of dogs with ratings and name <strong>note that the array is pre-sorted alphabetically by </strong><code>name</code>.</p>
+
+
+
+<p>This Example isn&#8217;t weird <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f61b.png" alt="😛" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const dogs = [
+  { name: 'Abby',   rating: 12 },
+  { name: 'Bandit', rating: 13 },
+  { name: 'Choco',  rating: 14 },
+  { name: 'Daisy',  rating: 12 },
+  { name: 'Elmo',   rating: 12 },
+  { name: 'Falco',  rating: 13 },
+  { name: 'Ghost',  rating: 14 },
+];
+dogs.sort((a, b) =&gt; b.rating - a.rating);</pre></div>
+
+
+
+<p>In the above example, the array is pre-sorted by name and we sorted it with its rating to get the highest rated first. The results you got before the ES10 update.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">[
+  { name: 'Ghost',  rating: 14 }, // <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f622.png" alt="😢" class="wp-smiley" style="height: 1em; max-height: 1em;" />
+  { name: 'Choco',  rating: 14 }, // <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f622.png" alt="😢" class="wp-smiley" style="height: 1em; max-height: 1em;" />
+  { name: 'Bandit', rating: 13 },
+  { name: 'Falco',  rating: 13 },
+  { name: 'Abby',   rating: 12 },
+  { name: 'Daisy',  rating: 12 },
+  { name: 'Elmo',   rating: 12 },
+]</pre></div>
+
+
+
+<p>The problem is <code>Ghost</code> and <code>Choco</code> have the same rating of <code>14</code> and they were pre-sorted alphabetically by their <code>name</code> but when you applied the <code>sort</code> method, it messed with its <code>name</code> sorting. The stability of the <code>sort</code> method is none. That&#8217;s what the new update about, Now if you do <code>sort</code> on the above array, it doesn&#8217;t mess with its stability. For example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">[
+  { name: 'Choco',  rating: 14 },
+  { name: 'Ghost',  rating: 14 },
+  { name: 'Bandit', rating: 13 },
+  { name: 'Falco',  rating: 13 },
+  { name: 'Abby',   rating: 12 },
+  { name: 'Daisy',  rating: 12 },
+  { name: 'Elmo',   rating: 12 },
+]</pre></div>
+
+
+
+<p>Did you noticed in the example above <code>Choco</code> comes first, It doesn&#8217;t mess with its stability. The name sorting remains as it is because that&#8217;s the order we had before sorting.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong>&nbsp;Although stability is now required per spec, JavaScript engines are still free to implement whatever sorting algorithm they prefer.&nbsp;<a href="https://v8.dev/blog/array-sort#timsort" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">V8 uses Timsort</a>, for example. The spec does not mandate any particular sorting algorithm. </p></blockquote>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<p>Support data as per chrome <a rel="noreferrer noopener" aria-label="v8 (opens in a new tab)" href="https://v8.dev/features/stable-sort#support" target="_blank">v8</a> blog</p>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:25%;font-size:16px;text-align:left;">Property</th>
+         <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:15%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:15%;" class="bsSafari" title="Safari"></th>
+         <th style="width:15%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">Stable Array sort</td>
+         <td>70</td>
+         <td>?</td>
+         <td>Yes</td>
+         <td>yes</td>
+         <td>?</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>Thank you for reading <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Please share it with love.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>Well formed JSON stringify JavaScript: ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/#respond</comments>
+				<pubDate>Wed, 06 Nov 2019 01:10:30 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=387</guid>
+				<description><![CDATA[In this article, we will learn the new well-formed JSON stringify JavaScript method introduced in ES10/2019 with examples and comparisons with the old one. RFC 8259 section 8.1&#160;requires JSON text exchanged outside the scope of a closed ecosystem to be encoded using UTF-8, but&#160;JSON.stringify&#160;can return strings including code points that have no representation in UTF-8<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn the new well-formed JSON <a href="https://buginit.com/tag/strings/">stringify</a> <a href="https://buginit.com/category/javascript/">JavaScript</a> method introduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a> with examples and comparisons with the old one.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tools.ietf.org/html/rfc8259#section-8.1" target="_blank">RFC 8259 section 8.1</a>&nbsp;requires JSON text exchanged outside the scope of a closed ecosystem to be encoded using UTF-8, but&nbsp;<code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tc39.github.io/ecma262/#sec-json.stringify" target="_blank">JSON.stringify</a></code>&nbsp;can return strings including code points that have no representation in UTF-8 (specifically, surrogate code points U+D800 through U+DFFF). And contrary to&nbsp;<a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tc39.github.io/ecma262/#sec-json.stringify" target="_blank">the description of&nbsp;</a><code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tc39.github.io/ecma262/#sec-json.stringify" target="_blank">JSON.stringify</a></code>, such strings are not &#8220;in UTF-16&#8221; because &#8220;isolated UTF-16 code units in the range D800₁₆..DFFF₁₆ are ill-formed&#8221; per&nbsp;<a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://unicode.org/versions/Unicode10.0.0/ch03.pdf#G7404" target="_blank">The Unicode Standard, Version 10.0.0, Section 3.4</a>&nbsp;at definition D91 and excluded from being &#8220;in UTF-16&#8221; per definition D89. </p><cite><a href="https://github.com/tc39/proposal-well-formed-stringify#well-formed-jsonstringify" target="_blank" rel="noreferrer noopener" aria-label="Read more about proposal (opens in a new tab)">Read more about proposal</a></cite></blockquote>
+
+
+
+<p>Previously <code>JSON.stringify</code>&nbsp;method has been&nbsp;defined to return unformed&nbsp; Unicode <a href="https://buginit.com/tag/strings/">strings</a> if there&nbsp;are&nbsp;any&nbsp;lone&nbsp;surrogates&nbsp;in&nbsp;the&nbsp;input, for example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('\uD800');
+// '&quot;�&quot;'</pre></div>
+
+
+
+<p>But now, because Lone UTF-16 surrogates cannot be encoded as UTF-8, that&#8217;s why the proposal, <strong>well-formed JSON.stringify</strong> changed the JSON.stringify so that it generates escape sequences for lone surrogates,  making its output valid Unicode (and representable in UTF-8) for example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('\uD800');
+// '&quot;\\ud800&quot;'</pre></div>
+
+
+
+<p>As you saw above the new JSON stringify JavaScript method returns the valid stringified Unicode.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note</strong> that&nbsp;<code>JSON.parse(stringified)</code>&nbsp;still produces the same results as before. </p></blockquote>
+
+
+
+<p>This feature is a small fix that was long overdue in JavaScript. It’s one less thing to worry about as a JavaScript developer <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f600.png" alt="😀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<h3>Example</h3>
+
+
+
+<p>Non-BMP characters still serialize to surrogate pairs.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('𝌆')
+// → '&quot;𝌆&quot;'
+JSON.stringify('\uD834\uDF06')
+// → '&quot;𝌆&quot;'</pre></div>
+
+
+
+<p>Unpaired surrogate code units will serialize to escape sequences.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('\uDF06\uD834')
+// → '&quot;\\udf06\\ud834&quot;'
+JSON.stringify('\uDEAD')
+// → '&quot;\\udead&quot;'</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">Well-formed JSON.stringify()</td>
+         <td>72</td>
+         <td>?</td>
+         <td>64</td>
+         <td>Yes</td>
+         <td>?</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>Thanks for reading, Share with love.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>JavaScript Trim: trimStart and trimEnd method ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/#respond</comments>
+				<pubDate>Fri, 01 Nov 2019 01:34:52 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=366</guid>
+				<description><![CDATA[In this article, we will talk about two JavaScript trim methods: trimStart() and trimEnd() those are intorduced in ES10/2019 and will understand it with the help of examples. JavaScript trim methods are used to remove spaces from string and specially trimStart() method is used to remove spaces from the start of the string. For example:<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will talk about two <a href="https://buginit.com/category/javascript/">JavaScript</a> trim methods: <code>trimStart()</code> and <code>trimEnd()</code> those are intorduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a> and will understand it with the help of examples.</p>
+
+
+
+<p>JavaScript trim methods are used to <strong>remove spaces from string</strong> and specially <code>trimStart()</code> method is used to remove spaces from the start of the <a href="https://buginit.com/tag/strings/">string</a>. For example:</p>
+
+
+
+<h3>#1 trimStart Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimStart());
+// expected output: &quot;Hello buginit.com   &quot;;
+</pre></div>
+
+
+
+<p>In the above example we have a variable called <code>greeting</code> that holds a string value that has spaces in start and the end. Then we used <code>trimStart()</code> to remove the spaces from the start of the string.</p>
+
+
+
+<p>Do you know there is an alias of  <code>trimStart()</code>  is called <code>trimLeft()</code> that also works the same as <code>trimStart()</code>. For example:</p>
+
+
+
+<h3>#2 trimLeft Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimLeft());
+// expected output: &quot;Hello buginit.com   &quot;;</pre></div>
+
+
+
+<h3 id="Syntax">Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">str.trimStart();
+str.trimLeft();</pre></div>
+
+
+
+<h4>Return value of trimStart</h4>
+
+
+
+<p>It returns a new string with removed whitespace from its beginning (left end).</p>
+
+
+
+<h3>#3 One more example of trimStart </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var str = '   foo  ';
+
+console.log(str.length); // 8
+
+str = str.trimStart();
+console.log(str.length); // 5
+console.log(str);        // 'foo  '</pre></div>
+
+
+
+<h3>trimEnd Method</h3>
+
+
+
+<p>Javascript trimEnd method is used to remove spaces from the end of the string. For example: </p>
+
+
+
+<h3>#4 trimEnd Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimEnd());
+// expected output: &quot;   Hello buginit.com&quot;;</pre></div>
+
+
+
+<p>In the above example we have a variable called <code>greeting</code> that holds a string value that has spaces in start and the end. Then we used <code>trimEnd()</code> to remove the spaces from the end of the string.</p>
+
+
+
+<p><code>trimEnd()</code> also has an alias is called <code>trimRight()</code> that also works the same as <code>trimEnd()</code>. For example:</p>
+
+
+
+<h3>#5 trimRight Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimRight());
+// expected output: &quot;   Hello buginit.com&quot;;</pre></div>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">str.trimEnd();
+str.trimRight();</pre></div>
+
+
+
+<h4>Return value of trimEnd </h4>
+
+
+
+<p>It returns a new string with removed whitespace from its end (right end).</p>
+
+
+
+<h3>#5 One more Example of trimEnd </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var str = '   foo  ';
+
+console.log(str.length); // 8
+
+str = str.trimEnd();
+console.log(str.length); // 6
+console.log(str);        // '   foo'</pre></div>
+
+
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">MDN</a></p>
+
+
+
+<h3>Support</h3>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">trimStart()</td>
+         <td>66</td>
+         <td>?</td>
+         <td>61</td>
+         <td>?</td>
+         <td>53</td>
+      </tr>
+      <tr>
+         <td style="text-align:left;">trimEnd()</td>
+         <td>66</td>
+         <td>?</td>
+         <td>61</td>
+         <td>?</td>
+         <td>53</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>That&#8217;s all, If I have missed anything else please let me know. Share it with love. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>JavaScript fromEntries method ES10</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/#respond</comments>
+				<pubDate>Tue, 29 Oct 2019 15:27:43 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Objects]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=361</guid>
+				<description><![CDATA[In this article, we are gonna talk about JavaScript fromEntries method. fromEntries introduced in ES10/2019 and it is an object method, we will cover basics and different types of examples. Let&#8217;s start, Object.fromEntries is a very useful built-in JavaScript method that transforms a list of key-value pairs into an object. Let&#8217;s see the quick basic example<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we are gonna talk about JavaScript fromEntries method.  <code>fromEntries</code> introduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a> and it is an <a href="https://buginit.com/tag/objects/">object</a> method, we will cover basics and different types of examples.</p>
+
+
+
+<p>Let&#8217;s start, <code>Object.fromEntries</code> is a very useful built-in JavaScript method that transforms a list of key-value pairs into an object. Let&#8217;s see the quick basic example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const entries = [
+  ['foo', 'bar'],
+  ['baz', 42]
+];
+
+const obj = Object.fromEntries(entries);
+console.log(obj);
+// expected output: Object { foo: &quot;bar&quot;, baz: 42 }</pre></div>
+
+
+
+<p>In the above example we have converted a paired array of array into an object. So basically <code>Object.fromEntries</code> does that. I was playing with that and found that If you pass a simple array into <code>Object.fromEntries</code> It will give you an error <code>Uncaught TypeError: Iterator value x is not an entry object</code>, let&#8217;s see an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">Object.fromEntries(['x', 42, 'y', 50])
+// output: Uncaught TypeError: Iterator value x is not an entry object</pre></div>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<p><code>Object.fromEntries(iterable);</code></p>
+
+
+
+<h3>Return value</h3>
+
+
+
+<p> JavaScript fromEntries returns a new object whose properties are given by the entries of the iterable. </p>
+
+
+
+<p>Don&#8217;t misunderstand it with <code>Object.entries</code> method, The new  <code>Object.fromEntries</code> API performs the inverse of <code>Object.entries</code>.  To easily reconstruct an object based on its entries. See the comparision between them: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const object = { x: 42, y: 50 };
+const entries = Object.entries(object);
+// → [['x', 42], ['y', 50]]
+
+const result = Object.fromEntries(entries);
+// → { x: 42, y: 50 }</pre></div>
+
+
+
+<h3>Converting a Map to an Object</h3>
+
+
+
+<p>Using Object.fromEntries you can easily convert <code>map</code> to <code>object</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+const obj = Object.fromEntries(map);
+console.log(obj); // { foo: &quot;bar&quot;, baz: 42 }</pre></div>
+
+
+
+<h4 id="data-loss"> Warning: beware of data loss with fromEntries method </h4>
+
+
+
+<p>When converting maps into plain objects, there’s an implicit assumption that each key stringifies uniquely. If this assumption does not hold, and data loss occurs: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const map = new Map([
+  [{}, 'a'],
+  [{}, 'b'],
+]);
+Object.fromEntries(map);
+// → { '[object Object]': 'b' }</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: the value &#8216;a&#8217; is nowhere to be found, since both keys stringify to the same value of &#8216;[object Object]&#8217;.</p><cite><a href="https://v8.dev/features/object-fromentries" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<h3> Object transformations</h3>
+
+
+
+<p>Using <code>Object.fromEntries</code> you can easily transform objects like an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const object1 = { a: 1, b: 2, c: 3 };
+
+const object2 = Object.fromEntries(
+  Object.entries(object1)
+  .map(([ key, val ]) =&gt; [ key, val * 2 ])
+);
+
+console.log(object2);
+// { a: 2, b: 4, c: 6 }</pre></div>
+
+
+
+<h3>Support</h3>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">fromEntries()</td>
+         <td>73</td>
+         <td>No</td>
+         <td>63</td>
+         <td>12.1</td>
+         <td>60</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>I hope it was useful, If I have missed anything else please let me know. Share it with love. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>7 Examples of JavaScript Dynamic Import ES10</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/7-examples-javascript-dynamic-import-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/7-examples-javascript-dynamic-import-es10/#respond</comments>
+				<pubDate>Mon, 28 Oct 2019 15:55:54 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=356</guid>
+				<description><![CDATA[In this article, we will talk about JavaScript Dynamic Import that introduced in ES10/2019, we will cover basics and different types of examples also we will take a look at static and Dynamic Import in JavaScript. And don&#8217;t worry I&#8217;m not going to give you a long lecture, we will cover this with small points<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/7-examples-javascript-dynamic-import-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will talk about <a href="https://buginit.com/category/javascript/">JavaScript</a> Dynamic Import that introduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a>, we will cover basics and different types of examples also we will take a look at static and Dynamic Import in JavaScript. And don&#8217;t worry I&#8217;m not going to give you a long lecture, we will cover this with small points and examples.</p>
+
+
+
+<p>Let&#8217;s start, Basically dynamic import is a new function like import statement that introduced in ES10/2019 and it returns a promise. As we know let&#8217;s have a look at static import of JavaScript below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import MyModule from './my-module.js';
+import { NamedExport } from './other-module.js';</pre></div>
+
+
+
+<p>Now, Let&#8217;s have a look at the basic JavaScript dynamic import statement.</p>
+
+
+
+<h3>#1 Simple Single Line Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import(&quot;module/foo.js&quot;).then(foo =&gt; console.log(foo.default))</pre></div>
+
+
+
+<p>In the above example, we used the single-line statement of <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">Arrow function</a> for <code>console.log</code> to make it shorter. You can also use the normal function like the below example:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import('module/foo.js').then(function(foo) {
+  console.log(foo.default);
+})</pre></div>
+
+
+
+<h3>#2 Detailed Example</h3>
+
+
+
+<p>Take a look at the multiline dynamic import example below:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import('./utils.js')
+  .then((module) =&gt; {
+  	// here is your default import
+    module.default();
+  	// here you can do whatever you want
+	module.doStuff();
+  	console.log('buginit.com');
+  });</pre></div>
+
+
+
+<h3>#3 Conditional Import Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">if ( isSettingComponent ) {
+  import('lodash').then(_ =&gt; {
+    // Do something with lodash (a.k.a '_')
+  });
+}</pre></div>
+
+
+
+<p>In the above example, we <code>import</code> <code>lodash</code> library only if there is a setting component.</p>
+
+
+
+<h3>#4 Using async/await</h3>
+
+
+
+<p>Because dynamic <code>import()</code> returns a promise, we can also use async/await instead of the then-based callback style in the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(async () =&gt; {
+    const module = await import('./utils.js')
+    // here is your default import
+    module.default();
+  	// here you can do whatever you want
+	module.doStuff();
+})();</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong>&nbsp;Although&nbsp;<code>import()</code><em>looks</em>&nbsp;like a function call, it is specified as&nbsp;<em>syntax</em>&nbsp;that just happens to use parentheses (similar to&nbsp;<code>super()</code>). That means that&nbsp;<code>import</code>&nbsp;doesn’t inherit from&nbsp;<code>Function.prototype</code>&nbsp;so you cannot&nbsp;<code>call</code>&nbsp;or&nbsp;<code>apply</code>&nbsp;it, and things like&nbsp;<code>const importAlias = import</code>&nbsp;don’t work — heck,&nbsp;<code>import</code>&nbsp;is not even an object! This doesn’t really matter in practice, though. </p><cite><a href="https://v8.dev/features/dynamic-import" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<h3>#5 Separate module Specifier.</h3>
+
+
+
+<p>I&#8217;m sorry but I am gonna call the file path as module specifier, So you can also separate the module specifier using a variable.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const moduleSpecifier = './utils.js';
+import(moduleSpecifier)
+  .then((module) =&gt; {
+  	// here is your default import
+    module.default();
+  	// here you can do whatever you want
+	module.doStuff();
+  });</pre></div>
+
+
+
+<h3>#6 Conditional module Specifier.</h3>
+
+
+
+<p>As we can separate the module specifier, we can also set it conditionally like the example below:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">let moduleSpecifier;
+if ( isSetting ) {
+	moduleSpecifier = './setting.js';
+} else {
+  	moduleSpecifier = './utils.js';
+}
+import(moduleSpecifier)
+  .then((module) =&gt; {
+  	// here is your default import
+    module.default();
+  	// here you can do whatever you want
+	module.doStuff();
+});</pre></div>
+
+
+
+<h3>#7 Catching Error</h3>
+
+
+
+<p>As JavaScript Dynamic Import returns a promise we can also catch the errors using <code>.catch</code> method like the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import('module/foo.js')
+  .then(foo =&gt; console.log(foo))
+  .catch(err =&gt; console.log(err))</pre></div>
+
+
+
+<p>Static import and JavaScript Dynamic Import they both are useful and both have their own use cases. It is recommended that you use static import for the initial dependencies, especially for above-the-fold content and in other cases like loading dependencies on-demand you can use dynamic import statement.</p>
+
+
+
+<h3>Support</h3>
+
+
+
+<p><strong>JavaScript Dynamic Import support in Babel, Chrome 63+, Mozilla Firefox 67+ and Safari 11.1+.</strong> </p>
+
+
+
+<p>That’s all I have got, I hope it was useful, If I have missed anything else please let me know. Share it with love. </p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-Dynamic-Import-buginit.com_.jpg" alt="JavaScript Dynamic Import buginit.com" class="wp-image-358" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-Dynamic-Import-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-Dynamic-Import-buginit.com_-300x164.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/7-examples-javascript-dynamic-import-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Reference to JavaScript matchAll method ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/#respond</comments>
+				<pubDate>Wed, 23 Oct 2019 15:16:08 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Guides]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=347</guid>
+				<description><![CDATA[We can use JavaScript matchAll method on any string and it returns all the matching results as an iterator that works easily with for...of loops and has properties like index, input and groups. It will return an empty iterator object if nothing matched. Simple Example As I said before JavaScript matchAll method will return an iterator of<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>We can use <a href="https://buginit.com/category/javascript/">JavaScript</a> matchAll method on any string and it returns all the matching results as an iterator that works easily with <code>for...of</code> loops and has properties like <code>index</code>, <code>input</code> and <code>groups</code>. It will return an empty iterator object if nothing matched.</p>
+
+
+
+<h3>Simple Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const regex = /t(e)(st(\d?))/g;
+const string = 'test1test2';
+const matches = string.matchAll(regex);
+for (const match of matches) {
+  console.log(match);
+}
+// [&quot;test1&quot;, &quot;e&quot;, &quot;st1&quot;, &quot;1&quot;, index: 0, input: &quot;test1test2&quot;, groups: undefined]
+// [&quot;test2&quot;, &quot;e&quot;, &quot;st2&quot;, &quot;2&quot;, index: 5, input: &quot;test1test2&quot;, groups: undefined]
+</pre></div>
+
+
+
+<p>As I said before JavaScript matchAll method will return an iterator of each match with properties like <code>index</code>, <code>input</code> and <code>groups</code> as shown below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">[&quot;test1&quot;, &quot;e&quot;, &quot;st1&quot;, &quot;1&quot;, index: 0, input: &quot;test1test2&quot;, groups: undefined]
+[&quot;test2&quot;, &quot;e&quot;, &quot;st2&quot;, &quot;2&quot;, index: 5, input: &quot;test1test2&quot;, groups: undefined]</pre></div>
+
+
+
+<h2>Syntax</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">myStr.matchAll(regexp)</pre></div>
+
+
+
+<h2>Parameters</h2>
+
+
+
+<p>It receives only one parameter <code>regexp</code>. A regular expression object. If you pass the non-RegExp object, It will automatically convert it to a RegExp by using <code>new RegExp(obj)</code>.</p>
+
+
+
+<h2>Additional properties</h2>
+
+
+
+<p>1. <code>index</code>:- The index of the first result found in the original string.</p>
+
+
+
+<p>2. <code>input</code>:- A complete copy of original string.</p>
+
+
+
+<p>3. <code>groups</code>:- It contained the result of any named capturing groups or will return <code>undefined</code> if no named capturing groups were defined.</p>
+
+
+
+<h2>Without Iterator Example</h2>
+
+
+
+<p>With the below example you can get a simple array as a result.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">let regexp = /t(e)(st(\d?))/g;
+let str = 'test1test2';
+
+let array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// expected output: 
+// [&quot;test1&quot;, &quot;e&quot;, &quot;st1&quot;, &quot;1&quot;, index: 0, input: &quot;test1test2&quot;, groups: undefined]
+
+console.log(array[1]);
+// expected output: 
+// [&quot;test2&quot;, &quot;e&quot;, &quot;st2&quot;, &quot;2&quot;, index: 5, input: &quot;test1test2&quot;, groups: undefined]</pre></div>
+
+
+
+<p>In the above example, we used <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">object destructuring</a> to create an array from an iterator. to read more about object destructuring:- <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">JavaScript Destructuring ES6: The Complete Guide</a></p>
+
+
+
+<p>For more <a rel="noreferrer noopener" aria-label="MDN (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll" target="_blank">MDN</a></p>
+
+
+
+<p>That&#8217;s all I have got, I hope you understood, If I have missed anything else please let me know. Share it with love.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-matchAll-method-buginit.com_.jpg" alt="JavaScript matchAll method buginit.com" class="wp-image-349" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-matchAll-method-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-matchAll-method-buginit.com_-300x214.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Features of JavaScript flatMap method ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/features-of-javascript-flatmap-method/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/features-of-javascript-flatmap-method/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 12:26:19 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[Arrays]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=342</guid>
+				<description><![CDATA[JavaScript flatMap method is basically a combination of map() and flat() method with the depth of 1, flatMap() method first maps each element using a mapping function, then flattens the result into a new array. This method is quite useful, as merging both methods into one method is a little more efficient. Also, read Guide to<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/features-of-javascript-flatmap-method/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p><a href="https://buginit.com/category/javascript/">JavaScript</a> flatMap method is basically a combination of <code>map()</code> and <code><a href="https://buginit.com/javascript/guide-to-flatten-array-in-javascript/">flat()</a></code> method with the depth of 1, <code>flatMap()</code> method first maps each element using a mapping function, then flattens the result into a new array. This method is quite useful, as merging both methods into one method is a little more efficient. </p>
+
+
+
+<p>Also, read <a href="https://buginit.com/javascript/guide-to-flatten-array-in-javascript/">Guide to Flatten array in JavaScript</a> </p>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
+    // return element for new_array
+}[, thisArg])</pre></div>
+
+
+
+<h3>Parameters</h3>
+
+
+
+<p><code>callback</code>:-  Function that produces an element of the new Array, taking three arguments below:</p>
+
+
+
+<p>First is <code>currentValue</code>This is the current element that is being processed in the array.</p>
+
+
+
+<p>Second is <code>index</code> The index of the current element is being processed in the array and it is an <em>optional</em> argument.</p>
+
+
+
+<p>Third is <code>array</code>:- The array <code>map</code> was called upon and this is an <em>optional</em> argument.</p>
+
+
+
+<p>Fourth is <code>thisArg</code> Value to use as <code>this</code> when executing <code>callback</code> and it is also an <em>optional</em> argument. </p>
+
+
+
+<h3>Return value of JavaScript flatMap</h3>
+
+
+
+<p>The return value is a new array with flattened and remembered that it flattens an array to the depth of 1. </p>
+
+
+
+<h3>Example</h3>
+
+
+
+<p>Here I&#8217;ll show you <code>map()</code> and <code>flatMap()</code> methods comparison</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">let arr = [1, 2, 3, 4];
+
+arr.map(x =&gt; [x * 2]); 
+// [[2], [4], [6], [8]]</pre></div>
+
+
+
+<p>The output of the above example is something like this<code>[[2], [4], [6], [8]]</code>. Let&#8217;s see the same example with <code>flatMap()</code> method below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">arr.flatMap(x =&gt; [x * 2]);
+// [2, 4, 6, 8]</pre></div>
+
+
+
+<p>Here is one more example of level 2 depth</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">arr.flatMap(x =&gt; [[x * 2]]);
+// [[2], [4], [6], [8]]</pre></div>
+
+
+
+<p> The output of the above example is an array of array like this: <code>[[2], [4], [6], [8]]</code> because JavaScript flatMap goes only to the depth of 1. </p>
+
+
+
+<p>Well if you were paying attention then I know you have a question that why would I return an array in first place in <code>map()</code> method? Because that map method was only an example to make you understand. Here is one more example below:</p>
+
+
+
+<h3> Example of Multiple Array </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const animals = ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f415.png" alt="🐕" class="wp-smiley" style="height: 1em; max-height: 1em;" />', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f408.png" alt="🐈" class="wp-smiley" style="height: 1em; max-height: 1em;" />', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f411.png" alt="🐑" class="wp-smiley" style="height: 1em; max-height: 1em;" />', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f42e.png" alt="🐮" class="wp-smiley" style="height: 1em; max-height: 1em;" />'];
+const noises = ['woof', 'meow', 'baa', 'mooo'];
+
+const mappedOnly = animals.map((animal, index) =&gt; [animal, noises[index]]);
+const mappedWithFlat = animals.flatMap((animal, index) =&gt; [animal, noises[index]]);
+
+console.log(mappedOnly);
+// [['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f415.png" alt="🐕" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'woof'], ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f408.png" alt="🐈" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'meow'], ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f411.png" alt="🐑" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'baa'], ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f42e.png" alt="🐮" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'mooo']
+
+console.log(mappedWithFlat);
+// ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f415.png" alt="🐕" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'woof', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f408.png" alt="🐈" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'meow', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f411.png" alt="🐑" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'baa', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f42e.png" alt="🐮" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'mooo']</pre></div>
+
+
+
+<p>I hope you understood now, In the above example we mapped and flatten two different arrays into one (animals and their noises) in a single statement using a single return statement of <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function</a> to read more about <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">An Advanced Guide Of Arrow Function in JavaScript</a></p>
+
+
+
+<h3>Returning array</h3>
+
+
+
+<p>If the above function is complicated for you, I&#8217;ll give you one more example. Let&#8217;s say if the return value is also an array</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const friends = [
+    {name: 'Dave', kids: ['Max', 'Jack']},
+    {name: 'Max', kids: ['Sam', 'Alex', 'Megan']},
+    {name: 'Jordan', kids: ['Mason', 'Cameron', 'Kaylin']}
+];
+const kidNames = friends.flatMap(ele =&gt; ele.kids);
+// [&quot;Max&quot;, &quot;Jack&quot;, &quot;Sam&quot;, &quot;Alex&quot;, &quot;Megan&quot;, &quot;Mason&quot;, &quot;Cameron&quot;, &quot;Kaylin&quot;]</pre></div>
+
+
+
+<p><a href="https://v8.dev/features/array-flat-flatmap" target="_blank" rel="noreferrer noopener" aria-label="Chrome Official docs (opens in a new tab)">Chrome Official docs</a></p>
+
+
+
+<p>In the above example we have an array called <code>friends</code>, we mapped its property called <code>kids</code> that is also an array and flatten at the same time using <code>flatMap()</code>. The output of the above example is: <code>["Max", "Jack", "Sam", "Alex", "Megan", "Mason", "Cameron", "Kaylin"]</code></p>
+
+
+
+<h3>Modifying items.</h3>
+
+
+
+<p>Yes, we can also modify items as we want during the mapping using <code>flatMap()</code> method. For example:</p>
+
+
+
+<p>Let&#8217;s say we want to remove all the negative numbers and split the odd numbers into an even number</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">let a = [5, 4, -3, 20, 17, -33, -4, 18]
+
+a.flatMap( (n) =&gt;
+  (n &lt; 0) ?      [] :
+  (n % 2 == 0) ? [n] :
+                 [n-1, 1]
+)
+
+// expected output: [4, 1, 4, 20, 16, 1, 18]</pre></div>
+
+
+
+<p>Output of above example: <code>[4, 1, 4, 20, 16, 1, 18]</code></p>
+
+
+
+<p>Using <code>flatMap()</code> is very useful and short but it all depends on you and your creativity. <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<p>Hers is an emotion for you:</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-flatMap-method-buginit.com_.jpg" alt="" class="wp-image-344" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-flatMap-method-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-flatMap-method-buginit.com_-300x211.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+
+
+
+<p>Thank you for reading and support. Please share it with love. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/features-of-javascript-flatmap-method/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Guide to Flatten array in JavaScript</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/guide-to-flatten-array-in-javascript/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/guide-to-flatten-array-in-javascript/#respond</comments>
+				<pubDate>Mon, 21 Oct 2019 16:24:04 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=318</guid>
+				<description><![CDATA[In this article, I&#8217;ll show you the how-to flatten array in JavaScript in detail by examples and will give every possible example of flat() function of JavaScript. flat function introduced in ECMAScript 2019 Flattering an array in JavaScript made easy using flat() array function. The flat() method creates a new array with all sub-array elements<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/guide-to-flatten-array-in-javascript/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, I&#8217;ll show you the how-to flatten array in <a href="https://buginit.com/category/javascript/">JavaScript</a> in detail by examples and will give every possible example of <code>flat()</code> function of JavaScript. <code>flat</code> function introduced in <a rel="noreferrer noopener" aria-label="ECMAScript 2019  (opens in a new tab)" href="https://www.ecma-international.org/ecma-262/10.0/index.html#sec-array.prototype.flat" target="_blank">ECMAScript 2019</a></p>
+
+
+
+<p>Flattering an array in JavaScript made easy using <code>flat()</code> array function. The <code>flat()</code> method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.</p>
+
+
+
+<p>Before <code>flat</code> method introduced we use <code>concat</code> and many other methods to flatten the array.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var animals = [
+  [&quot;Lion&quot;],
+  [&quot;Bear&quot;],
+  [&quot;Deer&quot;]
+];
+var merged = [].concat.apply([], animals);
+
+console.log(merged); //  [&quot;Lion&quot;, &quot;Bear&quot;, &quot;Deer&quot;]</pre></div>
+
+
+
+<p>But now we can use <code>flat()</code> method to flatten an array. like below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var animals = [
+  [&quot;Lion&quot;],
+  [&quot;Bear&quot;],
+  [&quot;Deer&quot;]
+];
+var merged = animals.flat();
+
+console.log(merged); //  [&quot;Lion&quot;, &quot;Bear&quot;, &quot;Deer&quot;]</pre></div>
+
+
+
+<h3>Parameter</h3>
+
+
+
+<p><code>flat()</code> method receives only one parameter is <code>depth</code> it specifies how deep a nested array structure should be flattened. By default, its value is 1. The return value is the new flattened array. I&#8217;ll show you some examples of flattening nested arrays.</p>
+
+
+
+<h3>Examples of Flattening nested arrays </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var arr = [1, 2, [3, 4]];
+arr.flat(); 
+// [1, 2, 3, 4]</pre></div>
+
+
+
+<p>In the above example, the nesting level of the array is 1 so, you don&#8217;t even have to specify the <code>depth</code> in <code>flat()</code> method because it takes 1 by default and the output is <code>[1, 2, 3, 4]</code>.</p>
+
+
+
+<p><strong>What if you did not pass any parameter to </strong><code><strong>flat()</strong></code><strong> method with multidimensional array?</strong></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var arr = [1, 2, [3, 4, [5, 6]]];
+arr.flat();
+// [1, 2, 3, 4, [5, 6]]</pre></div>
+
+
+
+<p>In the example above, we did not pass any parameter to <code>flat()</code> function when flattering 2 levels of an array so it will flatten till level 1 and leave rest as it is, the output of the above example is <code>[1, 2, 3, 4, [5, 6]]</code>. If you want to fix this completely you have to pass <code>depth</code> level 2 in the <code>flat()</code> method, see the below example.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var arr = [1, 2, [3, 4, [5, 6]]];
+arr.flat(2);
+// [1, 2, 3, 4, 5, 6]</pre></div>
+
+
+
+<h3>Infinite depth level</h3>
+
+
+
+<p>What if the depth of an array is infinite or dynamic that you don&#8217;t know? In that case, you just need to pass <code>Infinity</code> to <code>flat()</code> method and it will flatten the array to any level of depth. See the example below: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var arr = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+arr.flat(Infinity);
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</pre></div>
+
+
+
+<h3>Flattening and array holes</h3>
+
+
+
+<p>The flat method also removes the empty slots in arrays. Example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var arr = [1, 2, , 4, 5];
+arr.flat();
+// [1, 2, 4, 5]</pre></div>
+
+
+
+<p>Browser Support </p>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">flat()</td>
+         <td>69</td>
+         <td>No</td>
+         <td>62</td>
+         <td>12</td>
+         <td>56</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p> Thank you for reading and support. Please share it with love. </p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Flatten-array-in-JavaScript-buginit.com_.jpg" alt="" class="wp-image-332" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Flatten-array-in-JavaScript-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Flatten-array-in-JavaScript-buginit.com_-300x166.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/guide-to-flatten-array-in-javascript/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

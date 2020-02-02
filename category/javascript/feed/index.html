@@ -1,0 +1,1929 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>JavaScript &#8211; Buginit &#8211; HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+	<atom:link href="https://rajnishcoder.github.io/buginit/category/javascript/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rajnishcoder.github.io/buginit/</link>
+	<description></description>
+	<lastBuildDate>Sat, 14 Dec 2019 16:36:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>4 Examples of Replace All in JavaScript You Should Know</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/#respond</comments>
+				<pubDate>Sat, 14 Dec 2019 16:36:30 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=525</guid>
+				<description><![CDATA[In this article, we will learn about replace all in JavaScript with 6 types of examples simple to RegExp (regular expression). There are a lot of ways to replace the value in JavaScript. But, JavaScript already has an inbuilt array method replace but, with using simple, It only replaced the first matched value. For example<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn about replace all in <a href="https://buginit.com/category/javascript/">JavaScript</a> with 6 types of examples simple to RegExp (regular expression).</p>
+
+
+
+<p>There are a lot of ways to replace the value in <a href="https://buginit.com/category/javascript/">JavaScript</a>.</p>
+
+
+
+<p>But, JavaScript already has an inbuilt <a href="https://buginit.com/tag/arrays/">array</a> method <code>replace</code> but, with using simple, It only replaced the first matched value. For example below:</p>
+
+
+
+<h3>#1 Simple Example </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var a = 'can i replace all the replace word with no using replace method';
+a = a.replace('replace', 'no')
+// OUTPUT: &quot;can i no all the replace word with no using replace method&quot;</pre></div>
+
+
+
+<p>As you saw in the above example, there are 3 <strong>replace</strong> words in the given sentence and I tried to replace the <strong>replace word</strong> with <strong>no</strong> and it replaced the first word only.</p>
+
+
+
+<h4>#1.1 Replace number</h4>
+
+
+
+<p>As <a href="https://buginit.com/tag/strings/">strings</a> in the above example, it works well with numbers too. For example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var b = 'here we are gonna replace 2 with 3 so we need more 2';
+b = b.replace('2', '3')
+// OUTPUT: &quot;here we are gonna replace 3 with 3 so we need more 2&quot;</pre></div>
+
+
+
+<p>Did you see it replaced only first <code>2</code> in the given sentence?</p>
+
+
+
+<h3>Definition</h3>
+
+
+
+<blockquote class="wp-block-quote"><p>So, the <code>replace</code> method in <a href="https://buginit.com/category/javascript/">JavaScript</a> returns a new <a href="https://buginit.com/tag/strings/">string</a> with some or all matches of a <code>pattern</code> replaced by a <code>replacement</code>. The <code>pattern</code> can be a <a href="https://buginit.com/tag/strings/">string</a> or a RegExp (Regular Expression).</p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<p>Wait, you said <strong>all matches</strong> in definition but, <code>replace</code> method is replacing only the first match? what&#8217;s going on?</p>
+
+
+
+<p>Let me explain to you, In the <code>replace</code> method the first parameter you can pass is a <code>pattern</code> and in the <code>pattern</code> you can pass  <a href="https://buginit.com/tag/strings/">string</a> or a RegExp (Regular Expression).</p>
+
+
+
+<p>So whenever you pass a string, it is going to replace the first match in the string with the <strong>replacement</strong> that you passed in the second parameter of the <code>replace</code> method.</p>
+
+
+
+<p>And If you want to replace all the matching matches you have to pass the RegExp.</p>
+
+
+
+<p>Let&#8217;s see how in the below example:</p>
+
+
+
+<h3>#2 Replace all</h3>
+
+
+
+<h4>#2.1 Replace all in JavaScript </h4>
+
+
+
+<p>We can also replace all matched values in the <code>replace</code> method using RegExp, For example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var c = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+
+var regex = /dog/gi;
+
+c = c.replace(regex, 'ferret');
+// output: &quot;The quick brown fox jumps over the lazy ferret. If the ferret reacted, was it really lazy?&quot;</pre></div>
+
+
+
+<p>Did you noticed this time with RegExp <code>replace</code> method replaced all the matching <code>dog</code> words with <code>ferret</code>.</p>
+
+
+
+<h4>Explanation</h4>
+
+
+
+<p>In the variable <code>p</code> we had a string sentence.</p>
+
+
+
+<p>The variable called <code>regex</code> we stored the RegExp pattern to match <code>dog</code>.</p>
+
+
+
+<p>Inside <code>regex</code> the two forward slashes indicate the start and end of the regular expression. </p>
+
+
+
+<p><code>g</code> is a flag that indicates it is a global search so it will not return after the first match.</p>
+
+
+
+<p><code>i</code> is a flag same as <code>g</code> but it means <strong>insensitive </strong>(case insensitive match).</p>
+
+
+
+<h4> #2.2 Sensitive replace all in JavaScript  </h4>
+
+
+
+<p>As I think RegExp is powerful and you can modify RegExp as your needs. Here we are gonna modify RegExp for the sensitive match case.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var d = 'The quick brown fox jumps over the lazy dog. If the Dog reacted, was it really lazy?';
+
+var regex = /dog/g;
+
+d = d.replace(regex, 'ferret');
+// output: The quick brown fox jumps over the lazy ferret. If the Dog reacted, was it really lazy?</pre></div>
+
+
+
+<p>I made the second capital <code>D</code> in the second <code>Dog</code> word and remove the <code>i</code> flag from the <code>regex</code> that indicates the <strong>insensitive </strong>match.</p>
+
+
+
+<p>See the output in the above example. It only replaced the first <code>dog</code> word because the second <code>dog</code> word contains capital <code>D</code>. That simple!</p>
+
+
+
+<h4>#2.3 Creating Dynamic RegExp</h4>
+
+
+
+<p>Just in case, If you want to match a dynamic keyword with RegExp. Here you can do like the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var find = 'abc';
+str = 'a very nice abcline here'
+var re = new RegExp(find, 'g');
+
+str.replace(re, '');
+// Output: &quot;a very nice line here&quot;</pre></div>
+
+
+
+<p>In the above example, I have created a variable called <code>find</code> that can contain dynamic value.</p>
+
+
+
+<h4>#2.4 Generic replace all method</h4>
+
+
+
+<p>In the below example I&#8217;m gonna create a generic replace all method that takes a string in the first parameter and value to find in the second parameter and the replacement value in the third parameter.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>function replaceAll(str, find, replace) {
+    return str.replace(new RegExp(find, 'g'), replace);
+}
+
+replaceAll('the line of', 'of', 'here')
+// Output: &quot;the line here&quot;</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p> <strong>Note:</strong> Regular expressions contain special (meta) characters, and as such it is dangerous to blindly pass an argument in the <code>find</code> function above without pre-processing it to escape those characters. This is covered in the <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">Mozilla Developer Network</a>&#8216;s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">JavaScript Guide on Regular Expressions</a>,  </p></blockquote>
+
+
+
+<h3>Conclusion </h3>
+
+
+
+<p><code>replace</code> method replaced first matched value if you passed the string in the first parameter but if you use RegExp you can replace all matches and you can customize <code>match</code> as your needs.</p>
+
+
+
+<p>Thank you for reading, please share with love. If you got the typo or any other mistake please let me know.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>4 ways to remove duplicate array javascript</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comments</comments>
+				<pubDate>Sat, 07 Dec 2019 02:48:25 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Arrays]]></category>
+		<category><![CDATA[Tips & Tricks]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=502</guid>
+				<description><![CDATA[In this article, we will learn 4 ways with examples of removing duplicate array in JavaScript. and also how to retrieve duplicate values. Array is a very common concept in any programming language. If you do programming you have to deal it with on a regular basis. Let&#8217;s start with the quick and easy one.<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn 4 ways with examples of removing duplicate array in <a href="https://buginit.com/category/javascript/">JavaScript</a>. and also how to retrieve duplicate values.</p>
+
+
+
+<p><a href="https://buginit.com/tag/arrays/">Array</a> is a very common concept in any programming language. If you do programming you have to deal it with on a regular basis.</p>
+
+
+
+<p>Let&#8217;s  start with the quick and easy one.</p>
+
+
+
+<h2>#1 Using Set Object</h2>
+
+
+
+<p>You can use <code>Set</code> object to remove duplicate array in JavaScript, <strong><code>Set</code> is a global object that allows you to store unique values no matter if they are primitive values or object references.</strong> <a rel="noreferrer noopener" aria-label="mdn (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank">source mdn</a></p>
+
+
+
+<p>See the example below, how we can use the set object to remove duplicate array in <a href="https://buginit.com/category/javascript/">JavaScript</a>.</p>
+
+
+
+<p>Let&#8217;s assume we have a duplicate fruits array <code>var fruits = ["banana", "apple", "orange", "watermelon", "apple", "orange", "grape", "apple"];</code></p>
+
+
+
+<h4>#1.1 Using Array.from with <code>Set</code></h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+var uniqueFruits = Array.from(new Set(fruits));
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<h4>Explanation</h4>
+
+
+
+<p>Set is an object so it returns a new <code>Set</code> object with unique values, that&#8217;s why I used <code>Array.from</code> to convert it to an <a href="https://buginit.com/tag/arrays/">array</a>.</p>
+
+
+
+<p>You can use any technique to convert it, </p>
+
+
+
+<p>In the below example I&#8217;ll show you to do it with <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">spread syntax</a></p>
+
+
+
+<h4>#1.2 Using <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">Spread Syntax</a> with <code>Set</code></h4>
+
+
+
+<p>Here we are going to remove duplicate array in javascript using spread syntax. </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+var uniqueFruits = [...new Set(fruits)];
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<p>If you want to learn about <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">spread syntax here is the guide</a>.</p>
+
+
+
+<h3>#2 Using indexOf</h3>
+
+
+
+<p><code>indexOf</code> is a naive but smart way to remove duplicate array in JavaScript. When I did not know about <code>Set</code> object or have limitations to use the ES5, The first thing came in my mind is <code>indexOf</code> because personally I like this method and use it widely when playing with arrays.</p>
+
+
+
+<h4>#2.1 Using function</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+uniqueFruits = fruits.filter(function(item, pos) {
+    return fruits.indexOf(item) == pos;
+})
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<p>In the above example, I iterate over the <code>fruits</code> array with using <code>filter</code> method and checked if the first position <code>fruits.indexOf(item)</code> of this element in the array is equal to the current position <code>pos</code>. It is obvious that, these two positions are different for duplicate elements.</p>
+
+
+
+<h4>#2.2 Using arrow function</h4>
+
+
+
+<p>Here is the cool and sort way if you can use an <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function</a> instead of a plain function, In the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+uniqueFruits = fruits.filter((item, pos) =&gt; fruits.indexOf(item) == pos)
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<h2>Bonus </h2>
+
+
+
+<h3>Retrieving the duplicate values </h3>
+
+
+
+<p>Also, we can retrieve all the duplicate values using <code>indexOf</code> with <code>filter</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = [&quot;banana&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;watermelon&quot;, &quot;apple&quot;, &quot;orange&quot;, &quot;grape&quot;, &quot;apple&quot;];
+
+var duplicates = fruits.filter((item, pos) =&gt; fruits.indexOf(item) != pos)
+console.log(duplicates); 
+// Output: [&quot;apple&quot;, &quot;orange&quot;, &quot;apple&quot;]</pre></div>
+
+
+
+<p>Thanks for reading, share and comment if you liked it. Let me know if I did any mistake in the article and what&#8217;s your favorite way?</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>10 Examples of JavaScript Arguments Object</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comments</comments>
+				<pubDate>Sun, 01 Dec 2019 18:34:53 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Guides]]></category>
+		<category><![CDATA[Objects]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=478</guid>
+				<description><![CDATA[In this article, we will learn what is JavaScript arguments object and how to use it with 10 different types of examples and usages. In short, JavaScript arguments object is Array-like object that is accessible from inside the functions that contain the values of all the arguments passed to that function while calling. Note: If<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn what is <a href="https://buginit.com/category/javascript/">JavaScript</a> arguments object and how to use it with 10 different types of examples and usages.</p>
+
+
+
+<p>In short, JavaScript arguments object is <a href="https://buginit.com/tag/arrays/">Array</a>-like <a href="https://buginit.com/tag/objects/">object</a> that is accessible from inside the functions that contain the values of all the arguments passed to that function while calling.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong> If you&#8217;re writing ES6 compatible code, then <a href="https://buginit.com/javascript/understanding-the-rest-operator-in-javascript/">rest parameters</a> should be preferred.</p></blockquote>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: “Array-like” means that <code>arguments</code> has a <code>length</code> property and properties indexed from zero, but it doesn&#8217;t have <code>Array</code>&#8216;s built-in methods like <code>forEach()</code> and <code>map()</code>. </p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments#Description" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<p>Remember that javascript arguments object is a local variable that is available inside only a non-<a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function</a>. And it is not an array. It is similar to an array but doesn&#8217;t contain any array properties except <code>length</code>.</p>
+
+
+
+<p>For deep drive in <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function see this article</a></p>
+
+
+
+<h2>#1 Simple Example</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  console.log(arguments[0]);
+  // expected output: 1
+
+  console.log(arguments[1]);
+  // expected output: 2
+
+  console.log(arguments[2]);
+  // expected output: 3
+}
+
+test(1, 2, 3);</pre></div>
+
+
+
+<h4>Explanation</h4>
+
+
+
+<p>In the above example, I have created a function called <code>test</code> with three arguments <code>a</code>, <code>b</code> and <code>c</code> and accessing them using <code>arguments</code> object on the position of <code>0</code>, <code>1</code> and <code>2</code> as you can see the log inside the function in the above example.</p>
+
+
+
+<h3>#2 How the arguments object looks like?</h3>
+
+
+
+<p>Wanna see how it looks like?</p>
+
+
+
+<p>Let&#8217;s go inside the <code>arguments</code> object below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  console.log(arguments);
+}
+test(1, 2, 3); 
+// Output:- Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]</pre></div>
+
+
+
+<p>Let&#8217;s open that array-like object</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+  0: 1
+  1: 2
+  2: 3
+  callee: ƒ test(a, b, c)
+  length: 3
+  Symbol(Symbol.iterator): ƒ values()
+  __proto__: Object</pre></div>
+
+
+
+<p>Did you noticed the <code>__proto__</code> is an object So, basically <code>arguments</code> object contains: </p>
+
+
+
+<p>the <code>parameters</code> of its function as an array, </p>
+
+
+
+<p>the <code>length</code> of that array.</p>
+
+
+
+<p>and some other functions like <code>callee</code> and <code>Symbol</code>. Let&#8217;s dig more into it.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">Arguments(2) [1, 2, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+  0: 1
+  1: 2
+  callee: ƒ test(a, b)
+    arguments: null
+    caller: null
+    length: 2
+    name: &quot;test&quot;
+    prototype: {constructor: ƒ}
+    __proto__: ƒ ()
+    [[FunctionLocation]]: VM110:1
+    [[Scopes]]: Scopes[2]
+  length: 2
+  Symbol(Symbol.iterator): ƒ values()
+    arguments: (...)
+    caller: (...)
+    length: 0
+    name: &quot;values&quot;
+    __proto__: ƒ ()
+    [[Scopes]]: Scopes[0]
+  __proto__: Object</pre></div>
+
+
+
+<p>The <code>callee</code> function contains the information related to the function like <code>name</code> and <code>arguments</code> length.</p>
+
+
+
+<p>As MDN says that the <code>callee</code> function is a reference to the currently executing function that the arguments belong to.</p>
+
+
+
+<p>And As, I&#8217;m no expert in this so, don&#8217;t know why it contains the <code>Symbol</code> well if you know let me know.</p>
+
+
+
+<h3>#3 Changing Values</h3>
+
+
+
+<p>You can set or reassign each value of <code>argument</code> object. See the example below: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  arguments[0] = 'TEST';
+  console.log(arguments[0]);
+}
+
+test(1, 2, 3); // TEST
+</pre></div>
+
+
+
+<p>In the above example, I passed <code>1</code> as the first argument and change it inside the function to <code>TEST</code> and it logs the <code>arguments[0]</code>.  <strong>Please see #6 for more.</strong></p>
+
+
+
+<h3>#4 Convert it to a real array.</h3>
+
+
+
+<p>As I already told you <code>arguments</code> <a href="https://buginit.com/tag/objects/">object</a> is not an <a href="https://buginit.com/tag/arrays/">array</a> but it can be converted to a real array.</p>
+
+
+
+<h4>#4.1 Using <code>Array.prototype</code></h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = Array.prototype.slice.call(arguments);
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<p>The output of the above example is <code>[1, 2, 3]</code> See the output of console below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(3) [1, 2, 3]
+  0: 1
+  1: 2
+  2: 3
+  length: 3
+  __proto__: Array(0)</pre></div>
+
+
+
+<p>Did you noticed this time the <code>__proto__</code> is the type of array, we have converted it to the real array.</p>
+
+
+
+<h4>#4.2 Using array <a href="https://buginit.com/javascript/all-you-need-to-know-about-template-literals/">literal</a></h4>
+
+
+
+<p>Using the array <a href="https://buginit.com/javascript/all-you-need-to-know-about-template-literals/">literal</a> is a shorter way than the above example I showed. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = [].slice.call(arguments); 
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<h4>#4.3 Using Array.from()</h4>
+
+
+
+<p>You can also use array <code>.form()</code> method to convert the array-like <a href="https://buginit.com/tag/objects/">object</a> to a real array as I show in the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = Array.from(arguments);
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<h4>#4.4 Using spread syntax</h4>
+
+
+
+<p>Of course, You can use spread syntax to convert it into an array, like the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = [...arguments];
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<p>The JavaScript arguments object is useful when you have dynamic parameters to received or you just don&#8217;t know the function called with more parameters than the function is gonna formally received.</p>
+
+
+
+<h3>#5 Usages </h3>
+
+
+
+<p>For example if I say that, create a function that accepts any number of string parameters and returns the longest one?</p>
+
+
+
+<h4>#5.1 Finding the longest</h4>
+
+
+
+<p>See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function getLongestString() {
+  var longest = '';
+  for (var i=0; i &lt; arguments.length; i++) {
+    if (arguments[i].length &gt; longest.length) {
+      longest = arguments[i];
+    }
+  }
+  return longest;
+}</pre></div>
+
+
+
+<h4>#5.2 Generate the HTML list</h4>
+
+
+
+<p>I have one more example for you. I&#8217;m gonna define a function that creates the <a href="https://buginit.com/category/html/">HTML</a> list. Given below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function list(type) {
+  var html = '&lt;' + type + 'l&gt;&lt;li&gt;';
+  var args = Array.prototype.slice.call(arguments, 1);
+  html += args.join('&lt;/li&gt;&lt;li&gt;');
+  html += '&lt;/li&gt;&lt;/' + type + 'l&gt;'; // end list
+
+  return html;
+}</pre></div>
+
+
+
+<p>you can pass any number of arguments in the <code>list</code> function that I created in the above example and also which type of list you want <code>ol</code> or <code>ul</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var listHTML = list('u', 'One', 'Two', 'Three');
+/* listHTML is:
+&quot;&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;&quot;
+*/</pre></div>
+
+
+
+<p>I know, I know maybe you are thinking that I can do this using <a href="https://buginit.com/javascript/understanding-the-rest-operator-in-javascript/">rest parameters</a>. Yes, of course, you can do that and there are many different ways to do that but we are talking about <code>arguments</code> object so I&#8217;m sticking with it. </p>
+
+
+
+<p>And, if you have a better example let me know in the comment section.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>You can always use <code>arguments.lenth</code> to count how many arguments this function is receiving. </p></blockquote>
+
+
+
+<h3>#6 Careful with updating values </h3>
+
+
+
+<p>While you are using the <code>arguments</code> object, please be careful with update values as it also change the value of your parameters too. I mean see the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function func(a) { 
+  a = 99; // updating a also updates arguments[0]
+  console.log(arguments[0]);
+}
+func(10); // 99</pre></div>
+
+
+
+<p>In the above example, I accept the <code>a</code> as a first parameter and pass the value <code>10</code> and reassign the <code>a</code> inside a function, So it also gonna change arguments on <code>0</code> position<code>arguments[0]</code>.</p>
+
+
+
+<p>And Its also works reverse like if I change <code>arguments[0]</code> it is gonna change <code>a</code>. So be careful when you are changing.</p>
+
+
+
+<p>But, mdn docs say that it changes the value only in strict mode, but I tested it on my latest chrome console it also changes value normally without strict mode. Maybe they did not update their docs or chrome dev updated their JavaScript engines. It&#8217;s still a mystery. </p>
+
+
+
+<p>I don&#8217;t know but it changes the value so careful with it.</p>
+
+
+
+<p>That&#8217;s all for now, Thank you so much for reading this long post, please share and support. For more about&nbsp;<a href="https://buginit.com/category/css/">CSS</a>&nbsp;or&nbsp;<a href="https://buginit.com/category/javascript/">JavaScript</a> </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>4 Examples of JavaScript sort without mutating array</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/#comments</comments>
+				<pubDate>Wed, 27 Nov 2019 16:46:53 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Arrays]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=470</guid>
+				<description><![CDATA[In this article, we will learn JavaScript sort without mutating array with some of the examples. There are so many different ways to sort an array without mutating in JavaScript and I will try to cover all of them. As I know, If you want to sort an array without mutating you will need to<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn JavaScript sort without mutating <a href="https://buginit.com/tag/arrays/">array</a> with some of the examples.</p>
+
+
+
+<p>There are so many different ways to sort an array without mutating in <a href="https://buginit.com/category/javascript/">JavaScript</a> and I will try to cover all of them.</p>
+
+
+
+<p>As I know, If you want to sort an <a href="https://buginit.com/tag/arrays/">array</a> without mutating you will need to copy it first and then use the <code><a href="https://buginit.com/javascript/stable-sort-array-javascript-es10/">sort()</a></code> method. </p>
+
+
+
+<p>But if you are using your custom algorithms to sort then what can I say?</p>
+
+
+
+<p>Well, sometimes we don&#8217;t want to modify our original array and that&#8217;s the problem with the <code>sort()</code> method when it sort it also modifies the original array.</p>
+
+
+
+<p>Let&#8217;s see some examples of how we can <a href="https://buginit.com/javascript/stable-sort-array-javascript-es10/">sort</a> an array without mutating it below:</p>
+
+
+
+<h2>#1 Simple way</h2>
+
+
+
+<p>Let&#8217;s imagine we have an array <code>var arr = [2,3,7,5,3,7,1,3,4];</code> see the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var arr = [2,3,7,5,3,7,1,3,4];
+var sortedArr = arr.slice().sort();
+console.log(sortedArr) // [1, 2, 3, 3, 3, 4, 5, 7, 7]
+console.log(arr) // [2, 3, 7, 5, 3, 7, 1, 3, 4]</pre></div>
+
+
+
+<p>In the above example, First I copied the array by <code>slice()</code> then sort it using sort method, Yes it&#8217;s that simple.</p>
+
+
+
+<h3>#2 Using Concat</h3>
+
+
+
+<p>You can also use the <code>concat()</code> method to copy the array and then sort it. like an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var arr = [2,3,7,5,3,7,1,3,4];
+var sortedArr = arr.concat().sort();
+console.log(sortedArr) // [1, 2, 3, 3, 3, 4, 5, 7, 7]
+console.log(arr) // [2, 3, 7, 5, 3, 7, 1, 3, 4]</pre></div>
+
+
+
+<p>So, basically <code>concat()</code> method is used to concat two arrays that return a new concatenated array, So if you don&#8217;t pass the second array It will return you a new copy of the same array.</p>
+
+
+
+<p>In the above example, first I copied the array with concat method and then sort it.</p>
+
+
+
+<h3>#3 Using Spread syntax</h3>
+
+
+
+<p>If you don&#8217;t have any problem using ES6 so, you can use Spread syntax. I like this one because it is sort, readable and super cool.</p>
+
+
+
+<p>If you want to read more about <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">Spread syntax click here</a></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var arr = [2,3,7,5,3,7,1,3,4];
+var sortedArr = [...arr].sort();
+console.log(sortedArr) // [1, 2, 3, 3, 3, 4, 5, 7, 7]
+console.log(arr) // [2, 3, 7, 5, 3, 7, 1, 3, 4]</pre></div>
+
+
+
+<p>In the above example, I used Spread syntax to copy the array and then sort it using the sort method.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Note:- Remember that all above examples do the non-deep copy of an array if you have a nested/deep level arrays be careful.</p></blockquote>
+
+
+
+<h3 id="deepClone">How to deep clone an array?</h3>
+
+
+
+<p>To deep copy an array you can use JSON. How? See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var arr = [2,3,7,5,3,7,1,3,4];
+var deepCopy = JSON.parse(JSON.stringify(arr));</pre></div>
+
+
+
+<h3>#4 Using JSON</h3>
+
+
+
+<p>Implementing sort with JSON below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var arr = [2,3,7,5,3,7,1,3,4];
+var sortedArr = JSON.parse(JSON.stringify(arr)).sort();
+console.log(sortedArr) // [1, 2, 3, 3, 3, 4, 5, 7, 7]
+console.log(arr) // [2, 3, 7, 5, 3, 7, 1, 3, 4]</pre></div>
+
+
+
+<p>In the above example, I did the same I copied the array first but this time using JSON deep copy and then used sort method to sort.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: Be careful with non json values. for example it will convert <code>undefined</code> to <code>null</code>. See the example below:</p></blockquote>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var arr = [1, undefined, 2]
+JSON.parse(JSON.stringify(arr)); // =&gt; [1, null, 2]</pre></div>
+
+
+
+<p>Sources:-  <a rel="noreferrer noopener" aria-label="mdn concat (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat" target="_blank">mdn concat</a>, <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">Spread syntax</a></p>
+
+
+
+<p>Thank you for reading, If I missed something please let me know in a comment. For more about&nbsp;<a href="https://buginit.com/category/css/">CSS</a>&nbsp;or&nbsp;<a href="https://buginit.com/category/javascript/">JavaScript</a> </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>Understanding Try Catch Finally JavaScript</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/#respond</comments>
+				<pubDate>Tue, 12 Nov 2019 17:07:41 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=415</guid>
+				<description><![CDATA[In this article, we will learn about all three clauses of try catch finally in JavaScript with examples that will cover almost all cases. The try...catch statement consists of a try block, which contains one or more statements. The body {} of try...catch statement is required and must always be used, even for single statements.<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn about all three clauses of try catch finally in <a href="https://buginit.com/category/javascript/">JavaScript</a> with examples that will cover almost all cases.</p>
+
+
+
+<p>The <code>try...catch</code> statement consists of a try block, which contains one or more statements. The body <code>{}</code> of <code>try...catch</code> statement is required and must always be used, even for single statements. At least one <code>catch</code> clause, or a <code>finally</code> clause, must be present with <code>try</code> clause. So basically we have three forms of <code>try...catch</code> statement:</p>
+
+
+
+<ol><li><code>try...catch</code></li><li><code>try...finally</code></li><li><code>try...catch...finally</code>  </li></ol>
+
+
+
+<p><code>catch</code> clause contains statements that specify what to do if an exception is thrown in the&nbsp;<code>try</code>&nbsp;block. </p>
+
+
+
+<p>And in sort, the <code>finally</code> clause will be executed after, when <code>try</code> clause will run or <code>catch</code> clause will run.</p>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  try_statements
+}
+[catch (exception_var_1 if condition_1) { // non-standard
+  catch_statements_1
+}]
+...
+[catch (exception_var_2) {
+  catch_statements_2
+}]
+[finally {
+  finally_statements
+}]</pre></div>
+
+
+
+<p><code>try_statements</code>:- The statements to be executed.</p>
+
+
+
+<p><code>catch_statements_1</code>, <code>catch_statements_2</code>:-  These statements will run if there is an error/exception will occur in the&nbsp;<code>try</code>&nbsp;block.</p>
+
+
+
+<p><code>exception_var_1</code>, <code>exception_var_2</code>:- These are the identifiers to hold an exception <a href="https://buginit.com/tag/objects/">object</a> for the associated <code>catch</code> clause.</p>
+
+
+
+<p><code>condition_1</code>:-  A conditional expression.</p>
+
+
+
+<p><code>finally_statements</code>:- As I already told you the <code>finally</code> clause will be executed after when <code>try</code> clause will run or <code>catch</code> clause will run. These statements execute regardless of whether an exception was thrown or caught. <strong>You can say that the </strong><code><strong>finally</strong></code><strong> statement always executes.</strong></p>
+
+
+
+<h3>#1 Unconditional catch clause</h3>
+
+
+
+<p>try catch finally in <a href="https://buginit.com/category/javascript/">JavaScript</a> has an Unconditional <code>catch</code> clause statement is a simple <code>catch</code> statement that catches the exception object. For example below</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  throw 'myException'; // generates an exception
+}
+catch (e) {
+  // statements to handle any exceptions
+  logMyErrors(e); // pass exception object to error handler
+}</pre></div>
+
+
+
+<p>In the above example, we simply thrown an exception in the <code>try</code> block and received it inside the <code>catch</code> block and passed to the custom error handler called <code>logMyErrors</code>.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: you can take any name you like instead of <code>e</code></p></blockquote>
+
+
+
+<h3>#2 Conditional catch clauses</h3>
+
+
+
+<p>You can easily use one or more conditionally <code>catch</code> statements with <code>try</code> to detect the specific type of error/exception. The&nbsp;<code>try</code>&nbsp;block can potentially throw three types of exceptions:&nbsp;<code>TypeError</code>,&nbsp;<code>RangeError</code>, and&nbsp;<code>EvalError</code>. </p>
+
+
+
+<p>For example below:- </p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note</strong>: this functionality is not part of the ECMAScript specification and has been removed in Firefox 59. It&#8217;s not supported in any current browser anymore. </p></blockquote>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  myroutine(); // may throw three types of exceptions
+} catch (e if e instanceof TypeError) {
+  // statements to handle TypeError exceptions
+} catch (e if e instanceof RangeError) {
+  // statements to handle RangeError exceptions
+} catch (e if e instanceof EvalError) {
+  // statements to handle EvalError exceptions
+} catch (e) {
+  // statements to handle any unspecified exceptions
+  logMyErrors(e); // pass exception object to error handler
+}</pre></div>
+
+
+
+<p>As per <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">MDN</a></p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Non-standard</strong><br>This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future. </p></blockquote>
+
+
+
+<p><strong>Here is the same alternative working examples:</strong>  (obviously it&#8217;s verbose, but works everywhere): </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  myroutine(); // may throw three types of exceptions
+} catch (e) {
+  if (e instanceof TypeError) {
+    // statements to handle TypeError exceptions
+  } else if (e instanceof RangeError) {
+    // statements to handle RangeError exceptions
+  } else if (e instanceof EvalError) {
+    // statements to handle EvalError exceptions
+  } else {
+    // statements to handle any unspecified exceptions
+    logMyErrors(e); // pass exception object to error handler
+  }
+}</pre></div>
+
+
+
+<h3>#3 The finally clause</h3>
+
+
+
+<p>The <code>finally</code> clause (<em>oh please you know the </em><code><em>finally</em></code><em> clause I already told you two times before <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f600.png" alt="😀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></em> ), will be executed after when <code>try</code> clause will run or <code>catch</code> clause will run. But <strong>Note that the <code>finally</code> clause executes regardless of whether an exception is thrown.</strong> </p>
+
+
+
+<p>You can use the <code>finally</code> clause to clear up things anyway or general/routine cleanups. For example:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">openMyFile();
+try {
+  // tie up a resource
+  writeMyFile(theData);
+}
+finally {
+  closeMyFile(); // always close the resource
+}</pre></div>
+
+
+
+<h3>#4 Nested try-blocks</h3>
+
+
+
+<p>Yes, you can also use nesting with <code>try...catch</code></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  try {
+    throw new Error('oops');
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
+
+// Output:
+// &quot;finally&quot;
+// &quot;outer&quot; &quot;oops&quot;</pre></div>
+
+
+
+<p>See? In the above example, we did not define the <code>catch</code> block with the inner try block, so the outer catch block gets the exception. Let&#8217;s see the example if we put the catch inside. For example below</p>
+
+
+
+<h4>#4.1 Inner Catch</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  try {
+    throw new Error('oops');
+  }
+  catch (ex) {
+    console.error('inner', ex.message);
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
+
+// Output:
+// &quot;inner&quot; &quot;oops&quot;
+// &quot;finally&quot;</pre></div>
+
+
+
+<p>Did you noticed how the inner <code>catch</code> gets the error, Let&#8217;s see what if we re-throw the error inside the inner <code>catch</code> for example below:-</p>
+
+
+
+<h4>#4.1 Re-Throwing nested exception.</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  try {
+    throw new Error('oops');
+  }
+  catch (ex) {
+    console.error('inner', ex.message);
+    throw ex;
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
+
+// Output:
+// &quot;inner&quot; &quot;oops&quot;
+// &quot;finally&quot;
+// &quot;outer&quot; &quot;oops&quot;</pre></div>
+
+
+
+<p>See It proves that any given error/exception will be caught only once by the nearest enclosing <code>catch</code> block unless it is re-thrown. Of course, any new error/exception occurs in the &#8216;Inner&#8217; block with be caught by the &#8220;outer&#8221; block because maybe the code inside &#8216;Inner&#8217; block will do something wrong and throw an error.</p>
+
+
+
+<h3>#5 Returning from finally</h3>
+
+
+
+<p>You can also return from the <code>finally</code> block, understand try catch finally in <a href="https://buginit.com/category/javascript/">JavaScript</a> with an example below:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(function() {
+  try {
+    try {
+      throw new Error('oops');
+    }
+    catch (ex) {
+      console.error('inner', ex.message);
+      throw ex;
+    }
+    finally {
+      console.log('finally');
+      return;
+    }
+  }
+  catch (ex) {
+    console.error('outer', ex.message);
+  }
+})();
+
+// Output:
+// &quot;inner&quot; &quot;oops&quot;
+// &quot;finally&quot;</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p>If the <code>finally</code> block returns a value, this value becomes the return value of the entire <code>try-catch-finally</code> production, regardless of any <code>return</code> statements in the <code>try</code> and <code>catch</code> blocks.  </p></blockquote>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;text-align:left;" class="auto-style1">Statement</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td style="text-align:left;">try/catch/finally</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody></table>
+
+
+
+<p>If you want to learn about <a href="https://buginit.com/javascript/js-try-catch-optional-catch-binding-es10/">New try catch Optional catch binding update in ES10/2019 Click here</a></p>
+
+
+
+<p>That&#8217;s all for the try&#8230;catch. Thanks for reading and sorry for this long article I don&#8217;t even have a meme for you. please share it with love.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>JS try catch Optional catch binding update in ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/#respond</comments>
+				<pubDate>Sun, 10 Nov 2019 15:10:37 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=409</guid>
+				<description><![CDATA[In this article, we will learn about the new feature of JS try catch Optional catch binding. We will understand it with some comparative examples. So, Let&#8217;s start&#8230; First of all, See this to Understand Try Catch Finally JavaScript The JS try catch got an update of Optional catch binding in ES10/2019, If you did<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn about the new feature of <a href="https://buginit.com/category/javascript/">JS</a> try catch Optional catch binding. We will understand it with some comparative examples. So, Let&#8217;s start&#8230;</p>
+
+
+
+<p>First of all, See this to  <a href="https://buginit.com/javascript/try-catch-finally-javascript/">Understand Try Catch Finally JavaScript</a> </p>
+
+
+
+<p>The JS try catch got an update of <em>Optional catch binding</em> in <a href="https://buginit.com/tag/es10/">ES10/2019</a>, If you did not aware of try catch error handling statement you can read here on <a rel="noreferrer noopener" aria-label="MDN (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" target="_blank">MDN</a> or you can look at this simple example below:</p>
+
+
+
+<h3>Basic example of try-catch</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  nonExistentFunction();
+}
+catch(error) {
+  console.error(error);
+  // expected output: ReferenceError: nonExistentFunction is not defined
+  // Note - error messages will vary depending on browser
+}</pre></div>
+
+
+
+<p>Did you noticed that in the above example <code>catch</code> statement with the binding having <code>error</code> parameter. That <code>error</code> parameter is using to identify which type of error happened in the try statement. But now in the update of <a href="https://buginit.com/tag/es10/">ES10/2019</a>, That binding and parameter are fully optional, which means you don&#8217;t really have to write that binding when using the try catch statement. This is useful if you don’t have a need for the&nbsp;<code>exception</code>&nbsp;object in the code that handles the exception. Like an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  doSomethingThatMightThrow();
+} catch { // → No binding or parameter!
+  handleException();
+}</pre></div>
+
+
+
+<h3>Browser Support </h3>
+
+
+
+<p> Support data as per chrome&nbsp;<a href="https://v8.dev/features/optional-catch-binding#support" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">v8</a>&nbsp;blog </p>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:25%;font-size:16px;text-align:left;">Property</th>
+         <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:15%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:15%;" class="bsSafari" title="Safari"></th>
+         <th style="width:15%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">Optional catch binding</td>
+         <td>66</td>
+         <td>?</td>
+         <td>58</td>
+         <td>yes</td>
+         <td>?</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>That&#8217;s all the update is about. Thank you for reading. Share and follow us for the latest updates!</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>New Stable Sort Array in Javascript: ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/#comments</comments>
+				<pubDate>Sat, 09 Nov 2019 01:25:49 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Arrays]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=403</guid>
+				<description><![CDATA[In this article, we will learn the new functionality of sort array in JavaScript with examples and talk about its stability. Stable sort array in JavaScript means that if two elements in the array have the same sorting value will appear in the original order that we had before sorting. Before ES10/2019 Update , Let&#8217;s<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn the new functionality of sort array in<a href="https://buginit.com/category/javascript/"> JavaScript</a> with examples and talk about its stability.</p>
+
+
+
+<p>Stable sort <a href="https://buginit.com/tag/arrays/">array</a> in JavaScript means that if two elements in the array have the same sorting value will appear in the original order that we had before sorting. Before <a href="https://buginit.com/tag/es10/">ES10/2019 Update</a> , Let&#8217;s say we have an array of dogs with ratings and name <strong>note that the array is pre-sorted alphabetically by </strong><code>name</code>.</p>
+
+
+
+<p>This Example isn&#8217;t weird <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f61b.png" alt="😛" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const dogs = [
+  { name: 'Abby',   rating: 12 },
+  { name: 'Bandit', rating: 13 },
+  { name: 'Choco',  rating: 14 },
+  { name: 'Daisy',  rating: 12 },
+  { name: 'Elmo',   rating: 12 },
+  { name: 'Falco',  rating: 13 },
+  { name: 'Ghost',  rating: 14 },
+];
+dogs.sort((a, b) =&gt; b.rating - a.rating);</pre></div>
+
+
+
+<p>In the above example, the array is pre-sorted by name and we sorted it with its rating to get the highest rated first. The results you got before the ES10 update.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">[
+  { name: 'Ghost',  rating: 14 }, // <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f622.png" alt="😢" class="wp-smiley" style="height: 1em; max-height: 1em;" />
+  { name: 'Choco',  rating: 14 }, // <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f622.png" alt="😢" class="wp-smiley" style="height: 1em; max-height: 1em;" />
+  { name: 'Bandit', rating: 13 },
+  { name: 'Falco',  rating: 13 },
+  { name: 'Abby',   rating: 12 },
+  { name: 'Daisy',  rating: 12 },
+  { name: 'Elmo',   rating: 12 },
+]</pre></div>
+
+
+
+<p>The problem is <code>Ghost</code> and <code>Choco</code> have the same rating of <code>14</code> and they were pre-sorted alphabetically by their <code>name</code> but when you applied the <code>sort</code> method, it messed with its <code>name</code> sorting. The stability of the <code>sort</code> method is none. That&#8217;s what the new update about, Now if you do <code>sort</code> on the above array, it doesn&#8217;t mess with its stability. For example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">[
+  { name: 'Choco',  rating: 14 },
+  { name: 'Ghost',  rating: 14 },
+  { name: 'Bandit', rating: 13 },
+  { name: 'Falco',  rating: 13 },
+  { name: 'Abby',   rating: 12 },
+  { name: 'Daisy',  rating: 12 },
+  { name: 'Elmo',   rating: 12 },
+]</pre></div>
+
+
+
+<p>Did you noticed in the example above <code>Choco</code> comes first, It doesn&#8217;t mess with its stability. The name sorting remains as it is because that&#8217;s the order we had before sorting.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong>&nbsp;Although stability is now required per spec, JavaScript engines are still free to implement whatever sorting algorithm they prefer.&nbsp;<a href="https://v8.dev/blog/array-sort#timsort" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">V8 uses Timsort</a>, for example. The spec does not mandate any particular sorting algorithm. </p></blockquote>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<p>Support data as per chrome <a rel="noreferrer noopener" aria-label="v8 (opens in a new tab)" href="https://v8.dev/features/stable-sort#support" target="_blank">v8</a> blog</p>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:25%;font-size:16px;text-align:left;">Property</th>
+         <th style="width:15%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:15%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:15%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:15%;" class="bsSafari" title="Safari"></th>
+         <th style="width:15%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">Stable Array sort</td>
+         <td>70</td>
+         <td>?</td>
+         <td>Yes</td>
+         <td>yes</td>
+         <td>?</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>Thank you for reading <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Please share it with love.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>Well formed JSON stringify JavaScript: ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/#respond</comments>
+				<pubDate>Wed, 06 Nov 2019 01:10:30 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=387</guid>
+				<description><![CDATA[In this article, we will learn the new well-formed JSON stringify JavaScript method introduced in ES10/2019 with examples and comparisons with the old one. RFC 8259 section 8.1&#160;requires JSON text exchanged outside the scope of a closed ecosystem to be encoded using UTF-8, but&#160;JSON.stringify&#160;can return strings including code points that have no representation in UTF-8<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn the new well-formed JSON <a href="https://buginit.com/tag/strings/">stringify</a> <a href="https://buginit.com/category/javascript/">JavaScript</a> method introduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a> with examples and comparisons with the old one.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tools.ietf.org/html/rfc8259#section-8.1" target="_blank">RFC 8259 section 8.1</a>&nbsp;requires JSON text exchanged outside the scope of a closed ecosystem to be encoded using UTF-8, but&nbsp;<code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tc39.github.io/ecma262/#sec-json.stringify" target="_blank">JSON.stringify</a></code>&nbsp;can return strings including code points that have no representation in UTF-8 (specifically, surrogate code points U+D800 through U+DFFF). And contrary to&nbsp;<a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tc39.github.io/ecma262/#sec-json.stringify" target="_blank">the description of&nbsp;</a><code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tc39.github.io/ecma262/#sec-json.stringify" target="_blank">JSON.stringify</a></code>, such strings are not &#8220;in UTF-16&#8221; because &#8220;isolated UTF-16 code units in the range D800₁₆..DFFF₁₆ are ill-formed&#8221; per&nbsp;<a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://unicode.org/versions/Unicode10.0.0/ch03.pdf#G7404" target="_blank">The Unicode Standard, Version 10.0.0, Section 3.4</a>&nbsp;at definition D91 and excluded from being &#8220;in UTF-16&#8221; per definition D89. </p><cite><a href="https://github.com/tc39/proposal-well-formed-stringify#well-formed-jsonstringify" target="_blank" rel="noreferrer noopener" aria-label="Read more about proposal (opens in a new tab)">Read more about proposal</a></cite></blockquote>
+
+
+
+<p>Previously <code>JSON.stringify</code>&nbsp;method has been&nbsp;defined to return unformed&nbsp; Unicode <a href="https://buginit.com/tag/strings/">strings</a> if there&nbsp;are&nbsp;any&nbsp;lone&nbsp;surrogates&nbsp;in&nbsp;the&nbsp;input, for example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('\uD800');
+// '&quot;�&quot;'</pre></div>
+
+
+
+<p>But now, because Lone UTF-16 surrogates cannot be encoded as UTF-8, that&#8217;s why the proposal, <strong>well-formed JSON.stringify</strong> changed the JSON.stringify so that it generates escape sequences for lone surrogates,  making its output valid Unicode (and representable in UTF-8) for example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('\uD800');
+// '&quot;\\ud800&quot;'</pre></div>
+
+
+
+<p>As you saw above the new JSON stringify JavaScript method returns the valid stringified Unicode.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note</strong> that&nbsp;<code>JSON.parse(stringified)</code>&nbsp;still produces the same results as before. </p></blockquote>
+
+
+
+<p>This feature is a small fix that was long overdue in JavaScript. It’s one less thing to worry about as a JavaScript developer <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f600.png" alt="😀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<h3>Example</h3>
+
+
+
+<p>Non-BMP characters still serialize to surrogate pairs.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('𝌆')
+// → '&quot;𝌆&quot;'
+JSON.stringify('\uD834\uDF06')
+// → '&quot;𝌆&quot;'</pre></div>
+
+
+
+<p>Unpaired surrogate code units will serialize to escape sequences.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('\uDF06\uD834')
+// → '&quot;\\udf06\\ud834&quot;'
+JSON.stringify('\uDEAD')
+// → '&quot;\\udead&quot;'</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">Well-formed JSON.stringify()</td>
+         <td>72</td>
+         <td>?</td>
+         <td>64</td>
+         <td>Yes</td>
+         <td>?</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>Thanks for reading, Share with love.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>JavaScript Trim: trimStart and trimEnd method ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/#respond</comments>
+				<pubDate>Fri, 01 Nov 2019 01:34:52 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=366</guid>
+				<description><![CDATA[In this article, we will talk about two JavaScript trim methods: trimStart() and trimEnd() those are intorduced in ES10/2019 and will understand it with the help of examples. JavaScript trim methods are used to remove spaces from string and specially trimStart() method is used to remove spaces from the start of the string. For example:<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will talk about two <a href="https://buginit.com/category/javascript/">JavaScript</a> trim methods: <code>trimStart()</code> and <code>trimEnd()</code> those are intorduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a> and will understand it with the help of examples.</p>
+
+
+
+<p>JavaScript trim methods are used to <strong>remove spaces from string</strong> and specially <code>trimStart()</code> method is used to remove spaces from the start of the <a href="https://buginit.com/tag/strings/">string</a>. For example:</p>
+
+
+
+<h3>#1 trimStart Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimStart());
+// expected output: &quot;Hello buginit.com   &quot;;
+</pre></div>
+
+
+
+<p>In the above example we have a variable called <code>greeting</code> that holds a string value that has spaces in start and the end. Then we used <code>trimStart()</code> to remove the spaces from the start of the string.</p>
+
+
+
+<p>Do you know there is an alias of  <code>trimStart()</code>  is called <code>trimLeft()</code> that also works the same as <code>trimStart()</code>. For example:</p>
+
+
+
+<h3>#2 trimLeft Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimLeft());
+// expected output: &quot;Hello buginit.com   &quot;;</pre></div>
+
+
+
+<h3 id="Syntax">Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">str.trimStart();
+str.trimLeft();</pre></div>
+
+
+
+<h4>Return value of trimStart</h4>
+
+
+
+<p>It returns a new string with removed whitespace from its beginning (left end).</p>
+
+
+
+<h3>#3 One more example of trimStart </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var str = '   foo  ';
+
+console.log(str.length); // 8
+
+str = str.trimStart();
+console.log(str.length); // 5
+console.log(str);        // 'foo  '</pre></div>
+
+
+
+<h3>trimEnd Method</h3>
+
+
+
+<p>Javascript trimEnd method is used to remove spaces from the end of the string. For example: </p>
+
+
+
+<h3>#4 trimEnd Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimEnd());
+// expected output: &quot;   Hello buginit.com&quot;;</pre></div>
+
+
+
+<p>In the above example we have a variable called <code>greeting</code> that holds a string value that has spaces in start and the end. Then we used <code>trimEnd()</code> to remove the spaces from the end of the string.</p>
+
+
+
+<p><code>trimEnd()</code> also has an alias is called <code>trimRight()</code> that also works the same as <code>trimEnd()</code>. For example:</p>
+
+
+
+<h3>#5 trimRight Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimRight());
+// expected output: &quot;   Hello buginit.com&quot;;</pre></div>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">str.trimEnd();
+str.trimRight();</pre></div>
+
+
+
+<h4>Return value of trimEnd </h4>
+
+
+
+<p>It returns a new string with removed whitespace from its end (right end).</p>
+
+
+
+<h3>#5 One more Example of trimEnd </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var str = '   foo  ';
+
+console.log(str.length); // 8
+
+str = str.trimEnd();
+console.log(str.length); // 6
+console.log(str);        // '   foo'</pre></div>
+
+
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">MDN</a></p>
+
+
+
+<h3>Support</h3>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">trimStart()</td>
+         <td>66</td>
+         <td>?</td>
+         <td>61</td>
+         <td>?</td>
+         <td>53</td>
+      </tr>
+      <tr>
+         <td style="text-align:left;">trimEnd()</td>
+         <td>66</td>
+         <td>?</td>
+         <td>61</td>
+         <td>?</td>
+         <td>53</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>That&#8217;s all, If I have missed anything else please let me know. Share it with love. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>JavaScript fromEntries method ES10</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/#respond</comments>
+				<pubDate>Tue, 29 Oct 2019 15:27:43 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Objects]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=361</guid>
+				<description><![CDATA[In this article, we are gonna talk about JavaScript fromEntries method. fromEntries introduced in ES10/2019 and it is an object method, we will cover basics and different types of examples. Let&#8217;s start, Object.fromEntries is a very useful built-in JavaScript method that transforms a list of key-value pairs into an object. Let&#8217;s see the quick basic example<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we are gonna talk about JavaScript fromEntries method.  <code>fromEntries</code> introduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a> and it is an <a href="https://buginit.com/tag/objects/">object</a> method, we will cover basics and different types of examples.</p>
+
+
+
+<p>Let&#8217;s start, <code>Object.fromEntries</code> is a very useful built-in JavaScript method that transforms a list of key-value pairs into an object. Let&#8217;s see the quick basic example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const entries = [
+  ['foo', 'bar'],
+  ['baz', 42]
+];
+
+const obj = Object.fromEntries(entries);
+console.log(obj);
+// expected output: Object { foo: &quot;bar&quot;, baz: 42 }</pre></div>
+
+
+
+<p>In the above example we have converted a paired array of array into an object. So basically <code>Object.fromEntries</code> does that. I was playing with that and found that If you pass a simple array into <code>Object.fromEntries</code> It will give you an error <code>Uncaught TypeError: Iterator value x is not an entry object</code>, let&#8217;s see an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">Object.fromEntries(['x', 42, 'y', 50])
+// output: Uncaught TypeError: Iterator value x is not an entry object</pre></div>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<p><code>Object.fromEntries(iterable);</code></p>
+
+
+
+<h3>Return value</h3>
+
+
+
+<p> JavaScript fromEntries returns a new object whose properties are given by the entries of the iterable. </p>
+
+
+
+<p>Don&#8217;t misunderstand it with <code>Object.entries</code> method, The new  <code>Object.fromEntries</code> API performs the inverse of <code>Object.entries</code>.  To easily reconstruct an object based on its entries. See the comparision between them: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const object = { x: 42, y: 50 };
+const entries = Object.entries(object);
+// → [['x', 42], ['y', 50]]
+
+const result = Object.fromEntries(entries);
+// → { x: 42, y: 50 }</pre></div>
+
+
+
+<h3>Converting a Map to an Object</h3>
+
+
+
+<p>Using Object.fromEntries you can easily convert <code>map</code> to <code>object</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+const obj = Object.fromEntries(map);
+console.log(obj); // { foo: &quot;bar&quot;, baz: 42 }</pre></div>
+
+
+
+<h4 id="data-loss"> Warning: beware of data loss with fromEntries method </h4>
+
+
+
+<p>When converting maps into plain objects, there’s an implicit assumption that each key stringifies uniquely. If this assumption does not hold, and data loss occurs: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const map = new Map([
+  [{}, 'a'],
+  [{}, 'b'],
+]);
+Object.fromEntries(map);
+// → { '[object Object]': 'b' }</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: the value &#8216;a&#8217; is nowhere to be found, since both keys stringify to the same value of &#8216;[object Object]&#8217;.</p><cite><a href="https://v8.dev/features/object-fromentries" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<h3> Object transformations</h3>
+
+
+
+<p>Using <code>Object.fromEntries</code> you can easily transform objects like an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const object1 = { a: 1, b: 2, c: 3 };
+
+const object2 = Object.fromEntries(
+  Object.entries(object1)
+  .map(([ key, val ]) =&gt; [ key, val * 2 ])
+);
+
+console.log(object2);
+// { a: 2, b: 4, c: 6 }</pre></div>
+
+
+
+<h3>Support</h3>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">fromEntries()</td>
+         <td>73</td>
+         <td>No</td>
+         <td>63</td>
+         <td>12.1</td>
+         <td>60</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>I hope it was useful, If I have missed anything else please let me know. Share it with love. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

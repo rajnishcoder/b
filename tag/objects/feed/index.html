@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Objects &#8211; Buginit &#8211; HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+	<atom:link href="https://rajnishcoder.github.io/buginit/tag/objects/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rajnishcoder.github.io/buginit/</link>
+	<description></description>
+	<lastBuildDate>Sun, 01 Dec 2019 18:34:53 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>10 Examples of JavaScript Arguments Object</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comments</comments>
+				<pubDate>Sun, 01 Dec 2019 18:34:53 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Guides]]></category>
+		<category><![CDATA[Objects]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=478</guid>
+				<description><![CDATA[In this article, we will learn what is JavaScript arguments object and how to use it with 10 different types of examples and usages. In short, JavaScript arguments object is Array-like object that is accessible from inside the functions that contain the values of all the arguments passed to that function while calling. Note: If<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn what is <a href="https://buginit.com/category/javascript/">JavaScript</a> arguments object and how to use it with 10 different types of examples and usages.</p>
+
+
+
+<p>In short, JavaScript arguments object is <a href="https://buginit.com/tag/arrays/">Array</a>-like <a href="https://buginit.com/tag/objects/">object</a> that is accessible from inside the functions that contain the values of all the arguments passed to that function while calling.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong> If you&#8217;re writing ES6 compatible code, then <a href="https://buginit.com/javascript/understanding-the-rest-operator-in-javascript/">rest parameters</a> should be preferred.</p></blockquote>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: “Array-like” means that <code>arguments</code> has a <code>length</code> property and properties indexed from zero, but it doesn&#8217;t have <code>Array</code>&#8216;s built-in methods like <code>forEach()</code> and <code>map()</code>. </p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments#Description" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<p>Remember that javascript arguments object is a local variable that is available inside only a non-<a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function</a>. And it is not an array. It is similar to an array but doesn&#8217;t contain any array properties except <code>length</code>.</p>
+
+
+
+<p>For deep drive in <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function see this article</a></p>
+
+
+
+<h2>#1 Simple Example</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  console.log(arguments[0]);
+  // expected output: 1
+
+  console.log(arguments[1]);
+  // expected output: 2
+
+  console.log(arguments[2]);
+  // expected output: 3
+}
+
+test(1, 2, 3);</pre></div>
+
+
+
+<h4>Explanation</h4>
+
+
+
+<p>In the above example, I have created a function called <code>test</code> with three arguments <code>a</code>, <code>b</code> and <code>c</code> and accessing them using <code>arguments</code> object on the position of <code>0</code>, <code>1</code> and <code>2</code> as you can see the log inside the function in the above example.</p>
+
+
+
+<h3>#2 How the arguments object looks like?</h3>
+
+
+
+<p>Wanna see how it looks like?</p>
+
+
+
+<p>Let&#8217;s go inside the <code>arguments</code> object below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  console.log(arguments);
+}
+test(1, 2, 3); 
+// Output:- Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]</pre></div>
+
+
+
+<p>Let&#8217;s open that array-like object</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+  0: 1
+  1: 2
+  2: 3
+  callee: ƒ test(a, b, c)
+  length: 3
+  Symbol(Symbol.iterator): ƒ values()
+  __proto__: Object</pre></div>
+
+
+
+<p>Did you noticed the <code>__proto__</code> is an object So, basically <code>arguments</code> object contains: </p>
+
+
+
+<p>the <code>parameters</code> of its function as an array, </p>
+
+
+
+<p>the <code>length</code> of that array.</p>
+
+
+
+<p>and some other functions like <code>callee</code> and <code>Symbol</code>. Let&#8217;s dig more into it.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">Arguments(2) [1, 2, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+  0: 1
+  1: 2
+  callee: ƒ test(a, b)
+    arguments: null
+    caller: null
+    length: 2
+    name: &quot;test&quot;
+    prototype: {constructor: ƒ}
+    __proto__: ƒ ()
+    [[FunctionLocation]]: VM110:1
+    [[Scopes]]: Scopes[2]
+  length: 2
+  Symbol(Symbol.iterator): ƒ values()
+    arguments: (...)
+    caller: (...)
+    length: 0
+    name: &quot;values&quot;
+    __proto__: ƒ ()
+    [[Scopes]]: Scopes[0]
+  __proto__: Object</pre></div>
+
+
+
+<p>The <code>callee</code> function contains the information related to the function like <code>name</code> and <code>arguments</code> length.</p>
+
+
+
+<p>As MDN says that the <code>callee</code> function is a reference to the currently executing function that the arguments belong to.</p>
+
+
+
+<p>And As, I&#8217;m no expert in this so, don&#8217;t know why it contains the <code>Symbol</code> well if you know let me know.</p>
+
+
+
+<h3>#3 Changing Values</h3>
+
+
+
+<p>You can set or reassign each value of <code>argument</code> object. See the example below: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  arguments[0] = 'TEST';
+  console.log(arguments[0]);
+}
+
+test(1, 2, 3); // TEST
+</pre></div>
+
+
+
+<p>In the above example, I passed <code>1</code> as the first argument and change it inside the function to <code>TEST</code> and it logs the <code>arguments[0]</code>.  <strong>Please see #6 for more.</strong></p>
+
+
+
+<h3>#4 Convert it to a real array.</h3>
+
+
+
+<p>As I already told you <code>arguments</code> <a href="https://buginit.com/tag/objects/">object</a> is not an <a href="https://buginit.com/tag/arrays/">array</a> but it can be converted to a real array.</p>
+
+
+
+<h4>#4.1 Using <code>Array.prototype</code></h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = Array.prototype.slice.call(arguments);
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<p>The output of the above example is <code>[1, 2, 3]</code> See the output of console below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(3) [1, 2, 3]
+  0: 1
+  1: 2
+  2: 3
+  length: 3
+  __proto__: Array(0)</pre></div>
+
+
+
+<p>Did you noticed this time the <code>__proto__</code> is the type of array, we have converted it to the real array.</p>
+
+
+
+<h4>#4.2 Using array <a href="https://buginit.com/javascript/all-you-need-to-know-about-template-literals/">literal</a></h4>
+
+
+
+<p>Using the array <a href="https://buginit.com/javascript/all-you-need-to-know-about-template-literals/">literal</a> is a shorter way than the above example I showed. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = [].slice.call(arguments); 
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<h4>#4.3 Using Array.from()</h4>
+
+
+
+<p>You can also use array <code>.form()</code> method to convert the array-like <a href="https://buginit.com/tag/objects/">object</a> to a real array as I show in the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = Array.from(arguments);
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<h4>#4.4 Using spread syntax</h4>
+
+
+
+<p>Of course, You can use spread syntax to convert it into an array, like the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = [...arguments];
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<p>The JavaScript arguments object is useful when you have dynamic parameters to received or you just don&#8217;t know the function called with more parameters than the function is gonna formally received.</p>
+
+
+
+<h3>#5 Usages </h3>
+
+
+
+<p>For example if I say that, create a function that accepts any number of string parameters and returns the longest one?</p>
+
+
+
+<h4>#5.1 Finding the longest</h4>
+
+
+
+<p>See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function getLongestString() {
+  var longest = '';
+  for (var i=0; i &lt; arguments.length; i++) {
+    if (arguments[i].length &gt; longest.length) {
+      longest = arguments[i];
+    }
+  }
+  return longest;
+}</pre></div>
+
+
+
+<h4>#5.2 Generate the HTML list</h4>
+
+
+
+<p>I have one more example for you. I&#8217;m gonna define a function that creates the <a href="https://buginit.com/category/html/">HTML</a> list. Given below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function list(type) {
+  var html = '&lt;' + type + 'l&gt;&lt;li&gt;';
+  var args = Array.prototype.slice.call(arguments, 1);
+  html += args.join('&lt;/li&gt;&lt;li&gt;');
+  html += '&lt;/li&gt;&lt;/' + type + 'l&gt;'; // end list
+
+  return html;
+}</pre></div>
+
+
+
+<p>you can pass any number of arguments in the <code>list</code> function that I created in the above example and also which type of list you want <code>ol</code> or <code>ul</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var listHTML = list('u', 'One', 'Two', 'Three');
+/* listHTML is:
+&quot;&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;&quot;
+*/</pre></div>
+
+
+
+<p>I know, I know maybe you are thinking that I can do this using <a href="https://buginit.com/javascript/understanding-the-rest-operator-in-javascript/">rest parameters</a>. Yes, of course, you can do that and there are many different ways to do that but we are talking about <code>arguments</code> object so I&#8217;m sticking with it. </p>
+
+
+
+<p>And, if you have a better example let me know in the comment section.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>You can always use <code>arguments.lenth</code> to count how many arguments this function is receiving. </p></blockquote>
+
+
+
+<h3>#6 Careful with updating values </h3>
+
+
+
+<p>While you are using the <code>arguments</code> object, please be careful with update values as it also change the value of your parameters too. I mean see the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function func(a) { 
+  a = 99; // updating a also updates arguments[0]
+  console.log(arguments[0]);
+}
+func(10); // 99</pre></div>
+
+
+
+<p>In the above example, I accept the <code>a</code> as a first parameter and pass the value <code>10</code> and reassign the <code>a</code> inside a function, So it also gonna change arguments on <code>0</code> position<code>arguments[0]</code>.</p>
+
+
+
+<p>And Its also works reverse like if I change <code>arguments[0]</code> it is gonna change <code>a</code>. So be careful when you are changing.</p>
+
+
+
+<p>But, mdn docs say that it changes the value only in strict mode, but I tested it on my latest chrome console it also changes value normally without strict mode. Maybe they did not update their docs or chrome dev updated their JavaScript engines. It&#8217;s still a mystery. </p>
+
+
+
+<p>I don&#8217;t know but it changes the value so careful with it.</p>
+
+
+
+<p>That&#8217;s all for now, Thank you so much for reading this long post, please share and support. For more about&nbsp;<a href="https://buginit.com/category/css/">CSS</a>&nbsp;or&nbsp;<a href="https://buginit.com/category/javascript/">JavaScript</a> </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>JavaScript fromEntries method ES10</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/#respond</comments>
+				<pubDate>Tue, 29 Oct 2019 15:27:43 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Objects]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=361</guid>
+				<description><![CDATA[In this article, we are gonna talk about JavaScript fromEntries method. fromEntries introduced in ES10/2019 and it is an object method, we will cover basics and different types of examples. Let&#8217;s start, Object.fromEntries is a very useful built-in JavaScript method that transforms a list of key-value pairs into an object. Let&#8217;s see the quick basic example<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we are gonna talk about JavaScript fromEntries method.  <code>fromEntries</code> introduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a> and it is an <a href="https://buginit.com/tag/objects/">object</a> method, we will cover basics and different types of examples.</p>
+
+
+
+<p>Let&#8217;s start, <code>Object.fromEntries</code> is a very useful built-in JavaScript method that transforms a list of key-value pairs into an object. Let&#8217;s see the quick basic example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const entries = [
+  ['foo', 'bar'],
+  ['baz', 42]
+];
+
+const obj = Object.fromEntries(entries);
+console.log(obj);
+// expected output: Object { foo: &quot;bar&quot;, baz: 42 }</pre></div>
+
+
+
+<p>In the above example we have converted a paired array of array into an object. So basically <code>Object.fromEntries</code> does that. I was playing with that and found that If you pass a simple array into <code>Object.fromEntries</code> It will give you an error <code>Uncaught TypeError: Iterator value x is not an entry object</code>, let&#8217;s see an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">Object.fromEntries(['x', 42, 'y', 50])
+// output: Uncaught TypeError: Iterator value x is not an entry object</pre></div>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<p><code>Object.fromEntries(iterable);</code></p>
+
+
+
+<h3>Return value</h3>
+
+
+
+<p> JavaScript fromEntries returns a new object whose properties are given by the entries of the iterable. </p>
+
+
+
+<p>Don&#8217;t misunderstand it with <code>Object.entries</code> method, The new  <code>Object.fromEntries</code> API performs the inverse of <code>Object.entries</code>.  To easily reconstruct an object based on its entries. See the comparision between them: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const object = { x: 42, y: 50 };
+const entries = Object.entries(object);
+// → [['x', 42], ['y', 50]]
+
+const result = Object.fromEntries(entries);
+// → { x: 42, y: 50 }</pre></div>
+
+
+
+<h3>Converting a Map to an Object</h3>
+
+
+
+<p>Using Object.fromEntries you can easily convert <code>map</code> to <code>object</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+const obj = Object.fromEntries(map);
+console.log(obj); // { foo: &quot;bar&quot;, baz: 42 }</pre></div>
+
+
+
+<h4 id="data-loss"> Warning: beware of data loss with fromEntries method </h4>
+
+
+
+<p>When converting maps into plain objects, there’s an implicit assumption that each key stringifies uniquely. If this assumption does not hold, and data loss occurs: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const map = new Map([
+  [{}, 'a'],
+  [{}, 'b'],
+]);
+Object.fromEntries(map);
+// → { '[object Object]': 'b' }</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: the value &#8216;a&#8217; is nowhere to be found, since both keys stringify to the same value of &#8216;[object Object]&#8217;.</p><cite><a href="https://v8.dev/features/object-fromentries" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<h3> Object transformations</h3>
+
+
+
+<p>Using <code>Object.fromEntries</code> you can easily transform objects like an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const object1 = { a: 1, b: 2, c: 3 };
+
+const object2 = Object.fromEntries(
+  Object.entries(object1)
+  .map(([ key, val ]) =&gt; [ key, val * 2 ])
+);
+
+console.log(object2);
+// { a: 2, b: 4, c: 6 }</pre></div>
+
+
+
+<h3>Support</h3>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">fromEntries()</td>
+         <td>73</td>
+         <td>No</td>
+         <td>63</td>
+         <td>12.1</td>
+         <td>60</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>I hope it was useful, If I have missed anything else please let me know. Share it with love. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Understanding the JavaScript create object method</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/understanding-the-javascript-create-object-method/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/understanding-the-javascript-create-object-method/#respond</comments>
+				<pubDate>Sun, 20 Oct 2019 05:22:41 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Objects]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=311</guid>
+				<description><![CDATA[JavaScript create object (Object.create()) is introduced in JavaScript version 1.8.5 is simply a method that creates a new object using an existing object as the prototype of the newly created object. For example:- In the above example we have an object called person and has two properties isHuman is a boolean and printIntroduction is a<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/understanding-the-javascript-create-object-method/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p><a href="https://buginit.com/category/javascript/">JavaScript</a> create object (<code>Object.create()</code>) is introduced in JavaScript version 1.8.5 is simply a method that creates a new object using an existing object as the prototype of the newly created object. For example:- </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  }
+};
+
+// creating a new object 
+const me = Object.create(person);
+
+me.name = &quot;Matthew&quot;; // &quot;name&quot; is a property set on &quot;me&quot;, but not on &quot;person&quot;
+me.isHuman = true; // inherited properties can be overwritten
+
+me.printIntroduction();
+// expected output: &quot;My name is Matthew. Am I human? true&quot;
+</pre></div>
+
+
+
+<p>In the above example we have an object called <code>person</code> and has two properties <code>isHuman</code> is a boolean and <code>printIntroduction</code> is a function.</p>
+
+
+
+<p>Then we created a new object called <code>me</code> using <code>Object.create()</code>. </p>
+
+
+
+<p>Then defined the <code>name</code> and <code>isHuman</code> property of newly created object called <code>me</code> , but not on <code>person</code>.</p>
+
+
+
+<p>As <code>isHuman</code> is <code>false</code> in person object and we assign <code>true</code> to <code>isHuman</code> property of <code>me</code> object, it will become <code>true</code> because inherited properties can be overwritten.</p>
+
+
+
+<p>And finally, call the function <code>me.printIntroduction()</code></p>
+
+
+
+<p><strong>Expected output:</strong> <code>My name is Matthew. Am I human? true</code></p>
+
+
+
+<h3>Syntax </h3>
+
+
+
+<p><code>Object.create(proto, [propertiesObject])</code></p>
+
+
+
+<p><code>Object.create()</code> method can receive two parameters.</p>
+
+
+
+<p><code>proto</code>: The object which should be the prototype of the newly-created object.</p>
+
+
+
+<p><code>propertiesObject</code>: This is the optional parameter but If specified and not&nbsp;<code>undefined</code>, an object whose enumerable own properties (that is, those properties defined upon itself and&nbsp;<em>not</em>&nbsp;enumerable properties along its prototype chain) specify property descriptors to be added to the newly-created object, with the corresponding property names. These properties correspond to the second argument of&nbsp;<code>Object.defineProperties()</code>. </p>
+
+
+
+<p>The return value of <code>Object.create()</code> method is a new object with the specified prototype object and properties. </p>
+
+
+
+<h3>Second Argument</h3>
+
+
+
+<p>Here I&#8217;m gonna show you an example of the second argument of JavaScript create object method</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var superPower = {
+    usePower: function () {
+        console.log(this.power + &quot;!&quot;);
+    }
+};</pre></div>
+
+
+
+<p>Above we created an object called <code>superPower</code> and has a property name <code>usePower</code> that is a function that prints <code>power</code> property. but we did not define the <code>power</code> property above. Let&#8217;s do it with using the second argument of <code>Object.create()</code> method in the below example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var newSuperPower = Object.create(superPower, {
+    power: { value: &quot;sonic speed&quot; }
+});
+
+// Outputs: &quot;sonic speed!&quot;
+newSuperPower.usePower();</pre></div>
+
+
+
+<p>In the above example, we created a new object called <code>newSuperPower</code> by using <code>Object.create()</code> method and also assign <code>power</code> property in the second argument. That second argument might look a little strange to you, but it&#8217;s just a simple property descriptor object. In this case, you must have to assign value as a object else, it will give you <code>Uncaught TypeError: Property description must be an object: sonic speed</code></p>
+
+
+
+<h3 id="Polyfill">Polyfill</h3>
+
+
+
+<p><a aria-label="polyfill (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Glossary/Polyfill" target="_blank" rel="noopener noreferrer">Polyfill</a> is a piece of code that mimics the modern functionality to older browsers.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">if (typeof Object.create !== &quot;function&quot;) {
+    Object.create = function (proto, propertiesObject) {
+        if (typeof proto !== 'object' &amp;&amp; typeof proto !== 'function') {
+            throw new TypeError('Object prototype may only be an Object: ' + proto);
+        } else if (proto === null) {
+            throw new Error(&quot;This browser's implementation of Object.create is a shim and doesn't support 'null' as the first argument.&quot;);
+        }
+
+        if (typeof propertiesObject != 'undefined') {
+            throw new Error(&quot;This browser's implementation of Object.create is a shim and doesn't support a second argument.&quot;);
+        }
+
+        function F() {}
+        F.prototype = proto;
+
+        return new F();
+    };
+}</pre></div>
+
+
+
+<p>For now, that’s all. Thanks for reading. Share if you find helpful. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/understanding-the-javascript-create-object-method/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

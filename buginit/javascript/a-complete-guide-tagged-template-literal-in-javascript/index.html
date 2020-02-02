@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148904923-1"></script>
+
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	
+
+    
+	<link rel="shortcut icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+    
+ 
+
+	<title>A complete guide: Tagged Template Literal in JavaScript – Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://rajnishcoder.github.io/buginit/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-bootstrap-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fontawesome-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/custom/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" type="text/css" media="all">
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body id="blog" class="darkTheme">  
+    
+    	<div class="main_container">
+        	
+            	<header class="header_wrapper" itemscope itemtype="http://schema.org/WPHeader">
+                
+				
+                
+             	 	
+                    
+           		
+                <div id="primary_menu" class="blue_bg">
+					<div class="container" style="padding: 0">
+						<div id="logo" class="pull-left logo" itemscope itemtype="http://schema.org/Organization">
+							<a href="https://rajnishcoder.github.io/buginit/" itemprop="url" rel="home" style="float:left">
+																<p itemprop="name" class="site-title">
+								Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</p>   
+								<div class="buginitLogoWrap">
+									<img itemprop="logo" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/images/logo.svg">
+								</div>
+							</a>   
+							<h3 itemprop="description" class="site-description"> </h3>						</div>
+						<nav id="primary-menu" class="main-navigation navmenu pull-left" role="navigation">
+								  
+									<ul class="menu clearfix">
+											<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+<ul class="children">
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+									</ul>
+														</nav>
+					</div>
+                </div>    
+  
+         </header>
+  			 
+       
+            <div class="clearboth"></div>
+			
+            
+            				     
+            	<div class="breadcrumbs">
+					<div class="container">
+						<div id="breadcrumbs" itemprop="breadcrumb"><a href="https://rajnishcoder.github.io/buginit">Home</a> » <a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a> » <span class="current">A complete guide: Tagged Template Literal in JavaScript</span></div>                    </div>
+                </div>
+           
+              
+     	 
+            <div class="middle_wrapper">
+            	<div class="container mainContainer">
+                	<div> 
+ <script src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/js/caniuse-embed.min.js"></script>
+
+	<div class="col-md-8 col-sm-8 postInner">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+    	
+		        
+	 <article id="post-209" itemscope="" itemtype="http://schema.org/BlogPosting">
+	
+            	
+    <div class="article-content">    
+
+	<header class="entry-header">
+  	<h1 class="entry-title" itemprop="headline">A complete guide: Tagged Template Literal in JavaScript</h1>    
+     <span class="category" itemprop="articleSection"><i class="fa fa-bookmark"></i><a href="https://rajnishcoder.github.io/buginit/category/javascript/" rel="category tag">JavaScript</a></span><span class="tags"> <i class="fa fa-tags"></i><a href="https://rajnishcoder.github.io/buginit/tag/advanced-js/" rel="tag">Advanced JS</a>, <a href="https://rajnishcoder.github.io/buginit/tag/guides/" rel="tag">Guides</a>, <a href="https://rajnishcoder.github.io/buginit/tag/javascript/" rel="tag">JavaScript</a></span><span class="date"><i class="fa fa-clock-o"></i><a href="https://rajnishcoder.github.io/buginit/javascript/a-complete-guide-tagged-template-literal-in-javascript/" title="3:13 am" rel="bookmark"><time itemprop="datePublished" datetime="2019-10-09T03:13:37+00:00">October 9, 2019</time></a></span><span itemprop="author"><i class="fa fa-user"></i><span class="author"><a href="https://rajnishcoder.github.io/buginit/author/rajnishcoder/" title="View all posts by Rajnish Rajput" rel="">Rajnish Rajput</a></span></span> <span class="comments" itemprop="interactionCount"> <i class="fa fa-comment"></i><a href="https://rajnishcoder.github.io/buginit/javascript/a-complete-guide-tagged-template-literal-in-javascript/#respond" title="0 Comments" rel="comments">0 Comments</a></span> 
+      
+               <div id="above_post_add" class="advertisment">
+                       </div>
+            
+      <div class="clearboth"></div>
+ 	</header>
+
+	<div class="entry-content">
+		
+<figure class="wp-block-image"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Tagged-Template-Literal-buginit.com_-1024x481.png" alt="A complete guide: Tagged Template Literal in JavaScript" class="wp-image-212" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Tagged-Template-Literal-buginit.com_-1024x481.png 1024w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Tagged-Template-Literal-buginit.com_-300x141.png 300w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Tagged-Template-Literal-buginit.com_-768x361.png 768w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Tagged-Template-Literal-buginit.com_-1200x564.png 1200w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Tagged-Template-Literal-buginit.com_.png 1396w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+<p>In simple words: <a rel="noreferrer noopener" aria-label="JavaScript (opens in a new tab)" href="https://buginit.com/category/javascript/" target="_blank">JavaScript</a> Tagged template literal is a function call that uses a template literal to get its arguments.</p>
+
+
+
+<p>Here is a tagged function example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"clike","mime":"text/x-java","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>greet`I'm ${name}. I'm ${age} years old.`;</pre></div>
+
+
+
+<p>Don’t get yourself confused, In the above example, <code>greet</code> is a function that takes three arguments </p>
+
+
+
+<p>1. The first parameter is an <a href="https://buginit.com/tag/arrays/">array</a> containing all of the text from our template literal.  </p>
+
+
+
+<p>2. The 2nd to infinity parameters in our function are the variables to be inserted into our tag function. </p>
+
+
+
+<p>Here I’ll show you the <code>greet</code> function from inside in detail.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>// creating name and age variable 
+var name = 'buginit';
+var age = 1; 
+
+// creating a greet function
+function greet(strings, name, age) {
+  var str0 = strings[0]; // "I'm"
+  var str1 = strings[1]; // ". I'm"
+  var str2 = strings[2]; // "years old."
+  console.log(name) // buginit
+  console.log(age) // 1
+}
+
+// calling greet function here and passing 
+// name and age variable that we created above
+greet`I'm ${name}. I'm ${age} years old.`;
+</pre></div>
+
+
+
+<p>Explanation: First we created two variables called <code>name</code> and <code>age</code>. </p>
+
+
+
+<p>Then we defined the <code>greet</code> function, </p>
+
+
+
+<p>And then called the <code>greet</code> function with those two variables and some strings around using Tagged Template Literals. So the <code>greet</code> function will receive all the strings as an array in the first argument and those variables in the rest of the arguments as shown in the above example please read comments inside example.</p>
+
+
+
+<p>I hope you got the picture in your mind.</p>
+
+
+
+<h4>One more similar example</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>var person = 'Mike';
+var age = 28;
+
+function myTag(strings, personExp, ageExp) {
+  var str0 = strings[0]; // "That "
+  var str1 = strings[1]; // " is a "
+
+  // There is technically a string after
+  // the final expression (in our example),
+  // but it is empty (""), so disregard.
+  // var str2 = strings[2];
+
+  var ageStr;
+  if (ageExp > 99){
+    ageStr = 'centenarian';
+  } else {
+    ageStr = 'youngster';
+  }
+
+  // We can even return a string built using a template literal
+  return `${str0}${personExp}${str1}${ageStr}`;
+}
+
+var output = myTag`That ${ person } is a ${ age }`;
+
+console.log(output);
+// That Mike is a youngster</pre></div>
+
+
+
+<h3>Real-world example</h3>
+
+
+
+<h4>Writing CSS in JSX (React)</h4>
+
+
+
+<p><a href="https://buginit.com/category/javascript/" target="_blank" rel="noreferrer noopener" aria-label="Javascript (opens in a new tab)">Javascript</a> developers are familiar with weird syntax for inline Styling. And as I also work in React its really messy when code becomes bigger. </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"htmlmixed","mime":"text/html","theme":"material","lineNumbers":false,"lineWrapping":false,"readOnly":true}'><section style={{ padding: 4em;  background: papayawhip; }}> 
+  <h1 style={{  font-size: 1.5em;  text-align: center;  color: palevioletred; }}>  Hello World, this is my first styled component!</h1>
+</section></pre></div>
+
+
+
+<p>There is a library called <a rel="noreferrer noopener" href="https://github.com/styled-components/styled-components" target="_blank">styled-components</a> that tried to fix this problem by using the JavaScript Tagged Template Literal. Here is an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>import React from 'react';
+
+import styled from 'styled-components';
+
+// Create a <Title> react component that renders an <h1> which is
+// centered, palevioletred and sized at 1.5em
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+// Create a <Wrapper> react component that renders a <section> with
+// some padding and a papayawhip background
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+`;
+
+// Use them like any other React component – except they're styled!
+<Wrapper>
+  <Title>Hello World, this is my first styled component!</Title>
+</Wrapper></pre></div>
+
+
+
+<p>If you want to see more about this check out <a rel="noreferrer noopener" aria-label="styled components (opens in a new tab)" href="https://www.styled-components.com/docs/basics#getting-started" target="_blank">styled-components</a> here are lots of examples you can find.</p>
+
+
+
+<h4>Here are some rule to note down when you dig deeper in JavaScript Tagged Template Literals</h4>
+
+
+
+<p>1. Unicode escapes started by “\u”, for example:- <code>\u00A9</code></p>
+
+
+
+<p>2. Unicode code point escapes indicated by “\u{}”, for example:- <code>\u{2F804}</code></p>
+
+
+
+<p>3. Hexadecimal escapes started by “\x”, for example:- <code>\xA9</code></p>
+
+
+
+<p>4. Octal literal escapes started by “\” and (a) digit(s), for example:- <code>\251</code></p>
+
+
+
+<p>For whole information check out <a rel="noreferrer noopener" aria-label="Official Template Literal Revision (opens in a new tab)" href="https://tc39.es/proposal-template-literal-revision/" target="_blank">Official Template Literal Revision</a></p>
+
+
+
+<p>This article is only about the Tagged template literal if you want to read about the template literal check out this <a href="https://buginit.com/javascript/all-you-need-to-know-about-template-literals/">All You Need To Know About Template Literals In ES6: JavaScript</a></p>
+
+
+
+<p>Thanks for reading. Please share if you liked it.</p>
+     
+           <div id="below_post_add" class="advertisment">
+      	  	  </div>
+	  
+	  <div class="relatedPostWrap">
+		  <h4>You Might Interested In</h4>
+		  <ul class="relatedPostList">
+			  							<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/" rel="bookmark" title="Permanent Link to 4 Examples of Replace All in JavaScript You Should Know">
+									4 Examples of Replace All in JavaScript You Should Know								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" rel="bookmark" title="Permanent Link to 4 ways to remove duplicate array javascript">
+									4 ways to remove duplicate array javascript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" rel="bookmark" title="Permanent Link to 10 Examples of JavaScript Arguments Object">
+									10 Examples of JavaScript Arguments Object								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/" rel="bookmark" title="Permanent Link to 4 Examples of JavaScript sort without mutating array">
+									4 Examples of JavaScript sort without mutating array								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/" rel="bookmark" title="Permanent Link to Understanding Try Catch Finally JavaScript">
+									Understanding Try Catch Finally JavaScript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/" rel="bookmark" title="Permanent Link to JS try catch Optional catch binding update in ES10/2019">
+									JS try catch Optional catch binding update in ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/" rel="bookmark" title="Permanent Link to New Stable Sort Array in Javascript: ES10/2019">
+									New Stable Sort Array in Javascript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/" rel="bookmark" title="Permanent Link to Well formed JSON stringify JavaScript: ES10/2019">
+									Well formed JSON stringify JavaScript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/" rel="bookmark" title="Permanent Link to JavaScript Trim: trimStart and trimEnd method ES10/2019">
+									JavaScript Trim: trimStart and trimEnd method ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/" rel="bookmark" title="Permanent Link to JavaScript fromEntries method ES10">
+									JavaScript fromEntries method ES10								</a>
+							</li>
+									  </ul>
+	  </div>
+      
+	  
+	 
+
+
+
+  	</div>
+ 
+  
+	<footer class="entry-footer">
+			</footer>
+	
+    </div>
+    
+	</article>
+          
+           
+            <div class="clearfix"></div>
+            <div style="height:30px;"></div>
+            <div class="clearfix"></div>
+  
+        
+        	<div class="post-links">
+               <div class="alignleft"> <i class="fa fa-angle-double-left"></i> <a href="https://rajnishcoder.github.io/buginit/javascript/all-you-need-to-know-about-swapping-two-variables-in-javascript/" rel="next">All you need to know about swapping two variables in JavaScript</a></div>               <div class="alignright"><a href="https://rajnishcoder.github.io/buginit/javascript/all-you-need-to-know-about-template-literals/" rel="prev">All you need to know about Template literals in ES6: JavaScript</a> <i class="fa fa-angle-double-right"></i></div>			</div>
+       	 
+			
+<div id="comments" class="comments-area">
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/buginit/javascript/a-complete-guide-tagged-template-literal-in-javascript/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://rajnishcoder.github.io/buginit/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="209" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+</div>
+		</main>
+	</div>
+  </div>  
+
+  
+    
+ 						
+    
+       <div class="sidebar col-md-4 col-sm-4">
+            <aside id="search-2" class="widget widget_search" itemscope itemtype="http://schema.org/WPSideBar"><form role="search" method="get" class="search-form" action="https://rajnishcoder.github.io/buginit/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search">
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries" itemscope itemtype="http://schema.org/WPSideBar">		<h3 class="widget-title heading" itemprop="about">Recent Posts</h3>		<ul>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/">4 Examples of Replace All in JavaScript You Should Know</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/">4 ways to remove duplicate array javascript</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/">10 Examples of JavaScript Arguments Object</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/">4 Examples of JavaScript sort without mutating array</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/css/center-image-in-div/">CSS Center Image In div example with explanation</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments" itemscope itemtype="http://schema.org/WPSideBar"><h3 class="widget-title heading" itemprop="about">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-21">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link">Lacus</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-20">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-23">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link">Johnny</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-22">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/#comment-15">Smooth Scroll CSS</a></li></ul></aside>       </div>
+     
+  
+	 	</div> 
+          </div> 
+            </div> 
+             
+          
+            
+   <footer class="footer_wrapper" itemscope itemtype="http://schema.org/WPFooter">
+                 	
+            <div class="container">
+									<div id="footer-widget-area">    
+						<aside id="archives-2" class="widget widget_archive col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Archives</h3>		<ul>
+				<li><a href="https://rajnishcoder.github.io/buginit/2019/12/">December 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/11/">November 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/10/">October 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/09/">September 2019</a></li>
+		</ul>
+			</div></aside><aside id="categories-2" class="widget widget_categories col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Categories</h3>		<ul>
+				<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+		</ul>
+			</div></aside><aside id="meta-2" class="widget widget_meta col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Meta</h3>			<ul>
+						<li><a href="https://rajnishcoder.github.io/buginit/wp-login.php">Log in</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/feed/">Entries feed</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</div></aside>						<div class="clearboth"></div>
+					</div>
+				                <div class="clearboth"></div>
+            </div>
+            	<div class="copy_right">
+                    <div class="container"> 
+						<div class="row">
+							<div class="col-md-4">
+								<h3>Navigation</h3>
+								<ul itemscope itemtype="https://schema.org/SiteNavigationElement" id="menu-header-menu" class="menu"><li id="menu-item-359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-359"><a href="https://buginit.com/" itemprop="url"><span itemprop="name">Home</span></a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="https://rajnishcoder.github.io/buginit/about/" itemprop="url"><span itemprop="name">About</span></a></li>
+<li id="menu-item-361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a href="https://rajnishcoder.github.io/buginit/contact-us/" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
+<li id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a href="https://rajnishcoder.github.io/buginit/privacy-policy-2/" itemprop="url"><span itemprop="name">Privacy Policy</span></a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a href="https://rajnishcoder.github.io/buginit/html/" itemprop="url"><span itemprop="name">Learn HTML</span></a></li>
+</ul>							</div>
+							<div class="col-md-4">
+								<h3>Support Us</h3>
+								<a href="https://www.patreon.com/join/buginit" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Support on Patreon
+								</a>
+								<a href="https://www.paypal.me/rajnishprogrammer/5" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Through Paypal
+								</a>
+							</div>
+							<div class="col-md-4">
+								<h3>Follow Us</h3>								
+								<div class="footerFollowMain">
+									<ul class="footerFollowList">
+										<li class="fb"><a href="https://www.facebook.com/buginit" target="_blank"></a></li>
+										<li class="twitter"><a href="https://twitter.com/buginit" target="_blank"></a></li>
+									</ul>
+									
+								</div>
+							</div>
+						</div>
+						<div style="text-align:center">© 2020 All Rights Reserved. v1.1.2</div>
+						
+              		</div>
+            	</div> 
+             
+			<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/menu/script.js"></script>
+	     </footer> 	  
+
+	</div>
+	<div class="themeSwitcher" onclick="darkSwitcher(this)">
+		<i class="fa fa-adjust"></i>
+	</div>
+	<div id="dark" class="dark"></div>
+	<script>
+		// for darkmode
+		console.log(localStorage.getItem("isDark"));
+		
+		function darkSwitcher(ele) {
+			var isDark = JSON.parse(localStorage.getItem("isDark"));
+			console.log('1', isDark);
+			
+			var body = document.getElementsByTagName('body')[0];
+			if (isDark == true) {
+				console.log('2', isDark);
+				
+				body.classList.add('darkTheme');
+				document.getElementById('dark').classList.add('dark')
+				localStorage.setItem("isDark", "false");
+				console.log(localStorage.getItem("isDark"), isDark);
+				
+			} else {
+				console.log('in if else');
+				body.classList.remove('darkTheme');
+				document.getElementById('dark').classList.remove('dark')
+				localStorage.setItem("isDark", "true");
+				console.log(localStorage.getItem("isDark"));
+			}
+			// if (ele && body.classList.contains('darkTheme')) {
+			// } else {
+			// }
+		}
+	</script>
+    
+	
+
+    </body>
+    </html>

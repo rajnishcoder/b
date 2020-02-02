@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148904923-1"></script>
+
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	
+
+    
+	<link rel="shortcut icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+    
+ 
+
+	<title>Understanding the Rest Operator in Javascript – Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://rajnishcoder.github.io/buginit/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-bootstrap-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fontawesome-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/custom/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" type="text/css" media="all">
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body id="blog" class="darkTheme">  
+    
+    	<div class="main_container">
+        	
+            	<header class="header_wrapper" itemscope itemtype="http://schema.org/WPHeader">
+                
+				
+                
+             	 	
+                    
+           		
+                <div id="primary_menu" class="blue_bg">
+					<div class="container" style="padding: 0">
+						<div id="logo" class="pull-left logo" itemscope itemtype="http://schema.org/Organization">
+							<a href="https://rajnishcoder.github.io/buginit/" itemprop="url" rel="home" style="float:left">
+																<p itemprop="name" class="site-title">
+								Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</p>   
+								<div class="buginitLogoWrap">
+									<img itemprop="logo" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/images/logo.svg">
+								</div>
+							</a>   
+							<h3 itemprop="description" class="site-description"> </h3>						</div>
+						<nav id="primary-menu" class="main-navigation navmenu pull-left" role="navigation">
+								  
+									<ul class="menu clearfix">
+											<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+<ul class="children">
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+									</ul>
+														</nav>
+					</div>
+                </div>    
+  
+         </header>
+  			 
+       
+            <div class="clearboth"></div>
+			
+            
+            				     
+            	<div class="breadcrumbs">
+					<div class="container">
+						<div id="breadcrumbs" itemprop="breadcrumb"><a href="https://rajnishcoder.github.io/buginit">Home</a> » <a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a> » <span class="current">Understanding the Rest Operator in Javascript</span></div>                    </div>
+                </div>
+           
+              
+     	 
+            <div class="middle_wrapper">
+            	<div class="container mainContainer">
+                	<div> 
+ <script src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/js/caniuse-embed.min.js"></script>
+
+	<div class="col-md-8 col-sm-8 postInner">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+    	
+		        
+	 <article id="post-299" itemscope="" itemtype="http://schema.org/BlogPosting">
+	
+            	
+    <div class="article-content">    
+
+	<header class="entry-header">
+  	<h1 class="entry-title" itemprop="headline">Understanding the Rest Operator in Javascript</h1>    
+     <span class="category" itemprop="articleSection"><i class="fa fa-bookmark"></i><a href="https://rajnishcoder.github.io/buginit/category/javascript/" rel="category tag">JavaScript</a></span><span class="tags"> <i class="fa fa-tags"></i><a href="https://rajnishcoder.github.io/buginit/tag/advanced-js/" rel="tag">Advanced JS</a>, <a href="https://rajnishcoder.github.io/buginit/tag/guides/" rel="tag">Guides</a>, <a href="https://rajnishcoder.github.io/buginit/tag/javascript/" rel="tag">JavaScript</a></span><span class="date"><i class="fa fa-clock-o"></i><a href="https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/" title="4:52 pm" rel="bookmark"><time itemprop="datePublished" datetime="2019-10-15T16:52:01+00:00">October 15, 2019</time></a></span><span itemprop="author"><i class="fa fa-user"></i><span class="author"><a href="https://rajnishcoder.github.io/buginit/author/rajnishcoder/" title="View all posts by Rajnish Rajput" rel="">Rajnish Rajput</a></span></span> <span class="comments" itemprop="interactionCount"> <i class="fa fa-comment"></i><a href="https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/#comments" title="2 Comments" rel="comments">2 Comments</a></span> 
+      
+               <div id="above_post_add" class="advertisment">
+                       </div>
+            
+      <div class="clearboth"></div>
+ 	</header>
+
+	<div class="entry-content">
+		
+<p>The rest parameter syntax or Rest Operator in <a href="https://buginit.com/category/javascript/">JavaScript</a> allows us to handle the infinite number of parameters as an array. Basically, It improved the way of handling parameters of the function.</p>
+
+
+
+<h3>Basic Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function fun(...arr){ 
+    let sum = 0; 
+    for(let i of arr){ 
+        sum+=i; 
+    } 
+    return sum; 
+} 
+console.log(fun(1,2)); //3 
+console.log(fun(1,2,3)); //6 
+console.log(fun(1,2,3,4,5)); //15  </pre></div>
+
+
+
+<p>In the above example of the Rest Operator in JavaScript, we created the function called <code>fun</code> and receiving the <code>arr</code> parameter using the rest parameter. Now It doesn’t matter how many parameters you will pass in <code>fun</code> function it will grab all of them as an array.</p>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function f(a, b, ...theArgs) {
+  // ...
+}</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong> A function’s last parameter can be prefixed with <code>…</code> which will cause all remaining (user supplied) arguments to be placed within a “standard” javascript array. Only the last parameter can be a “rest parameter”.</p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<p><strong>For example:</strong></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function myFun(a, b, ...manyMoreArgs) {
+  console.log("a", a); 
+  console.log("b", b);
+  console.log("manyMoreArgs", manyMoreArgs); 
+}
+
+myFun("one", "two", "three", "four", "five", "six");
+
+// Console Output:
+// a, one
+// b, two
+// manyMoreArgs, [three, four, five, six]</pre></div>
+
+
+
+<h3>Destructuring rest parameters </h3>
+
+
+
+<p>Yes, you can use <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">destructuring</a> with the rest parameter. But, Arrays only (though objects will soon be supported). It means you can unpack the data of the rest parameter into distinct variables.</p>
+
+
+
+<p>To read more about Destructuring see this <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">JavaScript Destructuring ES6: The Complete Guide</a></p>
+
+
+
+<p>Back to the point, I’ll show how you can destructure the rest parameter in the below example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function f(...[a, b, c]) {
+  return a + b + c;
+}
+
+f(1)          // NaN (b and c are undefined)
+f(1, 2, 3)    // 6
+f(1, 2, 3, 4) // 6 (the fourth parameter is not destructured)</pre></div>
+
+
+
+<p>Well, you can use destructuring with the rest parameter and it will work but, As far as is know, I don’t see any use-case of it, It just makes the code little confusing.</p>
+
+
+
+<h4>What if you receive the rest parameter but did not pass it any value?</h4>
+
+
+
+<p>For example below: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function myFun(...allArgs) {
+  console.log("allArgs", allArgs); 
+}
+myFun(); // allArgs []</pre></div>
+
+
+
+<p>Nothing to worry about it as if you did not pass any value to it, It will be an empty array.</p>
+
+
+
+<h4>You can also check the length of your parameters.</h4>
+
+
+
+<p>Checking the length of parameters in the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function fun1(...theArgs) {
+  console.log(theArgs.length);
+}
+
+fun1();  // 0
+fun1(5); // 1
+fun1(5, 6, 7); // 3</pre></div>
+
+
+
+<p>For now, that’s all. Thanks for reading. Share if you find helpful. </p>
+     
+           <div id="below_post_add" class="advertisment">
+      	  	  </div>
+	  
+	  <div class="relatedPostWrap">
+		  <h4>You Might Interested In</h4>
+		  <ul class="relatedPostList">
+			  							<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/" rel="bookmark" title="Permanent Link to 4 Examples of Replace All in JavaScript You Should Know">
+									4 Examples of Replace All in JavaScript You Should Know								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" rel="bookmark" title="Permanent Link to 4 ways to remove duplicate array javascript">
+									4 ways to remove duplicate array javascript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" rel="bookmark" title="Permanent Link to 10 Examples of JavaScript Arguments Object">
+									10 Examples of JavaScript Arguments Object								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/" rel="bookmark" title="Permanent Link to 4 Examples of JavaScript sort without mutating array">
+									4 Examples of JavaScript sort without mutating array								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/" rel="bookmark" title="Permanent Link to Understanding Try Catch Finally JavaScript">
+									Understanding Try Catch Finally JavaScript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/" rel="bookmark" title="Permanent Link to JS try catch Optional catch binding update in ES10/2019">
+									JS try catch Optional catch binding update in ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/" rel="bookmark" title="Permanent Link to New Stable Sort Array in Javascript: ES10/2019">
+									New Stable Sort Array in Javascript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/" rel="bookmark" title="Permanent Link to Well formed JSON stringify JavaScript: ES10/2019">
+									Well formed JSON stringify JavaScript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/" rel="bookmark" title="Permanent Link to JavaScript Trim: trimStart and trimEnd method ES10/2019">
+									JavaScript Trim: trimStart and trimEnd method ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/" rel="bookmark" title="Permanent Link to JavaScript fromEntries method ES10">
+									JavaScript fromEntries method ES10								</a>
+							</li>
+									  </ul>
+	  </div>
+      
+	  
+	 
+
+
+
+  	</div>
+ 
+  
+	<footer class="entry-footer">
+			</footer>
+	
+    </div>
+    
+	</article>
+          
+           
+            <div class="clearfix"></div>
+            <div style="height:30px;"></div>
+            <div class="clearfix"></div>
+  
+        
+        	<div class="post-links">
+               <div class="alignleft"> <i class="fa fa-angle-double-left"></i> <a href="https://rajnishcoder.github.io/buginit/javascript/understanding-the-javascript-create-object-method/" rel="next">Understanding the JavaScript create object method</a></div>               <div class="alignright"><a href="https://rajnishcoder.github.io/buginit/javascript/an-advanced-guide-of-arrow-function-javascript-part-2/" rel="prev">An advanced guide of Arrow Function JavaScript: Part 2</a> <i class="fa fa-angle-double-right"></i></div>			</div>
+       	 
+			
+<div id="comments" class="comments-area">
+			<h2 class="comments-title">
+			2 thoughts on “<span>Understanding the Rest Operator in Javascript</span>”		</h2>
+   
+            <ul class="commentlist comment_section">
+                     
+     <li class="comment_block" id="comment-12">
+     
+         <div class="col-md-10 col-sm-10">
+            <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/b463de5febb2de15ca11caa2c3c596bd?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/b463de5febb2de15ca11caa2c3c596bd?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
+            <div class="col-md-10 col-sm-10 no-padding">
+                <h3><cite><b class="fn">Lcfvs</b> </cite>             </h3>
+            <span><a href="https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/#comment-12"><time datetime="2019-10-15T19:47:22+00:00">October 15, 2019 at 7:47 pm</time></a></span>
+                    
+                        
+            <p> 		</p><p><code></code><code>I don’t see any use-case of it, It just makes the code little confusing</code><code></code></p>
+<p>As I said, on Twitter, it avoids to pollute the function scope with useless variables declarations.</p>
+<p>As practical example, using a same Object.entries(obj), we can use a function to treat only the values, another to treat both values & keys, without creating another array from the first one. 😉</p>
+                      
+             
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/" data-commentid="12" data-postid="299" data-belowelement="comment-12" data-respondelement="respond" aria-label="Reply to Lcfvs">Reply</a></div>
+      <div class="clearfix"></div>
+          
+       
+          
+          </li>                 
+                                 
+	<ul class="children">
+     
+     <li class="comment_block" id="comment-13">
+     
+         <div class="col-md-10 col-sm-10">
+            <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
+            <div class="col-md-10 col-sm-10 no-padding">
+                <h3><cite><b class="fn">Rajnish Rajput</b> <span>Post author</span></cite>             </h3>
+            <span><a href="https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/#comment-13"><time datetime="2019-10-16T02:11:39+00:00">October 16, 2019 at 2:11 am</time></a></span>
+                    
+                        
+            <p> 		</p><p>First of all, thank you for reading and commenting I really appreciate it.<br>
+Thank you again for the idea of *scope pollution*, As it deserves the whole article on it I’ll write and link to it.</p>
+                      
+             
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/" data-commentid="13" data-postid="299" data-belowelement="comment-13" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
+      <div class="clearfix"></div>
+          
+       
+          
+          </li>                 
+                                 
+	
+</ul>
+
+            </ul>
+		
+       
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/buginit/javascript/understanding-rest-operator-javascript/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://rajnishcoder.github.io/buginit/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="299" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+</div>
+		</main>
+	</div>
+  </div>  
+
+  
+    
+ 						
+    
+       <div class="sidebar col-md-4 col-sm-4">
+            <aside id="search-2" class="widget widget_search" itemscope itemtype="http://schema.org/WPSideBar"><form role="search" method="get" class="search-form" action="https://rajnishcoder.github.io/buginit/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search">
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries" itemscope itemtype="http://schema.org/WPSideBar">		<h3 class="widget-title heading" itemprop="about">Recent Posts</h3>		<ul>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/">4 Examples of Replace All in JavaScript You Should Know</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/">4 ways to remove duplicate array javascript</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/">10 Examples of JavaScript Arguments Object</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/">4 Examples of JavaScript sort without mutating array</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/css/center-image-in-div/">CSS Center Image In div example with explanation</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments" itemscope itemtype="http://schema.org/WPSideBar"><h3 class="widget-title heading" itemprop="about">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-21">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link">Lacus</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-20">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-23">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link">Johnny</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-22">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/#comment-15">Smooth Scroll CSS</a></li></ul></aside>       </div>
+     
+  
+	 	</div> 
+          </div> 
+            </div> 
+             
+          
+            
+   <footer class="footer_wrapper" itemscope itemtype="http://schema.org/WPFooter">
+                 	
+            <div class="container">
+									<div id="footer-widget-area">    
+						<aside id="archives-2" class="widget widget_archive col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Archives</h3>		<ul>
+				<li><a href="https://rajnishcoder.github.io/buginit/2019/12/">December 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/11/">November 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/10/">October 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/09/">September 2019</a></li>
+		</ul>
+			</div></aside><aside id="categories-2" class="widget widget_categories col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Categories</h3>		<ul>
+				<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+		</ul>
+			</div></aside><aside id="meta-2" class="widget widget_meta col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Meta</h3>			<ul>
+						<li><a href="https://rajnishcoder.github.io/buginit/wp-login.php">Log in</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/feed/">Entries feed</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</div></aside>						<div class="clearboth"></div>
+					</div>
+				                <div class="clearboth"></div>
+            </div>
+            	<div class="copy_right">
+                    <div class="container"> 
+						<div class="row">
+							<div class="col-md-4">
+								<h3>Navigation</h3>
+								<ul itemscope itemtype="https://schema.org/SiteNavigationElement" id="menu-header-menu" class="menu"><li id="menu-item-359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-359"><a href="https://buginit.com/" itemprop="url"><span itemprop="name">Home</span></a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="https://rajnishcoder.github.io/buginit/about/" itemprop="url"><span itemprop="name">About</span></a></li>
+<li id="menu-item-361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a href="https://rajnishcoder.github.io/buginit/contact-us/" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
+<li id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a href="https://rajnishcoder.github.io/buginit/privacy-policy-2/" itemprop="url"><span itemprop="name">Privacy Policy</span></a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a href="https://rajnishcoder.github.io/buginit/html/" itemprop="url"><span itemprop="name">Learn HTML</span></a></li>
+</ul>							</div>
+							<div class="col-md-4">
+								<h3>Support Us</h3>
+								<a href="https://www.patreon.com/join/buginit" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Support on Patreon
+								</a>
+								<a href="https://www.paypal.me/rajnishprogrammer/5" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Through Paypal
+								</a>
+							</div>
+							<div class="col-md-4">
+								<h3>Follow Us</h3>								
+								<div class="footerFollowMain">
+									<ul class="footerFollowList">
+										<li class="fb"><a href="https://www.facebook.com/buginit" target="_blank"></a></li>
+										<li class="twitter"><a href="https://twitter.com/buginit" target="_blank"></a></li>
+									</ul>
+									
+								</div>
+							</div>
+						</div>
+						<div style="text-align:center">© 2020 All Rights Reserved. v1.1.2</div>
+						
+              		</div>
+            	</div> 
+             
+			<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/menu/script.js"></script>
+	     </footer> 	  
+
+	</div>
+	<div class="themeSwitcher" onclick="darkSwitcher(this)">
+		<i class="fa fa-adjust"></i>
+	</div>
+	<div id="dark" class="dark"></div>
+	<script>
+		// for darkmode
+		console.log(localStorage.getItem("isDark"));
+		
+		function darkSwitcher(ele) {
+			var isDark = JSON.parse(localStorage.getItem("isDark"));
+			console.log('1', isDark);
+			
+			var body = document.getElementsByTagName('body')[0];
+			if (isDark == true) {
+				console.log('2', isDark);
+				
+				body.classList.add('darkTheme');
+				document.getElementById('dark').classList.add('dark')
+				localStorage.setItem("isDark", "false");
+				console.log(localStorage.getItem("isDark"), isDark);
+				
+			} else {
+				console.log('in if else');
+				body.classList.remove('darkTheme');
+				document.getElementById('dark').classList.remove('dark')
+				localStorage.setItem("isDark", "true");
+				console.log(localStorage.getItem("isDark"));
+			}
+			// if (ele && body.classList.contains('darkTheme')) {
+			// } else {
+			// }
+		}
+	</script>
+    
+	
+
+    </body>
+    </html>

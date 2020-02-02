@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148904923-1"></script>
+
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	
+
+    
+	<link rel="shortcut icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+    
+ 
+
+	<title>All you need to know about swapping two variables in JavaScript – Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://rajnishcoder.github.io/buginit/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-bootstrap-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fontawesome-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/custom/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" type="text/css" media="all">
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body id="blog" class="darkTheme">  
+    
+    	<div class="main_container">
+        	
+            	<header class="header_wrapper" itemscope itemtype="http://schema.org/WPHeader">
+                
+				
+                
+             	 	
+                    
+           		
+                <div id="primary_menu" class="blue_bg">
+					<div class="container" style="padding: 0">
+						<div id="logo" class="pull-left logo" itemscope itemtype="http://schema.org/Organization">
+							<a href="https://rajnishcoder.github.io/buginit/" itemprop="url" rel="home" style="float:left">
+																<p itemprop="name" class="site-title">
+								Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</p>   
+								<div class="buginitLogoWrap">
+									<img itemprop="logo" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/images/logo.svg">
+								</div>
+							</a>   
+							<h3 itemprop="description" class="site-description"> </h3>						</div>
+						<nav id="primary-menu" class="main-navigation navmenu pull-left" role="navigation">
+								  
+									<ul class="menu clearfix">
+											<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+<ul class="children">
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+									</ul>
+														</nav>
+					</div>
+                </div>    
+  
+         </header>
+  			 
+       
+            <div class="clearboth"></div>
+			
+            
+            				     
+            	<div class="breadcrumbs">
+					<div class="container">
+						<div id="breadcrumbs" itemprop="breadcrumb"><a href="https://rajnishcoder.github.io/buginit">Home</a> » <a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a> » <span class="current">All you need to know about swapping two variables in JavaScript</span></div>                    </div>
+                </div>
+           
+              
+     	 
+            <div class="middle_wrapper">
+            	<div class="container mainContainer">
+                	<div> 
+ <script src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/js/caniuse-embed.min.js"></script>
+
+	<div class="col-md-8 col-sm-8 postInner">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+    	
+		        
+	 <article id="post-223" itemscope="" itemtype="http://schema.org/BlogPosting">
+	
+            	
+    <div class="article-content">    
+
+	<header class="entry-header">
+  	<h1 class="entry-title" itemprop="headline">All you need to know about swapping two variables in JavaScript</h1>    
+     <span class="category" itemprop="articleSection"><i class="fa fa-bookmark"></i><a href="https://rajnishcoder.github.io/buginit/category/javascript/" rel="category tag">JavaScript</a></span><span class="tags"> <i class="fa fa-tags"></i><a href="https://rajnishcoder.github.io/buginit/tag/guides/" rel="tag">Guides</a>, <a href="https://rajnishcoder.github.io/buginit/tag/javascript/" rel="tag">JavaScript</a></span><span class="date"><i class="fa fa-clock-o"></i><a href="https://rajnishcoder.github.io/buginit/javascript/all-you-need-to-know-about-swapping-two-variables-in-javascript/" title="2:05 am" rel="bookmark"><time itemprop="datePublished" datetime="2019-10-10T02:05:16+00:00">October 10, 2019</time></a></span><span itemprop="author"><i class="fa fa-user"></i><span class="author"><a href="https://rajnishcoder.github.io/buginit/author/rajnishcoder/" title="View all posts by Rajnish Rajput" rel="">Rajnish Rajput</a></span></span> <span class="comments" itemprop="interactionCount"> <i class="fa fa-comment"></i><a href="https://rajnishcoder.github.io/buginit/javascript/all-you-need-to-know-about-swapping-two-variables-in-javascript/#respond" title="0 Comments" rel="comments">0 Comments</a></span> 
+      
+               <div id="above_post_add" class="advertisment">
+                       </div>
+            
+      <div class="clearboth"></div>
+ 	</header>
+
+	<div class="entry-content">
+		
+<figure class="wp-block-image"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/swapping-two-variables-javascript-buginit.com_-1-1024x481.png" alt="swapping two variables javascript buginit.com" class="wp-image-230" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/swapping-two-variables-javascript-buginit.com_-1-1024x481.png 1024w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/swapping-two-variables-javascript-buginit.com_-1-300x141.png 300w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/swapping-two-variables-javascript-buginit.com_-1-768x361.png 768w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/swapping-two-variables-javascript-buginit.com_-1-1200x564.png 1200w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/swapping-two-variables-javascript-buginit.com_-1.png 1396w" sizes="(max-width: 1024px) 100vw, 1024px"></figure>
+
+
+
+<p>Swapping two variables normally requires a temporary variable or <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/XOR_swap_algorithm" target="_blank">XOR swap algorithm</a> as shown in example #2. We will learn two types of condition and 5 types of methods of swapping two variables in JavaScript.</p>
+
+
+
+<p>1. #2 and #3 examples are valid if the variable is a type of <code>number</code></p>
+
+
+
+<p>2. And the rest of the method valid if the variables are any type like <code>string</code>, <code>number</code>, <code>object</code>, <code>array</code> etc.</p>
+
+
+
+<p>Let’s break down 5 different ways of swapping two variables in JavaScript, Here is the first one.</p>
+
+
+
+<h3>#1 Using a Temp Variable</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>var x = 10;
+var y = 20;
+var tmp = x;
+x = y;
+y = tmp;
+// x = 20
+// y = 10</pre></div>
+
+
+
+<p>The above method can be used to swap any type of two variables.</p>
+
+
+
+<p>In the above example, we created a <code>tmp</code> variable to hold the value of <code>x</code> and assign <code>y</code> to <code>x</code> and then <code>tmp</code> to <code>x</code>.</p>
+
+
+
+<h3><strong>Swap variable values without a temporary variable</strong>.</h3>
+
+
+
+<h3>#2 Swap using Bitwise XOR operator</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"clike","mime":"text/x-java","theme":"material","lineNumbers":false,"lineWrapping":false,"readOnly":true}'>var x = 10;
+var y = 20;
+x ^= y;
+y ^= x;
+x ^= y;
+// x = 20
+// y = 10</pre></div>
+
+
+
+<p>To understand this completely please refer to this <a rel="noreferrer noopener" aria-label="wiki XOR swap algorithm (opens in a new tab)" href="https://en.wikipedia.org/wiki/XOR_swap_algorithm" target="_blank">wiki XOR swap algorithm</a>.</p>
+
+
+
+<blockquote class="wp-block-quote"><p> The xor operator in JavaScript converts its operands to 32-bit integers (using the <code>ToInt32</code> internal method—see <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.10">Section 11.10 of the ECMAScript standard</a>). It does not produce the correct results for non-integer numerical values. It also converts non-numeric values to 32-bit integers. If you start with <code>x = "hi"</code> and <code>y = "there"</code>, you end up with <code>x == 0</code> and <code>y == 0</code>. </p></blockquote>
+
+
+
+<h3>#3 Valid only for Numbers</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>var x = 10;
+var y = 20;
+x = x + y;
+y = x - y;
+x = x - y;
+// x = 20
+// y = 10</pre></div>
+
+
+
+<p>The above example only valid for the variables that are the type of <code>number</code>. So make sure what you use.</p>
+
+
+
+<h2>Single Line swapping</h2>
+
+
+
+<p>Here I’ll show you a couple of methods that can swap any type of variables in a single line.</p>
+
+
+
+<h3>#4 Using An Array</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>var x = 10;
+var y = 20;
+
+y = [x, x = y][0];
+// x = 20
+// y = 10</pre></div>
+
+
+
+<p>Using array first it will hold the value of <code>x</code> in <code>0</code> position on that array then it will assign the value of <code>y</code> to <code>x</code> in the second position on that array, then the expression will assign the value of <code>0</code> position of array to <code>y</code> that is actually <code>x</code>.</p>
+
+
+
+<h3>#5 Using destructuring expression</h3>
+
+
+
+<p>Here is my favorite coolest, simplest and readable swapping two variables method using destructuring expression, look at the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>var x = 10;
+var y = 20;
+
+[x, y] = [y, x];
+console.log(x); // 20
+console.log(y); // 10</pre></div>
+
+
+
+<p>But be careful it supports only in ES6 and above.</p>
+
+
+
+<p>More about <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">destructuring read here</a></p>
+     
+           <div id="below_post_add" class="advertisment">
+      	  	  </div>
+	  
+	  <div class="relatedPostWrap">
+		  <h4>You Might Interested In</h4>
+		  <ul class="relatedPostList">
+			  							<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/" rel="bookmark" title="Permanent Link to 4 Examples of Replace All in JavaScript You Should Know">
+									4 Examples of Replace All in JavaScript You Should Know								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" rel="bookmark" title="Permanent Link to 4 ways to remove duplicate array javascript">
+									4 ways to remove duplicate array javascript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" rel="bookmark" title="Permanent Link to 10 Examples of JavaScript Arguments Object">
+									10 Examples of JavaScript Arguments Object								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/" rel="bookmark" title="Permanent Link to 4 Examples of JavaScript sort without mutating array">
+									4 Examples of JavaScript sort without mutating array								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/" rel="bookmark" title="Permanent Link to Understanding Try Catch Finally JavaScript">
+									Understanding Try Catch Finally JavaScript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/" rel="bookmark" title="Permanent Link to JS try catch Optional catch binding update in ES10/2019">
+									JS try catch Optional catch binding update in ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/" rel="bookmark" title="Permanent Link to New Stable Sort Array in Javascript: ES10/2019">
+									New Stable Sort Array in Javascript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/" rel="bookmark" title="Permanent Link to Well formed JSON stringify JavaScript: ES10/2019">
+									Well formed JSON stringify JavaScript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/" rel="bookmark" title="Permanent Link to JavaScript Trim: trimStart and trimEnd method ES10/2019">
+									JavaScript Trim: trimStart and trimEnd method ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/" rel="bookmark" title="Permanent Link to JavaScript fromEntries method ES10">
+									JavaScript fromEntries method ES10								</a>
+							</li>
+									  </ul>
+	  </div>
+      
+	  
+	 
+
+
+
+  	</div>
+ 
+  
+	<footer class="entry-footer">
+			</footer>
+	
+    </div>
+    
+	</article>
+          
+           
+            <div class="clearfix"></div>
+            <div style="height:30px;"></div>
+            <div class="clearfix"></div>
+  
+        
+        	<div class="post-links">
+               <div class="alignleft"> <i class="fa fa-angle-double-left"></i> <a href="https://rajnishcoder.github.io/buginit/javascript/a-complete-guide-javascript-array-foreach/" rel="next">A Complete Guide: JavaScript Array forEach().</a></div>               <div class="alignright"><a href="https://rajnishcoder.github.io/buginit/javascript/a-complete-guide-tagged-template-literal-in-javascript/" rel="prev">A complete guide: Tagged Template Literal in JavaScript</a> <i class="fa fa-angle-double-right"></i></div>			</div>
+       	 
+			
+<div id="comments" class="comments-area">
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/buginit/javascript/all-you-need-to-know-about-swapping-two-variables-in-javascript/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://rajnishcoder.github.io/buginit/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="223" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+</div>
+		</main>
+	</div>
+  </div>  
+
+  
+    
+ 						
+    
+       <div class="sidebar col-md-4 col-sm-4">
+            <aside id="search-2" class="widget widget_search" itemscope itemtype="http://schema.org/WPSideBar"><form role="search" method="get" class="search-form" action="https://rajnishcoder.github.io/buginit/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search">
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries" itemscope itemtype="http://schema.org/WPSideBar">		<h3 class="widget-title heading" itemprop="about">Recent Posts</h3>		<ul>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/">4 Examples of Replace All in JavaScript You Should Know</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/">4 ways to remove duplicate array javascript</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/">10 Examples of JavaScript Arguments Object</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/">4 Examples of JavaScript sort without mutating array</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/css/center-image-in-div/">CSS Center Image In div example with explanation</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments" itemscope itemtype="http://schema.org/WPSideBar"><h3 class="widget-title heading" itemprop="about">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-21">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link">Lacus</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-20">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-23">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link">Johnny</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-22">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/#comment-15">Smooth Scroll CSS</a></li></ul></aside>       </div>
+     
+  
+	 	</div> 
+          </div> 
+            </div> 
+             
+          
+            
+   <footer class="footer_wrapper" itemscope itemtype="http://schema.org/WPFooter">
+                 	
+            <div class="container">
+									<div id="footer-widget-area">    
+						<aside id="archives-2" class="widget widget_archive col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Archives</h3>		<ul>
+				<li><a href="https://rajnishcoder.github.io/buginit/2019/12/">December 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/11/">November 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/10/">October 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/09/">September 2019</a></li>
+		</ul>
+			</div></aside><aside id="categories-2" class="widget widget_categories col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Categories</h3>		<ul>
+				<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+		</ul>
+			</div></aside><aside id="meta-2" class="widget widget_meta col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Meta</h3>			<ul>
+						<li><a href="https://rajnishcoder.github.io/buginit/wp-login.php">Log in</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/feed/">Entries feed</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</div></aside>						<div class="clearboth"></div>
+					</div>
+				                <div class="clearboth"></div>
+            </div>
+            	<div class="copy_right">
+                    <div class="container"> 
+						<div class="row">
+							<div class="col-md-4">
+								<h3>Navigation</h3>
+								<ul itemscope itemtype="https://schema.org/SiteNavigationElement" id="menu-header-menu" class="menu"><li id="menu-item-359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-359"><a href="https://buginit.com/" itemprop="url"><span itemprop="name">Home</span></a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="https://rajnishcoder.github.io/buginit/about/" itemprop="url"><span itemprop="name">About</span></a></li>
+<li id="menu-item-361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a href="https://rajnishcoder.github.io/buginit/contact-us/" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
+<li id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a href="https://rajnishcoder.github.io/buginit/privacy-policy-2/" itemprop="url"><span itemprop="name">Privacy Policy</span></a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a href="https://rajnishcoder.github.io/buginit/html/" itemprop="url"><span itemprop="name">Learn HTML</span></a></li>
+</ul>							</div>
+							<div class="col-md-4">
+								<h3>Support Us</h3>
+								<a href="https://www.patreon.com/join/buginit" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Support on Patreon
+								</a>
+								<a href="https://www.paypal.me/rajnishprogrammer/5" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Through Paypal
+								</a>
+							</div>
+							<div class="col-md-4">
+								<h3>Follow Us</h3>								
+								<div class="footerFollowMain">
+									<ul class="footerFollowList">
+										<li class="fb"><a href="https://www.facebook.com/buginit" target="_blank"></a></li>
+										<li class="twitter"><a href="https://twitter.com/buginit" target="_blank"></a></li>
+									</ul>
+									
+								</div>
+							</div>
+						</div>
+						<div style="text-align:center">© 2020 All Rights Reserved. v1.1.2</div>
+						
+              		</div>
+            	</div> 
+             
+			<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/menu/script.js"></script>
+	     </footer> 	  
+
+	</div>
+	<div class="themeSwitcher" onclick="darkSwitcher(this)">
+		<i class="fa fa-adjust"></i>
+	</div>
+	<div id="dark" class="dark"></div>
+	<script>
+		// for darkmode
+		console.log(localStorage.getItem("isDark"));
+		
+		function darkSwitcher(ele) {
+			var isDark = JSON.parse(localStorage.getItem("isDark"));
+			console.log('1', isDark);
+			
+			var body = document.getElementsByTagName('body')[0];
+			if (isDark == true) {
+				console.log('2', isDark);
+				
+				body.classList.add('darkTheme');
+				document.getElementById('dark').classList.add('dark')
+				localStorage.setItem("isDark", "false");
+				console.log(localStorage.getItem("isDark"), isDark);
+				
+			} else {
+				console.log('in if else');
+				body.classList.remove('darkTheme');
+				document.getElementById('dark').classList.remove('dark')
+				localStorage.setItem("isDark", "true");
+				console.log(localStorage.getItem("isDark"));
+			}
+			// if (ele && body.classList.contains('darkTheme')) {
+			// } else {
+			// }
+		}
+	</script>
+    
+	
+
+    </body>
+    </html>

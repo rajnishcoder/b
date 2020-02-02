@@ -1,0 +1,2450 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Guides &#8211; Buginit &#8211; HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+	<atom:link href="https://rajnishcoder.github.io/buginit/tag/guides/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rajnishcoder.github.io/buginit/</link>
+	<description></description>
+	<lastBuildDate>Sun, 01 Dec 2019 18:34:53 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>10 Examples of JavaScript Arguments Object</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comments</comments>
+				<pubDate>Sun, 01 Dec 2019 18:34:53 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Guides]]></category>
+		<category><![CDATA[Objects]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=478</guid>
+				<description><![CDATA[In this article, we will learn what is JavaScript arguments object and how to use it with 10 different types of examples and usages. In short, JavaScript arguments object is Array-like object that is accessible from inside the functions that contain the values of all the arguments passed to that function while calling. Note: If<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn what is <a href="https://buginit.com/category/javascript/">JavaScript</a> arguments object and how to use it with 10 different types of examples and usages.</p>
+
+
+
+<p>In short, JavaScript arguments object is <a href="https://buginit.com/tag/arrays/">Array</a>-like <a href="https://buginit.com/tag/objects/">object</a> that is accessible from inside the functions that contain the values of all the arguments passed to that function while calling.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong> If you&#8217;re writing ES6 compatible code, then <a href="https://buginit.com/javascript/understanding-the-rest-operator-in-javascript/">rest parameters</a> should be preferred.</p></blockquote>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: “Array-like” means that <code>arguments</code> has a <code>length</code> property and properties indexed from zero, but it doesn&#8217;t have <code>Array</code>&#8216;s built-in methods like <code>forEach()</code> and <code>map()</code>. </p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments#Description" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<p>Remember that javascript arguments object is a local variable that is available inside only a non-<a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function</a>. And it is not an array. It is similar to an array but doesn&#8217;t contain any array properties except <code>length</code>.</p>
+
+
+
+<p>For deep drive in <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function see this article</a></p>
+
+
+
+<h2>#1 Simple Example</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  console.log(arguments[0]);
+  // expected output: 1
+
+  console.log(arguments[1]);
+  // expected output: 2
+
+  console.log(arguments[2]);
+  // expected output: 3
+}
+
+test(1, 2, 3);</pre></div>
+
+
+
+<h4>Explanation</h4>
+
+
+
+<p>In the above example, I have created a function called <code>test</code> with three arguments <code>a</code>, <code>b</code> and <code>c</code> and accessing them using <code>arguments</code> object on the position of <code>0</code>, <code>1</code> and <code>2</code> as you can see the log inside the function in the above example.</p>
+
+
+
+<h3>#2 How the arguments object looks like?</h3>
+
+
+
+<p>Wanna see how it looks like?</p>
+
+
+
+<p>Let&#8217;s go inside the <code>arguments</code> object below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  console.log(arguments);
+}
+test(1, 2, 3); 
+// Output:- Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]</pre></div>
+
+
+
+<p>Let&#8217;s open that array-like object</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+  0: 1
+  1: 2
+  2: 3
+  callee: ƒ test(a, b, c)
+  length: 3
+  Symbol(Symbol.iterator): ƒ values()
+  __proto__: Object</pre></div>
+
+
+
+<p>Did you noticed the <code>__proto__</code> is an object So, basically <code>arguments</code> object contains: </p>
+
+
+
+<p>the <code>parameters</code> of its function as an array, </p>
+
+
+
+<p>the <code>length</code> of that array.</p>
+
+
+
+<p>and some other functions like <code>callee</code> and <code>Symbol</code>. Let&#8217;s dig more into it.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">Arguments(2) [1, 2, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+  0: 1
+  1: 2
+  callee: ƒ test(a, b)
+    arguments: null
+    caller: null
+    length: 2
+    name: &quot;test&quot;
+    prototype: {constructor: ƒ}
+    __proto__: ƒ ()
+    [[FunctionLocation]]: VM110:1
+    [[Scopes]]: Scopes[2]
+  length: 2
+  Symbol(Symbol.iterator): ƒ values()
+    arguments: (...)
+    caller: (...)
+    length: 0
+    name: &quot;values&quot;
+    __proto__: ƒ ()
+    [[Scopes]]: Scopes[0]
+  __proto__: Object</pre></div>
+
+
+
+<p>The <code>callee</code> function contains the information related to the function like <code>name</code> and <code>arguments</code> length.</p>
+
+
+
+<p>As MDN says that the <code>callee</code> function is a reference to the currently executing function that the arguments belong to.</p>
+
+
+
+<p>And As, I&#8217;m no expert in this so, don&#8217;t know why it contains the <code>Symbol</code> well if you know let me know.</p>
+
+
+
+<h3>#3 Changing Values</h3>
+
+
+
+<p>You can set or reassign each value of <code>argument</code> object. See the example below: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  arguments[0] = 'TEST';
+  console.log(arguments[0]);
+}
+
+test(1, 2, 3); // TEST
+</pre></div>
+
+
+
+<p>In the above example, I passed <code>1</code> as the first argument and change it inside the function to <code>TEST</code> and it logs the <code>arguments[0]</code>.  <strong>Please see #6 for more.</strong></p>
+
+
+
+<h3>#4 Convert it to a real array.</h3>
+
+
+
+<p>As I already told you <code>arguments</code> <a href="https://buginit.com/tag/objects/">object</a> is not an <a href="https://buginit.com/tag/arrays/">array</a> but it can be converted to a real array.</p>
+
+
+
+<h4>#4.1 Using <code>Array.prototype</code></h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = Array.prototype.slice.call(arguments);
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<p>The output of the above example is <code>[1, 2, 3]</code> See the output of console below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(3) [1, 2, 3]
+  0: 1
+  1: 2
+  2: 3
+  length: 3
+  __proto__: Array(0)</pre></div>
+
+
+
+<p>Did you noticed this time the <code>__proto__</code> is the type of array, we have converted it to the real array.</p>
+
+
+
+<h4>#4.2 Using array <a href="https://buginit.com/javascript/all-you-need-to-know-about-template-literals/">literal</a></h4>
+
+
+
+<p>Using the array <a href="https://buginit.com/javascript/all-you-need-to-know-about-template-literals/">literal</a> is a shorter way than the above example I showed. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = [].slice.call(arguments); 
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<h4>#4.3 Using Array.from()</h4>
+
+
+
+<p>You can also use array <code>.form()</code> method to convert the array-like <a href="https://buginit.com/tag/objects/">object</a> to a real array as I show in the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = Array.from(arguments);
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<h4>#4.4 Using spread syntax</h4>
+
+
+
+<p>Of course, You can use spread syntax to convert it into an array, like the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function test(a, b, c) {
+  var args = [...arguments];
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<p>The JavaScript arguments object is useful when you have dynamic parameters to received or you just don&#8217;t know the function called with more parameters than the function is gonna formally received.</p>
+
+
+
+<h3>#5 Usages </h3>
+
+
+
+<p>For example if I say that, create a function that accepts any number of string parameters and returns the longest one?</p>
+
+
+
+<h4>#5.1 Finding the longest</h4>
+
+
+
+<p>See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function getLongestString() {
+  var longest = '';
+  for (var i=0; i &lt; arguments.length; i++) {
+    if (arguments[i].length &gt; longest.length) {
+      longest = arguments[i];
+    }
+  }
+  return longest;
+}</pre></div>
+
+
+
+<h4>#5.2 Generate the HTML list</h4>
+
+
+
+<p>I have one more example for you. I&#8217;m gonna define a function that creates the <a href="https://buginit.com/category/html/">HTML</a> list. Given below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function list(type) {
+  var html = '&lt;' + type + 'l&gt;&lt;li&gt;';
+  var args = Array.prototype.slice.call(arguments, 1);
+  html += args.join('&lt;/li&gt;&lt;li&gt;');
+  html += '&lt;/li&gt;&lt;/' + type + 'l&gt;'; // end list
+
+  return html;
+}</pre></div>
+
+
+
+<p>you can pass any number of arguments in the <code>list</code> function that I created in the above example and also which type of list you want <code>ol</code> or <code>ul</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var listHTML = list('u', 'One', 'Two', 'Three');
+/* listHTML is:
+&quot;&lt;ul&gt;&lt;li&gt;One&lt;/li&gt;&lt;li&gt;Two&lt;/li&gt;&lt;li&gt;Three&lt;/li&gt;&lt;/ul&gt;&quot;
+*/</pre></div>
+
+
+
+<p>I know, I know maybe you are thinking that I can do this using <a href="https://buginit.com/javascript/understanding-the-rest-operator-in-javascript/">rest parameters</a>. Yes, of course, you can do that and there are many different ways to do that but we are talking about <code>arguments</code> object so I&#8217;m sticking with it. </p>
+
+
+
+<p>And, if you have a better example let me know in the comment section.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>You can always use <code>arguments.lenth</code> to count how many arguments this function is receiving. </p></blockquote>
+
+
+
+<h3>#6 Careful with updating values </h3>
+
+
+
+<p>While you are using the <code>arguments</code> object, please be careful with update values as it also change the value of your parameters too. I mean see the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function func(a) { 
+  a = 99; // updating a also updates arguments[0]
+  console.log(arguments[0]);
+}
+func(10); // 99</pre></div>
+
+
+
+<p>In the above example, I accept the <code>a</code> as a first parameter and pass the value <code>10</code> and reassign the <code>a</code> inside a function, So it also gonna change arguments on <code>0</code> position<code>arguments[0]</code>.</p>
+
+
+
+<p>And Its also works reverse like if I change <code>arguments[0]</code> it is gonna change <code>a</code>. So be careful when you are changing.</p>
+
+
+
+<p>But, mdn docs say that it changes the value only in strict mode, but I tested it on my latest chrome console it also changes value normally without strict mode. Maybe they did not update their docs or chrome dev updated their JavaScript engines. It&#8217;s still a mystery. </p>
+
+
+
+<p>I don&#8217;t know but it changes the value so careful with it.</p>
+
+
+
+<p>That&#8217;s all for now, Thank you so much for reading this long post, please share and support. For more about&nbsp;<a href="https://buginit.com/category/css/">CSS</a>&nbsp;or&nbsp;<a href="https://buginit.com/category/javascript/">JavaScript</a> </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>Understanding Try Catch Finally JavaScript</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/#respond</comments>
+				<pubDate>Tue, 12 Nov 2019 17:07:41 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=415</guid>
+				<description><![CDATA[In this article, we will learn about all three clauses of try catch finally in JavaScript with examples that will cover almost all cases. The try...catch statement consists of a try block, which contains one or more statements. The body {} of try...catch statement is required and must always be used, even for single statements.<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn about all three clauses of try catch finally in <a href="https://buginit.com/category/javascript/">JavaScript</a> with examples that will cover almost all cases.</p>
+
+
+
+<p>The <code>try...catch</code> statement consists of a try block, which contains one or more statements. The body <code>{}</code> of <code>try...catch</code> statement is required and must always be used, even for single statements. At least one <code>catch</code> clause, or a <code>finally</code> clause, must be present with <code>try</code> clause. So basically we have three forms of <code>try...catch</code> statement:</p>
+
+
+
+<ol><li><code>try...catch</code></li><li><code>try...finally</code></li><li><code>try...catch...finally</code>  </li></ol>
+
+
+
+<p><code>catch</code> clause contains statements that specify what to do if an exception is thrown in the&nbsp;<code>try</code>&nbsp;block. </p>
+
+
+
+<p>And in sort, the <code>finally</code> clause will be executed after, when <code>try</code> clause will run or <code>catch</code> clause will run.</p>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  try_statements
+}
+[catch (exception_var_1 if condition_1) { // non-standard
+  catch_statements_1
+}]
+...
+[catch (exception_var_2) {
+  catch_statements_2
+}]
+[finally {
+  finally_statements
+}]</pre></div>
+
+
+
+<p><code>try_statements</code>:- The statements to be executed.</p>
+
+
+
+<p><code>catch_statements_1</code>, <code>catch_statements_2</code>:-  These statements will run if there is an error/exception will occur in the&nbsp;<code>try</code>&nbsp;block.</p>
+
+
+
+<p><code>exception_var_1</code>, <code>exception_var_2</code>:- These are the identifiers to hold an exception <a href="https://buginit.com/tag/objects/">object</a> for the associated <code>catch</code> clause.</p>
+
+
+
+<p><code>condition_1</code>:-  A conditional expression.</p>
+
+
+
+<p><code>finally_statements</code>:- As I already told you the <code>finally</code> clause will be executed after when <code>try</code> clause will run or <code>catch</code> clause will run. These statements execute regardless of whether an exception was thrown or caught. <strong>You can say that the </strong><code><strong>finally</strong></code><strong> statement always executes.</strong></p>
+
+
+
+<h3>#1 Unconditional catch clause</h3>
+
+
+
+<p>try catch finally in <a href="https://buginit.com/category/javascript/">JavaScript</a> has an Unconditional <code>catch</code> clause statement is a simple <code>catch</code> statement that catches the exception object. For example below</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  throw 'myException'; // generates an exception
+}
+catch (e) {
+  // statements to handle any exceptions
+  logMyErrors(e); // pass exception object to error handler
+}</pre></div>
+
+
+
+<p>In the above example, we simply thrown an exception in the <code>try</code> block and received it inside the <code>catch</code> block and passed to the custom error handler called <code>logMyErrors</code>.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: you can take any name you like instead of <code>e</code></p></blockquote>
+
+
+
+<h3>#2 Conditional catch clauses</h3>
+
+
+
+<p>You can easily use one or more conditionally <code>catch</code> statements with <code>try</code> to detect the specific type of error/exception. The&nbsp;<code>try</code>&nbsp;block can potentially throw three types of exceptions:&nbsp;<code>TypeError</code>,&nbsp;<code>RangeError</code>, and&nbsp;<code>EvalError</code>. </p>
+
+
+
+<p>For example below:- </p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note</strong>: this functionality is not part of the ECMAScript specification and has been removed in Firefox 59. It&#8217;s not supported in any current browser anymore. </p></blockquote>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  myroutine(); // may throw three types of exceptions
+} catch (e if e instanceof TypeError) {
+  // statements to handle TypeError exceptions
+} catch (e if e instanceof RangeError) {
+  // statements to handle RangeError exceptions
+} catch (e if e instanceof EvalError) {
+  // statements to handle EvalError exceptions
+} catch (e) {
+  // statements to handle any unspecified exceptions
+  logMyErrors(e); // pass exception object to error handler
+}</pre></div>
+
+
+
+<p>As per <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">MDN</a></p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Non-standard</strong><br>This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future. </p></blockquote>
+
+
+
+<p><strong>Here is the same alternative working examples:</strong>  (obviously it&#8217;s verbose, but works everywhere): </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  myroutine(); // may throw three types of exceptions
+} catch (e) {
+  if (e instanceof TypeError) {
+    // statements to handle TypeError exceptions
+  } else if (e instanceof RangeError) {
+    // statements to handle RangeError exceptions
+  } else if (e instanceof EvalError) {
+    // statements to handle EvalError exceptions
+  } else {
+    // statements to handle any unspecified exceptions
+    logMyErrors(e); // pass exception object to error handler
+  }
+}</pre></div>
+
+
+
+<h3>#3 The finally clause</h3>
+
+
+
+<p>The <code>finally</code> clause (<em>oh please you know the </em><code><em>finally</em></code><em> clause I already told you two times before <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f600.png" alt="😀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></em> ), will be executed after when <code>try</code> clause will run or <code>catch</code> clause will run. But <strong>Note that the <code>finally</code> clause executes regardless of whether an exception is thrown.</strong> </p>
+
+
+
+<p>You can use the <code>finally</code> clause to clear up things anyway or general/routine cleanups. For example:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">openMyFile();
+try {
+  // tie up a resource
+  writeMyFile(theData);
+}
+finally {
+  closeMyFile(); // always close the resource
+}</pre></div>
+
+
+
+<h3>#4 Nested try-blocks</h3>
+
+
+
+<p>Yes, you can also use nesting with <code>try...catch</code></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  try {
+    throw new Error('oops');
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
+
+// Output:
+// &quot;finally&quot;
+// &quot;outer&quot; &quot;oops&quot;</pre></div>
+
+
+
+<p>See? In the above example, we did not define the <code>catch</code> block with the inner try block, so the outer catch block gets the exception. Let&#8217;s see the example if we put the catch inside. For example below</p>
+
+
+
+<h4>#4.1 Inner Catch</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  try {
+    throw new Error('oops');
+  }
+  catch (ex) {
+    console.error('inner', ex.message);
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
+
+// Output:
+// &quot;inner&quot; &quot;oops&quot;
+// &quot;finally&quot;</pre></div>
+
+
+
+<p>Did you noticed how the inner <code>catch</code> gets the error, Let&#8217;s see what if we re-throw the error inside the inner <code>catch</code> for example below:-</p>
+
+
+
+<h4>#4.1 Re-Throwing nested exception.</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">try {
+  try {
+    throw new Error('oops');
+  }
+  catch (ex) {
+    console.error('inner', ex.message);
+    throw ex;
+  }
+  finally {
+    console.log('finally');
+  }
+}
+catch (ex) {
+  console.error('outer', ex.message);
+}
+
+// Output:
+// &quot;inner&quot; &quot;oops&quot;
+// &quot;finally&quot;
+// &quot;outer&quot; &quot;oops&quot;</pre></div>
+
+
+
+<p>See It proves that any given error/exception will be caught only once by the nearest enclosing <code>catch</code> block unless it is re-thrown. Of course, any new error/exception occurs in the &#8216;Inner&#8217; block with be caught by the &#8220;outer&#8221; block because maybe the code inside &#8216;Inner&#8217; block will do something wrong and throw an error.</p>
+
+
+
+<h3>#5 Returning from finally</h3>
+
+
+
+<p>You can also return from the <code>finally</code> block, understand try catch finally in <a href="https://buginit.com/category/javascript/">JavaScript</a> with an example below:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(function() {
+  try {
+    try {
+      throw new Error('oops');
+    }
+    catch (ex) {
+      console.error('inner', ex.message);
+      throw ex;
+    }
+    finally {
+      console.log('finally');
+      return;
+    }
+  }
+  catch (ex) {
+    console.error('outer', ex.message);
+  }
+})();
+
+// Output:
+// &quot;inner&quot; &quot;oops&quot;
+// &quot;finally&quot;</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p>If the <code>finally</code> block returns a value, this value becomes the return value of the entire <code>try-catch-finally</code> production, regardless of any <code>return</code> statements in the <code>try</code> and <code>catch</code> blocks.  </p></blockquote>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;text-align:left;" class="auto-style1">Statement</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td style="text-align:left;">try/catch/finally</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody></table>
+
+
+
+<p>If you want to learn about <a href="https://buginit.com/javascript/js-try-catch-optional-catch-binding-es10/">New try catch Optional catch binding update in ES10/2019 Click here</a></p>
+
+
+
+<p>That&#8217;s all for the try&#8230;catch. Thanks for reading and sorry for this long article I don&#8217;t even have a meme for you. please share it with love.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>7 Examples of JavaScript Dynamic Import ES10</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/7-examples-javascript-dynamic-import-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/7-examples-javascript-dynamic-import-es10/#respond</comments>
+				<pubDate>Mon, 28 Oct 2019 15:55:54 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=356</guid>
+				<description><![CDATA[In this article, we will talk about JavaScript Dynamic Import that introduced in ES10/2019, we will cover basics and different types of examples also we will take a look at static and Dynamic Import in JavaScript. And don&#8217;t worry I&#8217;m not going to give you a long lecture, we will cover this with small points<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/7-examples-javascript-dynamic-import-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will talk about <a href="https://buginit.com/category/javascript/">JavaScript</a> Dynamic Import that introduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a>, we will cover basics and different types of examples also we will take a look at static and Dynamic Import in JavaScript. And don&#8217;t worry I&#8217;m not going to give you a long lecture, we will cover this with small points and examples.</p>
+
+
+
+<p>Let&#8217;s start, Basically dynamic import is a new function like import statement that introduced in ES10/2019 and it returns a promise. As we know let&#8217;s have a look at static import of JavaScript below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import MyModule from './my-module.js';
+import { NamedExport } from './other-module.js';</pre></div>
+
+
+
+<p>Now, Let&#8217;s have a look at the basic JavaScript dynamic import statement.</p>
+
+
+
+<h3>#1 Simple Single Line Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import(&quot;module/foo.js&quot;).then(foo =&gt; console.log(foo.default))</pre></div>
+
+
+
+<p>In the above example, we used the single-line statement of <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">Arrow function</a> for <code>console.log</code> to make it shorter. You can also use the normal function like the below example:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import('module/foo.js').then(function(foo) {
+  console.log(foo.default);
+})</pre></div>
+
+
+
+<h3>#2 Detailed Example</h3>
+
+
+
+<p>Take a look at the multiline dynamic import example below:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import('./utils.js')
+  .then((module) =&gt; {
+  	// here is your default import
+    module.default();
+  	// here you can do whatever you want
+	module.doStuff();
+  	console.log('buginit.com');
+  });</pre></div>
+
+
+
+<h3>#3 Conditional Import Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">if ( isSettingComponent ) {
+  import('lodash').then(_ =&gt; {
+    // Do something with lodash (a.k.a '_')
+  });
+}</pre></div>
+
+
+
+<p>In the above example, we <code>import</code> <code>lodash</code> library only if there is a setting component.</p>
+
+
+
+<h3>#4 Using async/await</h3>
+
+
+
+<p>Because dynamic <code>import()</code> returns a promise, we can also use async/await instead of the then-based callback style in the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(async () =&gt; {
+    const module = await import('./utils.js')
+    // here is your default import
+    module.default();
+  	// here you can do whatever you want
+	module.doStuff();
+})();</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong>&nbsp;Although&nbsp;<code>import()</code><em>looks</em>&nbsp;like a function call, it is specified as&nbsp;<em>syntax</em>&nbsp;that just happens to use parentheses (similar to&nbsp;<code>super()</code>). That means that&nbsp;<code>import</code>&nbsp;doesn’t inherit from&nbsp;<code>Function.prototype</code>&nbsp;so you cannot&nbsp;<code>call</code>&nbsp;or&nbsp;<code>apply</code>&nbsp;it, and things like&nbsp;<code>const importAlias = import</code>&nbsp;don’t work — heck,&nbsp;<code>import</code>&nbsp;is not even an object! This doesn’t really matter in practice, though. </p><cite><a href="https://v8.dev/features/dynamic-import" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<h3>#5 Separate module Specifier.</h3>
+
+
+
+<p>I&#8217;m sorry but I am gonna call the file path as module specifier, So you can also separate the module specifier using a variable.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const moduleSpecifier = './utils.js';
+import(moduleSpecifier)
+  .then((module) =&gt; {
+  	// here is your default import
+    module.default();
+  	// here you can do whatever you want
+	module.doStuff();
+  });</pre></div>
+
+
+
+<h3>#6 Conditional module Specifier.</h3>
+
+
+
+<p>As we can separate the module specifier, we can also set it conditionally like the example below:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">let moduleSpecifier;
+if ( isSetting ) {
+	moduleSpecifier = './setting.js';
+} else {
+  	moduleSpecifier = './utils.js';
+}
+import(moduleSpecifier)
+  .then((module) =&gt; {
+  	// here is your default import
+    module.default();
+  	// here you can do whatever you want
+	module.doStuff();
+});</pre></div>
+
+
+
+<h3>#7 Catching Error</h3>
+
+
+
+<p>As JavaScript Dynamic Import returns a promise we can also catch the errors using <code>.catch</code> method like the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">import('module/foo.js')
+  .then(foo =&gt; console.log(foo))
+  .catch(err =&gt; console.log(err))</pre></div>
+
+
+
+<p>Static import and JavaScript Dynamic Import they both are useful and both have their own use cases. It is recommended that you use static import for the initial dependencies, especially for above-the-fold content and in other cases like loading dependencies on-demand you can use dynamic import statement.</p>
+
+
+
+<h3>Support</h3>
+
+
+
+<p><strong>JavaScript Dynamic Import support in Babel, Chrome 63+, Mozilla Firefox 67+ and Safari 11.1+.</strong> </p>
+
+
+
+<p>That’s all I have got, I hope it was useful, If I have missed anything else please let me know. Share it with love. </p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-Dynamic-Import-buginit.com_.jpg" alt="JavaScript Dynamic Import buginit.com" class="wp-image-358" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-Dynamic-Import-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-Dynamic-Import-buginit.com_-300x164.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/7-examples-javascript-dynamic-import-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Reference to JavaScript matchAll method ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/#respond</comments>
+				<pubDate>Wed, 23 Oct 2019 15:16:08 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Guides]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=347</guid>
+				<description><![CDATA[We can use JavaScript matchAll method on any string and it returns all the matching results as an iterator that works easily with for...of loops and has properties like index, input and groups. It will return an empty iterator object if nothing matched. Simple Example As I said before JavaScript matchAll method will return an iterator of<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>We can use <a href="https://buginit.com/category/javascript/">JavaScript</a> matchAll method on any string and it returns all the matching results as an iterator that works easily with <code>for...of</code> loops and has properties like <code>index</code>, <code>input</code> and <code>groups</code>. It will return an empty iterator object if nothing matched.</p>
+
+
+
+<h3>Simple Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const regex = /t(e)(st(\d?))/g;
+const string = 'test1test2';
+const matches = string.matchAll(regex);
+for (const match of matches) {
+  console.log(match);
+}
+// [&quot;test1&quot;, &quot;e&quot;, &quot;st1&quot;, &quot;1&quot;, index: 0, input: &quot;test1test2&quot;, groups: undefined]
+// [&quot;test2&quot;, &quot;e&quot;, &quot;st2&quot;, &quot;2&quot;, index: 5, input: &quot;test1test2&quot;, groups: undefined]
+</pre></div>
+
+
+
+<p>As I said before JavaScript matchAll method will return an iterator of each match with properties like <code>index</code>, <code>input</code> and <code>groups</code> as shown below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">[&quot;test1&quot;, &quot;e&quot;, &quot;st1&quot;, &quot;1&quot;, index: 0, input: &quot;test1test2&quot;, groups: undefined]
+[&quot;test2&quot;, &quot;e&quot;, &quot;st2&quot;, &quot;2&quot;, index: 5, input: &quot;test1test2&quot;, groups: undefined]</pre></div>
+
+
+
+<h2>Syntax</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">myStr.matchAll(regexp)</pre></div>
+
+
+
+<h2>Parameters</h2>
+
+
+
+<p>It receives only one parameter <code>regexp</code>. A regular expression object. If you pass the non-RegExp object, It will automatically convert it to a RegExp by using <code>new RegExp(obj)</code>.</p>
+
+
+
+<h2>Additional properties</h2>
+
+
+
+<p>1. <code>index</code>:- The index of the first result found in the original string.</p>
+
+
+
+<p>2. <code>input</code>:- A complete copy of original string.</p>
+
+
+
+<p>3. <code>groups</code>:- It contained the result of any named capturing groups or will return <code>undefined</code> if no named capturing groups were defined.</p>
+
+
+
+<h2>Without Iterator Example</h2>
+
+
+
+<p>With the below example you can get a simple array as a result.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">let regexp = /t(e)(st(\d?))/g;
+let str = 'test1test2';
+
+let array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// expected output: 
+// [&quot;test1&quot;, &quot;e&quot;, &quot;st1&quot;, &quot;1&quot;, index: 0, input: &quot;test1test2&quot;, groups: undefined]
+
+console.log(array[1]);
+// expected output: 
+// [&quot;test2&quot;, &quot;e&quot;, &quot;st2&quot;, &quot;2&quot;, index: 5, input: &quot;test1test2&quot;, groups: undefined]</pre></div>
+
+
+
+<p>In the above example, we used <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">object destructuring</a> to create an array from an iterator. to read more about object destructuring:- <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">JavaScript Destructuring ES6: The Complete Guide</a></p>
+
+
+
+<p>For more <a rel="noreferrer noopener" aria-label="MDN (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll" target="_blank">MDN</a></p>
+
+
+
+<p>That&#8217;s all I have got, I hope you understood, If I have missed anything else please let me know. Share it with love.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-matchAll-method-buginit.com_.jpg" alt="JavaScript matchAll method buginit.com" class="wp-image-349" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-matchAll-method-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-matchAll-method-buginit.com_-300x214.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Features of JavaScript flatMap method ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/features-of-javascript-flatmap-method/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/features-of-javascript-flatmap-method/#respond</comments>
+				<pubDate>Tue, 22 Oct 2019 12:26:19 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[Arrays]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=342</guid>
+				<description><![CDATA[JavaScript flatMap method is basically a combination of map() and flat() method with the depth of 1, flatMap() method first maps each element using a mapping function, then flattens the result into a new array. This method is quite useful, as merging both methods into one method is a little more efficient. Also, read Guide to<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/features-of-javascript-flatmap-method/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p><a href="https://buginit.com/category/javascript/">JavaScript</a> flatMap method is basically a combination of <code>map()</code> and <code><a href="https://buginit.com/javascript/guide-to-flatten-array-in-javascript/">flat()</a></code> method with the depth of 1, <code>flatMap()</code> method first maps each element using a mapping function, then flattens the result into a new array. This method is quite useful, as merging both methods into one method is a little more efficient. </p>
+
+
+
+<p>Also, read <a href="https://buginit.com/javascript/guide-to-flatten-array-in-javascript/">Guide to Flatten array in JavaScript</a> </p>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
+    // return element for new_array
+}[, thisArg])</pre></div>
+
+
+
+<h3>Parameters</h3>
+
+
+
+<p><code>callback</code>:-  Function that produces an element of the new Array, taking three arguments below:</p>
+
+
+
+<p>First is <code>currentValue</code>This is the current element that is being processed in the array.</p>
+
+
+
+<p>Second is <code>index</code> The index of the current element is being processed in the array and it is an <em>optional</em> argument.</p>
+
+
+
+<p>Third is <code>array</code>:- The array <code>map</code> was called upon and this is an <em>optional</em> argument.</p>
+
+
+
+<p>Fourth is <code>thisArg</code> Value to use as <code>this</code> when executing <code>callback</code> and it is also an <em>optional</em> argument. </p>
+
+
+
+<h3>Return value of JavaScript flatMap</h3>
+
+
+
+<p>The return value is a new array with flattened and remembered that it flattens an array to the depth of 1. </p>
+
+
+
+<h3>Example</h3>
+
+
+
+<p>Here I&#8217;ll show you <code>map()</code> and <code>flatMap()</code> methods comparison</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">let arr = [1, 2, 3, 4];
+
+arr.map(x =&gt; [x * 2]); 
+// [[2], [4], [6], [8]]</pre></div>
+
+
+
+<p>The output of the above example is something like this<code>[[2], [4], [6], [8]]</code>. Let&#8217;s see the same example with <code>flatMap()</code> method below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">arr.flatMap(x =&gt; [x * 2]);
+// [2, 4, 6, 8]</pre></div>
+
+
+
+<p>Here is one more example of level 2 depth</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">arr.flatMap(x =&gt; [[x * 2]]);
+// [[2], [4], [6], [8]]</pre></div>
+
+
+
+<p> The output of the above example is an array of array like this: <code>[[2], [4], [6], [8]]</code> because JavaScript flatMap goes only to the depth of 1. </p>
+
+
+
+<p>Well if you were paying attention then I know you have a question that why would I return an array in first place in <code>map()</code> method? Because that map method was only an example to make you understand. Here is one more example below:</p>
+
+
+
+<h3> Example of Multiple Array </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const animals = ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f415.png" alt="🐕" class="wp-smiley" style="height: 1em; max-height: 1em;" />', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f408.png" alt="🐈" class="wp-smiley" style="height: 1em; max-height: 1em;" />', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f411.png" alt="🐑" class="wp-smiley" style="height: 1em; max-height: 1em;" />', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f42e.png" alt="🐮" class="wp-smiley" style="height: 1em; max-height: 1em;" />'];
+const noises = ['woof', 'meow', 'baa', 'mooo'];
+
+const mappedOnly = animals.map((animal, index) =&gt; [animal, noises[index]]);
+const mappedWithFlat = animals.flatMap((animal, index) =&gt; [animal, noises[index]]);
+
+console.log(mappedOnly);
+// [['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f415.png" alt="🐕" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'woof'], ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f408.png" alt="🐈" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'meow'], ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f411.png" alt="🐑" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'baa'], ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f42e.png" alt="🐮" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'mooo']
+
+console.log(mappedWithFlat);
+// ['<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f415.png" alt="🐕" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'woof', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f408.png" alt="🐈" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'meow', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f411.png" alt="🐑" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'baa', '<img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f42e.png" alt="🐮" class="wp-smiley" style="height: 1em; max-height: 1em;" />', 'mooo']</pre></div>
+
+
+
+<p>I hope you understood now, In the above example we mapped and flatten two different arrays into one (animals and their noises) in a single statement using a single return statement of <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function</a> to read more about <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">An Advanced Guide Of Arrow Function in JavaScript</a></p>
+
+
+
+<h3>Returning array</h3>
+
+
+
+<p>If the above function is complicated for you, I&#8217;ll give you one more example. Let&#8217;s say if the return value is also an array</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const friends = [
+    {name: 'Dave', kids: ['Max', 'Jack']},
+    {name: 'Max', kids: ['Sam', 'Alex', 'Megan']},
+    {name: 'Jordan', kids: ['Mason', 'Cameron', 'Kaylin']}
+];
+const kidNames = friends.flatMap(ele =&gt; ele.kids);
+// [&quot;Max&quot;, &quot;Jack&quot;, &quot;Sam&quot;, &quot;Alex&quot;, &quot;Megan&quot;, &quot;Mason&quot;, &quot;Cameron&quot;, &quot;Kaylin&quot;]</pre></div>
+
+
+
+<p><a href="https://v8.dev/features/array-flat-flatmap" target="_blank" rel="noreferrer noopener" aria-label="Chrome Official docs (opens in a new tab)">Chrome Official docs</a></p>
+
+
+
+<p>In the above example we have an array called <code>friends</code>, we mapped its property called <code>kids</code> that is also an array and flatten at the same time using <code>flatMap()</code>. The output of the above example is: <code>["Max", "Jack", "Sam", "Alex", "Megan", "Mason", "Cameron", "Kaylin"]</code></p>
+
+
+
+<h3>Modifying items.</h3>
+
+
+
+<p>Yes, we can also modify items as we want during the mapping using <code>flatMap()</code> method. For example:</p>
+
+
+
+<p>Let&#8217;s say we want to remove all the negative numbers and split the odd numbers into an even number</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">let a = [5, 4, -3, 20, 17, -33, -4, 18]
+
+a.flatMap( (n) =&gt;
+  (n &lt; 0) ?      [] :
+  (n % 2 == 0) ? [n] :
+                 [n-1, 1]
+)
+
+// expected output: [4, 1, 4, 20, 16, 1, 18]</pre></div>
+
+
+
+<p>Output of above example: <code>[4, 1, 4, 20, 16, 1, 18]</code></p>
+
+
+
+<p>Using <code>flatMap()</code> is very useful and short but it all depends on you and your creativity. <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<p>Hers is an emotion for you:</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-flatMap-method-buginit.com_.jpg" alt="" class="wp-image-344" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-flatMap-method-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-flatMap-method-buginit.com_-300x211.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+
+
+
+<p>Thank you for reading and support. Please share it with love. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/features-of-javascript-flatmap-method/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Understanding the Rest Operator in Javascript</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/#comments</comments>
+				<pubDate>Tue, 15 Oct 2019 16:52:01 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=299</guid>
+				<description><![CDATA[The rest parameter syntax or Rest Operator in JavaScript allows us to handle the infinite number of parameters as an array. Basically, It improved the way of handling parameters of the function. Basic Example In the above example of the Rest Operator in JavaScript, we created the function called fun and receiving the arr parameter<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>The rest parameter syntax or Rest Operator in <a href="https://buginit.com/category/javascript/">JavaScript</a> allows us to handle the infinite number of parameters as an array. Basically, It improved the way of handling parameters of the function.</p>
+
+
+
+<h3>Basic Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function fun(...arr){ 
+    let sum = 0; 
+    for(let i of arr){ 
+        sum+=i; 
+    } 
+    return sum; 
+} 
+console.log(fun(1,2)); //3 
+console.log(fun(1,2,3)); //6 
+console.log(fun(1,2,3,4,5)); //15  </pre></div>
+
+
+
+<p>In the above example of the Rest Operator in JavaScript, we created the function called <code>fun</code> and receiving the <code>arr</code> parameter using the rest parameter. Now It doesn&#8217;t matter how many parameters you will pass in <code>fun</code> function it will grab all of them as an array.</p>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function f(a, b, ...theArgs) {
+  // ...
+}</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong> A function&#8217;s last parameter can be prefixed with <code>…</code> which will cause all remaining (user supplied) arguments to be placed within a &#8220;standard&#8221; javascript array. Only the last parameter can be a &#8220;rest parameter&#8221;.</p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<p><strong>For example:</strong></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function myFun(a, b, ...manyMoreArgs) {
+  console.log(&quot;a&quot;, a); 
+  console.log(&quot;b&quot;, b);
+  console.log(&quot;manyMoreArgs&quot;, manyMoreArgs); 
+}
+
+myFun(&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;, &quot;five&quot;, &quot;six&quot;);
+
+// Console Output:
+// a, one
+// b, two
+// manyMoreArgs, [three, four, five, six]</pre></div>
+
+
+
+<h3>Destructuring rest parameters </h3>
+
+
+
+<p>Yes, you can use <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">destructuring</a> with the rest parameter. But, Arrays only (though objects will soon be supported). It means you can unpack the data of the rest parameter into distinct variables.</p>
+
+
+
+<p>To read more about Destructuring see this <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">JavaScript Destructuring ES6: The Complete Guide</a></p>
+
+
+
+<p>Back to the point, I&#8217;ll show how you can destructure the rest parameter in the below example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function f(...[a, b, c]) {
+  return a + b + c;
+}
+
+f(1)          // NaN (b and c are undefined)
+f(1, 2, 3)    // 6
+f(1, 2, 3, 4) // 6 (the fourth parameter is not destructured)</pre></div>
+
+
+
+<p>Well, you can use destructuring with the rest parameter and it will work but, As far as is know, I don&#8217;t see any use-case of it, It just makes the code little confusing.</p>
+
+
+
+<h4>What if you receive the rest parameter but did not pass it any value?</h4>
+
+
+
+<p>For example below: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function myFun(...allArgs) {
+  console.log(&quot;allArgs&quot;, allArgs); 
+}
+myFun(); // allArgs []</pre></div>
+
+
+
+<p>Nothing to worry about it as if you did not pass any value to it, It will be an empty array.</p>
+
+
+
+<h4>You can also check the length of your parameters.</h4>
+
+
+
+<p>Checking the length of parameters in the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function fun1(...theArgs) {
+  console.log(theArgs.length);
+}
+
+fun1();  // 0
+fun1(5); // 1
+fun1(5, 6, 7); // 3</pre></div>
+
+
+
+<p>For now, that&#8217;s all. Thanks for reading. Share if you find helpful. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/understanding-rest-operator-javascript/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+		<item>
+		<title>An advanced guide of Arrow Function JavaScript: Part 2</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/an-advanced-guide-of-arrow-function-javascript-part-2/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/an-advanced-guide-of-arrow-function-javascript-part-2/#respond</comments>
+				<pubDate>Mon, 14 Oct 2019 02:30:09 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=283</guid>
+				<description><![CDATA[This is an advance guide of JavaScript Arrow Function and If you directly visited this page so I&#8217;ll suggest you first read part 1 here. Let&#8217;s continue, #4 This Keyword #4.1 No separate&#160;this Every function in Javascript defined its own this value, but that&#8217;s the beauty of arrow function it doesn&#8217;t do that. Let&#8217;s understand<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/an-advanced-guide-of-arrow-function-javascript-part-2/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>This is an advance guide of JavaScript Arrow Function and If you directly visited this page so I&#8217;ll suggest you first read <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">part 1 here</a>.</p>
+
+
+
+<p>Let&#8217;s continue,</p>
+
+
+
+<h3>#4 This Keyword</h3>
+
+
+
+<h4>#4.1  No separate&nbsp;this</h4>
+
+
+
+<p>Every function in Javascript defined its own <code>this</code> value, but that&#8217;s the beauty of arrow function it doesn&#8217;t do that.</p>
+
+
+
+<p>Let&#8217;s understand with an example:</p>
+
+
+
+<h4>#4.1.1 Function Example for this keyword</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function Person() {
+  // The Person() constructor defines `this` as an instance of itself.
+  this.age = 0;
+
+  setInterval(function growUp() {
+    // In non-strict mode, the growUp() function defines `this`
+    // as the global object (because it's where growUp() is executed.), 
+    // which is different from the `this`
+    // defined by the Person() constructor.
+    this.age++;
+  }, 1000);
+}
+
+var p = new Person();</pre></div>
+
+
+
+<p>In the above example <code>this</code> defined inside the <code>growUp()</code> function is different from the <code>this</code> defined inside the <code>Person()</code> function.</p>
+
+
+
+<p>In ECMAScript 3/5, the <code>this</code> issue was fixable by assigning the value of <code>this</code> to a variable <code>that</code> could be closed over.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function Person() {
+  var that = this;
+  that.age = 0;
+
+  setInterval(function growUp() {
+    // The callback refers to the `that` variable of which
+    // the value is the expected object.
+    that.age++;
+  }, 1000);
+}</pre></div>
+
+
+
+<p>In the above example, we assigned <code>this</code> to the variable called <code>that</code>, so we can use easily <code>Person()</code> function <code>this</code> inside <code>growUp()</code> function.</p>
+
+
+
+<p>Well, get to the point, An arrow function does not have its own <code>this</code>. The <code>this</code> value of the enclosing lexical scope is used; arrow functions follow the normal variable lookup rules. So while searching for <code>this</code> which is not present inside the current scope, it will end up finding <code>this</code> from its enclosing scope. For example: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function Person(){
+  this.age = 0;
+
+  setInterval(() =&gt; {
+    this.age++; // |this| properly refers to the Person object
+  }, 1000);
+}
+
+var p = new Person();</pre></div>
+
+
+
+<p>In the above example <code>this</code> inside the arrow function will refer to the <code>Person()</code> function because of arrow function doesn&#8217;t have its own <code>this</code>.</p>
+
+
+
+<h3>#5  No binding of&nbsp;arguments </h3>
+
+
+
+<p>As normally a function has its own arguments object in javascript, like and example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var arguments = [1, 2, 3];
+function arr(){ return arguments[0]};
+
+arr(2); // it will return 2</pre></div>
+
+
+
+<p>Arrow function doesn&#8217;t have its own <code>arguments</code>&nbsp;object. So, in the example below, arguments is simply a reference to the arguments of the enclosing scope:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var arguments = [1, 2, 3];
+var arr = () =&gt; arguments[0];
+
+arr(2); // it will return 1</pre></div>
+
+
+
+<h3>#6 Arrow function with new&nbsp;operator</h3>
+
+
+
+<p>Arrow functions cannot be used as constructors and will throw an error when you trying to use <code>new</code> operator with them.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var Foo = () =&gt; {};
+var foo = new Foo(); // TypeError: Foo is not a constructor</pre></div>
+
+
+
+<h3>#7 Arrow function with prototype property</h3>
+
+
+
+<p>Arrow function also doesn&#8217;t have <code>prototype</code> property. So, if you used it anyway It will be <code>undefined</code>.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var Foo = () =&gt; {};
+console.log(Foo.prototype); // undefined</pre></div>
+
+
+
+<h3>#8 Arrow Function body</h3>
+
+
+
+<p>Arrow function can have two types of body &#8220;<strong>concise body</strong>&#8221; or the usual &#8220;<strong>block body</strong>&#8220;. let&#8217;s understand with an example:</p>
+
+
+
+<h4>#8.1 Concise body</h4>
+
+
+
+<p>Inside a concise body of arrow function you can only use an expression, which becomes the implicit return value.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">// Concise body example
+var func = x =&gt; x * x;                  
+// concise body syntax, implied &quot;return&quot;</pre></div>
+
+
+
+<h4>#8.2 Block body</h4>
+
+
+
+<p> When using a block body, you must have to use an explicit return statement. For example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">// Block body example
+var func = (x, y) =&gt; { return x + y; }; 
+// with block body, explicit &quot;return&quot; needed</pre></div>
+
+
+
+<h3>#9 Returning object literals</h3>
+
+
+
+<p>Note that, when using the concise body of an arrow function and returning object literals syntax <code>params =&gt; {object:literal}</code> will not work as expected. For example below: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var func = () =&gt; { foo: 1 };
+// Calling func() returns undefined!
+
+var func = () =&gt; { foo: function() {} };
+// SyntaxError: function statement requires a name</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p>This is because the code inside braces ({}) is parsed as a sequence of statements (i.e. foo is treated like a label, not a key in an object literal).</p></blockquote>
+
+
+
+<p>If you want to use it, you must wrap the object literal in parentheses:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var func = () =&gt; ({ foo: 1 });</pre></div>
+
+
+
+<h3>#10 Line breaks</h3>
+
+
+
+<p>An arrow function cannot contain a line break between its parameters and its arrow. For example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var func = (a, b, c)
+  =&gt; 1;
+// SyntaxError: expected expression, got '=&gt;'</pre></div>
+
+
+
+<p>However, you can use it in the following ways below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var func = (a, b, c) =&gt;
+  1;
+
+var func = (a, b, c) =&gt; (
+  1
+);
+
+var func = (a, b, c) =&gt; {
+  return 1
+};
+
+var func = (
+  a,
+  b,
+  c
+) =&gt; 1;
+ 
+// no SyntaxError thrown</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr style="height:50px;">
+    <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:20%;" class="bsEdge" title="Edge"></th>
+    <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:20%;" class="bsSafari" title="Safari"></th>
+    <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome 45</td>
+    <td>Edge 12</td>    
+    <td>Firefox 22</td>
+    <td>Safari 10</td>
+    <td>Opera 32</td>
+  </tr>
+  <tr>
+    <td>Sep, 2015</td>
+    <td>Jul, 2015</td>    
+    <td>May, 2013</td>
+    <td>Sep, 2016</td>
+    <td>Sep, 2015</td>
+  </tr></tbody>
+</table>
+
+
+
+<p>Here is this link of Part 1</p>
+
+
+
+<p><a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">An Advanced Guide Of Arrow Function JavaScript: Part 1</a></p>
+
+
+
+<p>Thank you for reading and support. Please share it with love.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/an-advanced-guide-of-arrow-function-javascript-part-2/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>An advanced guide of Arrow Function JavaScript: Part 1</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/an-advanced-guide-of-arrow-function-javascript/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/an-advanced-guide-of-arrow-function-javascript/#respond</comments>
+				<pubDate>Sun, 13 Oct 2019 09:50:55 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=259</guid>
+				<description><![CDATA[An Arrow Function in JavaScript also called a &#8220;Fat arrow&#8221; function is a syntactically compact alternative to a regular function expression. It allows us to write shorter function syntax. Arrow functions are anonymous and change the way this binds in functions. Arrow functions doesn&#8217;t support its own bindings to the this, arguments, super, or new.target<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/an-advanced-guide-of-arrow-function-javascript/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>An <strong>Arrow Function</strong> in <a href="https://buginit.com/category/javascript/">JavaScript</a> also called a <strong>&#8220;Fat arrow&#8221;</strong> function is a syntactically compact alternative to a regular function expression. It allows us to write shorter function syntax. Arrow functions are anonymous and change the way <code>this</code> binds in functions.</p>
+
+
+
+<p>Arrow functions doesn&#8217;t support its own bindings to the <code>this</code>, <code>arguments</code>, <code>super</code>, or <code>new.target</code> keywords. </p>
+
+
+
+<blockquote class="wp-block-quote"><p> JavaScript Arrow function were introduced in ES6. </p></blockquote>
+
+
+
+<h3>#1 Basic Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var materials = [
+  'JavaScript',
+  'HTML',
+  'CSS',
+  'Buginit.com'
+];
+// before 
+console.log(materials.map(function (material) { return material.length}));
+// with arrow function
+console.log(materials.map(material =&gt; material.length));
+// expected output: Array [10, 4, 3, 11]</pre></div>
+
+
+
+<h3>#2 Basic syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(param1, param2, …, paramN) =&gt; { statements } 
+(param1, param2, …, paramN) =&gt; expression
+// equivalent to: =&gt; { return expression; }</pre></div>
+
+
+
+<h4>#2.1  Optional Parentheses</h4>
+
+
+
+<p>Parentheses are optional when there&#8217;s only one parameter present:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(singleParam) =&gt; { statements }
+singleParam =&gt; { statements }</pre></div>
+
+
+
+<h4>#2.2 Without Parameters</h4>
+
+
+
+<p>If you do not have any parameters then it should be written with a pair of parentheses like the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">() =&gt; { statements }</pre></div>
+
+
+
+<h3>#3 Advanced syntax</h3>
+
+
+
+<h4>#3.1 Object literal expression</h4>
+
+
+
+<p>Parenthesize the body of a function to return an object literal expression. like an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">params =&gt; ({foo: bar})</pre></div>
+
+
+
+<h4>#3.2 Rest and Default Parameter</h4>
+
+
+
+<p>Arrow function supports Rest and default parameters.</p>
+
+
+
+<h4>#3.2.1 Rest Example</h4>
+
+
+
+<p>Easily receive <code>N</code> number of parameters by using rest parameters:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">// rest example
+(param1, param2, ...rest) =&gt; { statements }</pre></div>
+
+
+
+<h4>#3.2.2 Default Value Example</h4>
+
+
+
+<p>You can easily assign a default value to any parameter during receiving it. like an example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">(param1 = defaultValue1, param2, …, paramN = defaultValueN) =&gt; { 
+	statements 
+}</pre></div>
+
+
+
+<h4> #3.3 Destructuring</h4>
+
+
+
+<p><a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">Destructuring</a> within the parameter list is also supported by Arrow functions:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c;
+f(); // 6</pre></div>
+
+
+
+<p>To understand Destructuring please read this article: <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">JavaScript Destructuring ES6: The Complete Guide</a></p>
+
+
+
+<p><strong>Basically there are two main reasons to introduce the Arrow functions: The need for shorter functions and the behavior of the </strong><code><strong>this</strong></code><strong> keyword.</strong></p>
+
+
+
+<p>As you already saw the shorter syntax above. But anyway I&#8217;ll show you one more comparison example:</p>
+
+
+
+<h4>#3.4 Using Normal Function</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var elements = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+// Using normal function 
+// This statement returns the array: [8, 6, 7, 9]
+elements.map(function(element) {
+  return element.length;
+});</pre></div>
+
+
+
+<h4>#3.5 Using Arrow Function</h4>
+
+
+
+<p>As we have a single parameter and single statement to return, so we can use arrow function like below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">elements.map(element =&gt; element.length); // [8, 6, 7, 9]</pre></div>
+
+
+
+<p>Do you think its cool? </p>
+
+
+
+<p><strong>Well, hang on!! Buddy</strong></p>
+
+
+
+<p>We are going to use <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">Destructuring</a> within the parameter with the above example:</p>
+
+
+
+<p>I am gonna break it into 2 steps to make it easy.</p>
+
+
+
+<h4>#3.5.1 Step 1:</h4>
+
+
+
+<p>Because we only need the <code>length</code> property, we can use destructuring parameter, Notice that the <code>length</code> corresponds to the property we want to get whereas the obviously non-special <code>fooLength</code> is just the name of a variable which can be changed to any valid variable name you want</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">elements.map(({ length :fooLength }) =&gt; fooLength); // [8, 6, 7, 9]</pre></div>
+
+
+
+<p>In the above example, we are taking the <code>length</code> property of the <code>elements</code> array and assigning it to the <code>fooLength</code> using JavaScript <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">Destructuring</a>, then returning it to <code>map()</code> method using a single returning statement of arrow function.</p>
+
+
+
+<h4>#3.5.2 Step 2:</h4>
+
+
+
+<p>This destructuring parameter assignment can also be written as seen below. However, let&#8217;s try to remove our variable <code>fooLength</code> that we were assigned to the length property in the previous example.</p>
+
+
+
+<p><strong>Hold On!!!</strong></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">elements.map(({ length }) =&gt; length); // [8, 6, 7, 9] </pre></div>
+
+
+
+<p><strong>Boom!!</strong> what did I just saw? </p>
+
+
+
+<p>Yes, we can do this, we don&#8217;t really have to assign the variable when using destructuring. So now, destructuring takes the <code>length</code> from the array element and arrow function treat it like a parameter then we used a single returning statement of arrow function to return the length in the above example.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Arrow-Function-JavaScript-buginit.com_.jpg" alt="Arrow Function JavaScript buginit.com" class="wp-image-272" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Arrow-Function-JavaScript-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/Arrow-Function-JavaScript-buginit.com_-300x296.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /><figcaption>just a meme for you!</figcaption></figure></div>
+
+
+
+<p>That&#8217;s all? </p>
+
+
+
+<p>No, as this post has become long we will cover the rest of it in <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript-part-2/">PART 2</a>.</p>
+
+
+
+<p><a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript-part-2/">An Advanced Guide Of Arrow Function JavaScript: Part 2</a></p>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr style="height:50px;">
+    <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:20%;" class="bsEdge" title="Edge"></th>
+    <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:20%;" class="bsSafari" title="Safari"></th>
+    <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome 45</td>
+    <td>Edge 12</td>    
+    <td>Firefox 22</td>
+    <td>Safari 10</td>
+    <td>Opera 32</td>
+  </tr>
+  <tr>
+    <td>Sep, 2015</td>
+    <td>Jul, 2015</td>    
+    <td>May, 2013</td>
+    <td>Sep, 2016</td>
+    <td>Sep, 2015</td>
+  </tr></tbody>
+</table>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/an-advanced-guide-of-arrow-function-javascript/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Do you really know JavaScript includes method?</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/do-you-really-know-javascript-includes-method/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/do-you-really-know-javascript-includes-method/#respond</comments>
+				<pubDate>Sat, 12 Oct 2019 02:18:27 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Arrays]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=244</guid>
+				<description><![CDATA[JavaScript includes method is very handy when you need to search or find something in the array or string, yes it works on both. It returns the Boolean value true if the array contains the value and false if not, and the same applied to the strings. Note: When comparing strings and characters JavaScript includes<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/do-you-really-know-javascript-includes-method/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p><strong>JavaScript includes method </strong>is very handy when you need to search or find something in the array or string, yes it works on both. <strong>It returns the Boolean value true if the array contains the value and false if not, and the same applied to the strings.</strong></p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note: </strong>When comparing strings and characters <a href="https://buginit.com/category/javascript/" target="_blank" rel="noreferrer noopener" aria-label="JavaScript (opens in a new tab)">JavaScript</a> includes method is <strong>case-sensitive</strong>.</p></blockquote>
+
+
+
+<h3>#1 Array Example </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// expected output: true
+
+var pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// expected output: true
+
+console.log(pets.includes('at'));
+// expected output: false</pre></div>
+
+
+
+<h4>#1.1 Find by Specific Index</h4>
+
+
+
+<p>In JavaScript include method, you can also find values from specific indexes, as second parameter it receives <code><em>fromIndex</em></code> for example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var array1 = [1, 2, 3];
+
+console.log(array1.includes(2, 1));
+// expected output: true
+
+var array1 = [1, 2, 3];
+
+console.log(array1.includes(2, 2));
+// expected output: false</pre></div>
+
+
+
+<p>In the above example, we are passing <code><em>fromIndex</em></code> in the second parameter to tell the <code>include()</code> method that if the value exists from that specific index.</p>
+
+
+
+<p><code><em>fromIndex</em></code> Definition according to MDN.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>The position in this array at which to begin searching for <code>valueToFind</code>; the first character to be searched is found at <code>fromIndex</code> for positive values of <code>fromIndex</code>, or at <code>array.length + fromIndex</code> for negative values of <code>fromIndex</code> (using the absolute value of <code>fromIndex</code> as the number of characters from the end of the array at which to start the search). Defaults to 0. </p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<h4>#1.2 Some Quick Examples</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">[1, 2, 3].includes(2);     // true
+[1, 2, 3].includes(4);     // false
+[1, 2, 3].includes(3, 3);  // false
+[1, 2, 3].includes(3, -1); // true
+[1, 2, NaN].includes(NaN); // true</pre></div>
+
+
+
+<h4>#1.3 What if <em>fromIndex</em> is greater than array length?</h4>
+
+
+
+<p>If <code><em>fromIndex</em></code> is greater than or equal to the length of the array, it returns <code>false</code>. For example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var arr = ['a', 'b', 'c'];
+
+arr.includes('c', 3);   // false
+arr.includes('c', 100); // false</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong> Technically speaking, <code>includes()</code> uses the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality" target="_blank" rel="noreferrer noopener" aria-label="sameValueZero (opens in a new tab)">sameValueZero</a> algorithm to determine whether the given element is found. </p></blockquote>
+
+
+
+<h4>#1.4 What if <em>fromIndex</em> is less than 0?</h4>
+
+
+
+<p>If <code><em>fromIndex</em></code> is less than 0 (negative value) then it is going to compute the index, the computed index is calculated to be used as a position in the array at which to begin searching for <code><em>valueToFind</em></code>. If the computed index is less or equal than <code>-1 * array.length</code>, it will search the whole array.</p>
+
+
+
+<p>For example: If array length is 3 and <code><em>fromIndex</em></code> is -100 hence, the <code>computed index is 3 + (-100) = -97</code></p>
+
+
+
+<h4>#1.5 Computed Index Examples</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">// array length is 3
+// fromIndex is -100
+// computed index is 3 + (-100) = -97
+
+var arr = ['a', 'b', 'c'];
+
+arr.includes('a', -100); // true
+arr.includes('b', -100); // true
+arr.includes('c', -100); // true
+arr.includes('a', -2); // false</pre></div>
+
+
+
+<h3>#2 String Include </h3>
+
+
+
+<p>JavaScript includes also works the same as arrays, It also recieves two parameters </p>
+
+
+
+<p>First <code>searchString</code>: A string to be searched for within this string.</p>
+
+
+
+<p>Second <code>position</code> (Optional): The position within the string at which to begin searching for searchString. (defaults to 0).</p>
+
+
+
+<p>Here is the example below:-</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var str = &quot;Hello world, welcome to the buginit.com&quot;;
+console.log(str.includes(&quot;buginit.com&quot;)); // true 
+console.log(str.includes(&quot;buginit com&quot;)); // false </pre></div>
+
+
+
+<h4>#2.1 Some more quick examples</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const str = 'To be, or not to be, that is the question.';
+
+console.log(str.includes('To be'));       // true
+console.log(str.includes('question'));    // true
+console.log(str.includes('nonexistent')); // false
+console.log(str.includes('To be', 1));    // false
+console.log(str.includes('TO BE'));       // false
+console.log(str.includes(''))             // true</pre></div>
+
+
+
+<h4>#2.2 Case-sensitivity Example</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">'Buginit dot com'.includes('buginit'); // returns false</pre></div>
+
+
+
+<h4>#2.3 Polyfill</h4>
+
+
+
+<p>This method has been added to the ECMAScript 2015 specification and may not be available in all JavaScript implementations yet. However, you can easily polyfill this method for String:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">if (!String.prototype.includes) {
+  String.prototype.includes = function(search, start) {
+    'use strict';
+    if (typeof start !== 'number') {
+      start = 0;
+    }
+
+    if (start + search.length &gt; this.length) {
+      return false;
+    } else {
+      return this.indexOf(search, start) !== -1;
+    }
+  };
+}</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<h4>Arrays</h4>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td style="text-align:left;">includes()</td>
+    <td>47</td>
+    <td>14.0</td>    
+    <td>43</td>
+    <td>9</td>
+    <td>34</td>
+  </tr>
+</tbody></table>
+
+
+
+<h4>Strings</h4>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td style="text-align:left;">includes()</td>
+    <td>41</td>
+    <td>12.0</td>    
+    <td>40</td>
+    <td>9</td>
+    <td>28</td>
+  </tr>
+</tbody></table>
+
+
+
+<p>That&#8217;s all folks, thanks for reading, here is a meme for you.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-includes-method-meme-buginit.com_.jpg" alt="JavaScript includes method meme buginit.com" class="wp-image-252" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-includes-method-meme-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-includes-method-meme-buginit.com_-300x194.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/do-you-really-know-javascript-includes-method/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>A Complete Guide: JavaScript Array forEach().</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/a-complete-guide-javascript-array-foreach/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/a-complete-guide-javascript-array-foreach/#respond</comments>
+				<pubDate>Fri, 11 Oct 2019 02:28:21 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Arrays]]></category>
+		<category><![CDATA[Guides]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=232</guid>
+				<description><![CDATA[The JavaScript array forEach method accepts the callback method and executes it once for each element of the array, in order to skip non-existent entries in sparse arrays. Here is a quick and simple example. Although I only used one argument above. But, it takes three arguments: The value of each entry, the index of<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/a-complete-guide-javascript-array-foreach/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<figure class="wp-block-image"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/A-Complete-Guide-JavaScript-Array-forEach-buginit.com_-1024x481.png" alt="A Complete Guide JavaScript Array forEach" class="wp-image-239" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/A-Complete-Guide-JavaScript-Array-forEach-buginit.com_-1024x481.png 1024w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/A-Complete-Guide-JavaScript-Array-forEach-buginit.com_-300x141.png 300w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/A-Complete-Guide-JavaScript-Array-forEach-buginit.com_-768x361.png 768w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/A-Complete-Guide-JavaScript-Array-forEach-buginit.com_-1200x564.png 1200w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/A-Complete-Guide-JavaScript-Array-forEach-buginit.com_.png 1396w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>The <a href="https://buginit.com/category/javascript/">JavaScript</a> array forEach method accepts the callback method and executes it once for each element of the array, in order to skip non-existent entries in sparse arrays.</p>
+
+
+
+<h4>Here is a quick and simple example.</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var array1 = ['a', 'b', 'c'];
+
+array1.forEach(function(element) {
+  console.log(element);
+});
+
+// expected output: &quot;a&quot;
+// expected output: &quot;b&quot;
+// expected output: &quot;c&quot;</pre></div>
+
+
+
+<p>Although I only used one argument above. But, it takes three arguments: The value of each entry, the index of that entry, and a reference to the array you&#8217;re iterating over.</p>
+
+
+
+<p><code>currentValue</code> The current element being processed in the array.</p>
+
+
+
+<p><code>index</code>&nbsp;<strong>(Optional)</strong> The index of the current element being processed in the array.</p>
+
+
+
+<p><code>array</code>&nbsp;<strong>(Optional)</strong> The array&nbsp;<code>forEach()</code>&nbsp;was called upon.</p>
+
+
+
+<p><code>thisArg</code>&nbsp;<strong>(Optional)</strong> Value to use as&nbsp;<code>this</code>&nbsp;when executing&nbsp;<code>callback</code>. </p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Warninig:</strong> There is no way to stop or break a <code>forEach()</code> loop other than by throwing an exception. If you need such behavior, the <code>forEach()</code> method is the wrong tool. </p></blockquote>
+
+
+
+<h3>Performance</h3>
+
+
+
+<p>If you&#8217;re worried about the runtime cost of making a function call for JavaScript forEach array entry, don&#8217;t be.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>The performance of looping through a 100-entry array both with and without calling a function. Without the function call, IE6 looped through the array ~4,500 times in a second (that&#8217;s 450,000 loop iterations/second). With the function, it managed ~2,000 times a second (200,000 loop iterations/second). So while that&#8217;s a big&nbsp;relative&nbsp;difference (56% slower!), in real terms it falls into&nbsp;fuggedaboudit&nbsp;territory: 2.78&nbsp;microseconds of overhead. You heard me,&nbsp;<em>micro</em>seconds. That&#8217;s 0.00278 milliseconds. </p><cite><a href="http://blog.niftysnippets.org/2012/02/foreach-and-runtime-cost.html" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<h3>Examples</h3>
+
+
+
+<h4>#1 No operation for uninitialized values (sparse arrays) </h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;clike&quot;,&quot;mime&quot;:&quot;text/x-java&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const arraySparse = [1,3,,7];
+let numCallbackRuns = 0;
+
+arraySparse.forEach(function(element){
+  console.log(element);
+  numCallbackRuns++;
+});
+
+console.log(&quot;numCallbackRuns: &quot;, numCallbackRuns);
+
+// 1
+// 3
+// 7
+// numCallbackRuns: 3</pre></div>
+
+
+
+<p><strong>As you can see the missing value between 3 and 7 didn&#8217;t invoke the callback function. </strong>in the above example.</p>
+
+
+
+<h4>#2 Converting a for loop to forEach</h4>
+
+
+
+<p>Here is the example of the same iteration on <code>for</code> loop and <code>forEach</code></p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;clike&quot;,&quot;mime&quot;:&quot;text/x-java&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const items = ['item1', 'item2', 'item3'];
+const copy = [];
+
+// simple for loop
+for (let i=0; i&lt;items.length; i++) {
+  copy.push(items[i]);
+}
+
+// using the forEach function 
+items.forEach(function(item){
+  copy.push(item);
+});</pre></div>
+
+
+
+<h4>#3 If the array is modified during iteration</h4>
+
+
+
+<p>The following example logs <code>"one"</code>, <code>"two"</code>, <code>"four"</code>. When the entry containing the value <code>"two"</code> is reached, the first entry of the whole array is shifted off, which results in all remaining entries moving up one position. Because element <code>"four"</code> is now at an earlier position in the array, <code>"three"</code> will be skipped. <code>forEach()</code> does not make a copy of the array before iterating. </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var words = ['one', 'two', 'three', 'four'];
+words.forEach(function(word) {
+  console.log(word);
+  if (word === 'two') {
+    words.shift();
+  }
+});
+// one
+// two
+// four</pre></div>
+
+
+
+<h4>#4 Flatten an array </h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">function flatten(arr) {
+  const result = []
+
+  arr.forEach((i) =&gt; {
+    if (Array.isArray(i)) {
+      result.push(...flatten(i))
+    } else {
+      result.push(i)
+    }
+  })
+  
+  return result
+}
+
+// Usage
+const problem = [1, 2, 3, [4, 5, [6, 7], 8, 9]]
+
+flatten(problem) // [1, 2, 3, 4, 5, 6, 7, 8, 9]</pre></div>
+
+
+
+<p>If you want to flatten an array using built-in methods you can use <code>Array.prototype.flat()</code></p>
+
+
+
+<h3>Support</h3>
+
+
+
+<p>Unless you&#8217;re supporting obsolete browsers like IE8 (which StatCounter shows it less than 1% market share as in 2019), you can happily use&nbsp;<code>forEach</code>&nbsp;in a general-purpose web page without a shim. If you do need to support obsolete browsers, shimming/polyfilling&nbsp;<code>forEach</code>&nbsp;is easily done (search for &#8220;es5 shim&#8221; for several options). </p>
+
+
+
+<p><code>forEach</code>&nbsp;has the benefit that you don&#8217;t have to declare indexing and value variables in the containing scope, as they&#8217;re supplied as arguments to the iteration function, and so nicely scoped to just that iteration.
+
+</p>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td style="text-align:left;">forEach()</td>
+    <td>Yes</td>
+    <td>9.0</td>    
+    <td>1.5</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody></table>
+
+
+
+<p></p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/a-complete-guide-javascript-array-foreach/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>HTML &#8211; Buginit &#8211; HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+	<atom:link href="https://rajnishcoder.github.io/buginit/category/html/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rajnishcoder.github.io/buginit/</link>
+	<description></description>
+	<lastBuildDate>Wed, 20 Nov 2019 02:40:09 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>What is colspan Attribute in HTML?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-colspan-attribute-in-html/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-colspan-attribute-in-html/#respond</comments>
+				<pubDate>Wed, 20 Nov 2019 02:40:09 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=444</guid>
+				<description><![CDATA[The colspan Attribute in HTML is simply to define how many numbers of columns a cell should take/span in a table. Basically using colspan attribute in HTML tables you are merging the multiple cells. AS MDN docs say: The default value of colspan is 1 and the value must be in non-negative integer. The limitation<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/html/what-is-colspan-attribute-in-html/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>The colspan Attribute in <a href="https://buginit.com/category/html/">HTML</a> is simply to define how many numbers of columns a cell should take/span in a table. <strong>Basically using <code>colspan</code> attribute in HTML tables you are merging the multiple cells.</strong></p>
+
+
+
+<p>AS MDN docs say: The default value of <code>colspan</code> is 1 and the value must be in non-negative integer. The limitation of the value is 1000. And the value above 1000 will be considered as incorrect value and will be set to the default value 1. </p>
+
+
+
+<p>But the tag really doesn&#8217;t care about the maximum limit of value because I tried the insane value of <code>10000000000000000000000000</code> and it worked well, <strong>It doesn&#8217;t change to the default value 1 in chrome version 78.0.3904.97 (Official Build) (64-bit)</strong> I don&#8217;t know about other browsers may be the limits exists in other or old version of browsers.</p>
+
+
+
+<h3>Tag Support</h3>
+
+
+
+<p>You can use colspan attribute in HTML with <code>&lt;td></code> and <code>&lt;th></code> tags. For example below:-</p>
+
+
+
+<h3>td example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Month&lt;/th&gt;
+    &lt;th&gt;Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;February&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;2&quot;&gt;Sum: $180&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></div>
+
+
+
+<p>In the above example the last row <code>td</code> tag will take both of month and savings columns because we defined the <code>colspan</code> attribute and set the value <code>2</code>. If you want to cover 3 columns set the value as <code>3</code> and <code>4</code> for 4 columns and so on.</p>
+
+
+
+<h3>th example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th colspan=&quot;2&quot;&gt;Monthly Savings&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;January&lt;/td&gt;
+    &lt;td&gt;$100&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;February&lt;/td&gt;
+    &lt;td&gt;$80&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre></div>
+
+
+
+<p>In the above example of <code>th</code> tag the Monthly Savings heading will expand in 2 cells of the table and everything will be remain the same.</p>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Element</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+<td style="text-align:left;">td</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+<td style="text-align:left;">th</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody></table>
+
+
+
+<p>some of the information is collected from the <a rel="noreferrer noopener" aria-label="mdn (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td" target="_blank">mdn</a>.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-colspan-attribute-in-html/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>What is HTML cols Attribute?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-html-cols-attribute/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-html-cols-attribute/#respond</comments>
+				<pubDate>Wed, 02 Oct 2019 04:27:57 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=114</guid>
+				<description><![CDATA[The cols attribute indicates the visible width of a textarea. Note: You can also set the height and width of &#60;textarea> by using CSS Tag Support You can use cols attribute on &#60;textarea> tag. Example Browser Support Attribute cols Yes Yes Yes Yes Yes]]></description>
+								<content:encoded><![CDATA[
+<p>The <code>cols</code> attribute indicates the visible width of a <code>textarea</code>.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: You can also set the height and width of <code>&lt;textarea></code> by using CSS</p></blockquote>
+
+
+
+<h3>Tag Support</h3>
+
+
+
+<p>You can use <code>cols</code> attribute on <code>&lt;textarea></code> tag.</p>
+
+
+
+<h3>Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;textarea rows=&quot;5&quot; cols=&quot;60&quot;&gt;
+	At buginit.com you can learn basic to pro web development technologies.
+&lt;/textarea&gt;</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Attribute</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+<td style="text-align:left;">cols</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody></table>
+
+
+
+<p></p>
+
+
+
+<p></p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-html-cols-attribute/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>What is HTML class Attribute?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-html-class-attribute/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-html-class-attribute/#respond</comments>
+				<pubDate>Tue, 01 Oct 2019 02:43:03 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+		<category><![CDATA[HTML Global Attributes]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=110</guid>
+				<description><![CDATA[The class attribute is very important as it is a part of global attribute in HTML and used to allow CSS and JavaScript to select the specific HTML element. In CSS you can use CSS class selectors dot (.) and DOM method in JavaScript like: document.getElementsByClassName. Tag Support You can use class attribute on all<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/html/what-is-html-class-attribute/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>The <code>class</code> attribute is very important as it is a part of <a href="https://buginit.com/tag/html-global-attributes/">global attribute</a> in HTML and used to allow CSS and JavaScript to select the specific HTML element.</p>
+
+
+
+<p>In CSS you can use CSS class selectors dot (<code>.</code>) and DOM method in JavaScript like: <code>document.getElementsByClassName</code>.</p>
+
+
+
+<h3>Tag Support</h3>
+
+
+
+<p>You can use class attribute on all the elements in HTML.</p>
+
+
+
+<h3>Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;div class=&quot;tagcloud&quot;&gt;
+    &lt;a href=&quot;https://buginit.com/tag/html/&quot; class=&quot;tag-cloud-link&quot;&gt;
+        HTML
+    &lt;/a&gt;
+    &lt;a href=&quot;https://buginit.com/tag/html-attributes/&quot; class=&quot;tag-cloud-link&quot;&gt;
+        HTML Attributes
+    &lt;/a&gt;
+    &lt;a href=&quot;https://buginit.com/tag/html-global-attributes/&quot; class=&quot;tag-cloud-link&quot;&gt;
+        HTML Global Attributes
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p class=&quot;important&quot;&gt;Note that this is an important paragraph. :)&lt;/p&gt;</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: you can also use multiple classes</p></blockquote>
+
+
+
+<h3>Multiple Classes Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;div class=&quot;tagcloud&quot;&gt;
+    &lt;a href=&quot;https://buginit.com/tag/html/&quot; class=&quot;tag-cloud-link tag-link-4 tag-link-position-1&quot;&gt;
+        HTML
+    &lt;/a&gt;
+    &lt;a href=&quot;https://buginit.com/tag/html-attributes/&quot; class=&quot;tag-cloud-link tag-link-6 tag-link-position-2&quot;&gt;
+        HTML Attributes
+    &lt;/a&gt;
+    &lt;a href=&quot;https://buginit.com/tag/html-global-attributes/&quot; class=&quot;tag-cloud-link tag-link-7 tag-link-position-3&quot;&gt;
+        HTML Global Attributes
+    &lt;/a&gt;
+&lt;/div&gt;
+&lt;p class=&quot;important bold&quot;&gt;Note that this is an important paragraph. :) and also bold&lt;/p&gt;</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Attribute</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+<td style="text-align:left;">class</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody></table>
+
+
+
+<p></p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-html-class-attribute/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>What is HTML cite Attribute?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-html-cite-attribute/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-html-cite-attribute/#respond</comments>
+				<pubDate>Mon, 30 Sep 2019 02:44:12 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=103</guid>
+				<description><![CDATA[The cite attribute used to specify a URL that points to the source document or message or why the text was inserted/changed. Tag Support You can use cite attribute with &#60;blockquote&#62;, &#60;del&#62;, &#60;ins&#62;, &#60;q&#62; tags. Blockquote Example It points out that the quote is from another source. Del Example It points out why the text<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/html/what-is-html-cite-attribute/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>The <code>cite</code> attribute used to specify a URL that points to the source document or message or why the text was inserted/changed. </p>
+
+
+
+<h3>Tag Support</h3>
+
+
+
+<p>You can use cite attribute with <code>&lt;blockquote&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>, <code>&lt;q&gt;</code>  tags.</p>
+
+
+
+<h3>Blockquote Example</h3>
+
+
+
+<p>It points out that the quote is from another source.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;blockquote cite=&quot;https://en.wikipedia.org/wiki/HTML&quot;&gt;
+	HTML elements are the building blocks of HTML pages. With HTML 
+  	constructs, images and other objects such as interactive forms may 
+  	be embedded into the rendered page. HTML provides a means to create 
+  	structured documents by denoting structural semantics for text such 
+  	as headings, paragraphs, lists, links, quotes and other items.
+&lt;/blockquote&gt;</pre></div>
+
+
+
+<h3> Del Example </h3>
+
+
+
+<p> It points out why the text was deleted.  </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;p&gt;
+  &lt;del cite=&quot;del_cite.html&quot;&gt;This text has been deleted&lt;/del&gt;
+&lt;/p&gt;</pre></div>
+
+
+
+<h3> Ins Example  </h3>
+
+
+
+<p> It points out out why the text was inserted. </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;p&gt;This is a text.
+	&lt;ins cite=&quot;why_inserted.html&quot;&gt;This is an inserted text.&lt;/ins&gt;
+&lt;/p&gt;</pre></div>
+
+
+
+<h3> Q Example  </h3>
+
+
+
+<p>
+
+It points out the source URL of a quote.
+
+</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;p&gt;WWF's goal is to:
+	&lt;q cite=&quot;http://www.wwf.org&quot;&gt;
+		Build a future where people live in harmony with nature.
+  	&lt;/q&gt;
+	We hope they succeed.
+&lt;/p&gt;</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Element</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+<td style="text-align:left;">blockquote</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+<td style="text-align:left;">del</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+<td style="text-align:left;">ins</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+<td style="text-align:left;">q</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody></table>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-html-cite-attribute/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>What is HTML checked Attribute?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-html-checked-attribute/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-html-checked-attribute/#respond</comments>
+				<pubDate>Sun, 29 Sep 2019 14:26:02 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=100</guid>
+				<description><![CDATA[The checked attribute is a boolean attribute and it specifies that an element should be pre-selected (checked) when the page loads. Tip: you can also set checked attribute after page load with using JavaScript. Tag Support You can use checked attribute with &#60;input&#62; tag where input type is checkbox or radio. Example Browser Support Attribute<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/html/what-is-html-checked-attribute/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>The <code>checked</code> attribute is a boolean attribute and it specifies that an element should be pre-selected (checked) when the page loads.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Tip: you can also set checked attribute after page load with using JavaScript.</p></blockquote>
+
+
+
+<h3>Tag Support</h3>
+
+
+
+<p>You can use checked attribute with <code>&lt;input&gt;</code> tag where input type is <code>checkbox</code> or <code>radio</code>.</p>
+
+
+
+<h3>Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;form&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;check&quot; value=&quot;1&quot; checked&gt; 
+  		Checked by default
+  	&lt;br&gt; 
+    &lt;input type=&quot;checkbox&quot; name=&quot;check&quot; value=&quot;2&quot;&gt; 
+  		Not checked by default 
+&lt;/form&gt; </pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Attribute</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+<td style="text-align:left;">checked</td>
+    <td>1.0</td>
+    <td>2.0</td>
+    <td>1.0</td>
+    <td>1.0</td>
+    <td>1.0</td>
+  </tr>
+</tbody></table>
+
+
+
+<p></p>
+
+
+
+<p></p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-html-checked-attribute/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>What is HTML charset Attribute?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-html-charset-attribute/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-html-charset-attribute/#respond</comments>
+				<pubDate>Sun, 29 Sep 2019 14:08:33 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=97</guid>
+				<description><![CDATA[The charset attribute specifies the character encoding for the HTML document if, used in &#60;meta> tag. But if it is used with &#60;script> tags then it specifies the character encoding used in an external script file. Tag Support You can use this attribute in &#60;meta> and &#60;script> tags. Meta Example Script Example Browser Support Element<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/html/what-is-html-charset-attribute/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>The <code>charset</code> attribute specifies the character encoding for the HTML document if, used in <code>&lt;meta></code> tag. But if it is used with <code>&lt;script></code> tags then it specifies the character encoding used in an external script file.</p>
+
+
+
+<h3>Tag Support </h3>
+
+
+
+<p>You can use this attribute in <code>&lt;meta></code> and <code>&lt;script></code> tags.</p>
+
+
+
+<h3> Meta Example </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;/head&gt;</pre></div>
+
+
+
+<h2>Script Example</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;script src=&quot;main.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Element</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+<td style="text-align:left;">meta</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+<td style="text-align:left;">script</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</tbody></table>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-html-charset-attribute/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>What is HTML autoplay Attribute?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-html-autoplay-attribute/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-html-autoplay-attribute/#respond</comments>
+				<pubDate>Sun, 29 Sep 2019 13:38:57 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=92</guid>
+				<description><![CDATA[The autoplay attribute is a boolean attribute and it makes sure that the audio or video will play automatically as soon as possible without stopping. Tag Support You can use this attribute on audio and video HTML tags. Audio Tag Example Video Tag Example Browser Support Element audio 4.0 9.0 3.5 4.0 10.5 video 4.0<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/html/what-is-html-autoplay-attribute/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>The <code>autoplay</code> attribute is a boolean attribute and it makes sure that the <code>audio</code> or <code>video</code> will play automatically as soon as possible without stopping.</p>
+
+
+
+<h3>Tag Support</h3>
+
+
+
+<p>You can use this attribute on <code>audio</code> and <code>video</code> HTML tags.</p>
+
+
+
+<h3>Audio Tag Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;audio controls autoplay&gt;
+  &lt;source src=&quot;dog.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+  &lt;source src=&quot;dog.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</pre></div>
+
+
+
+<h3>Video Tag Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;video controls autoplay&gt;
+  &lt;source src=&quot;myMovie.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;myMovie.ogg&quot; type=&quot;video/ogg&quot;&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Element</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+<td style="text-align:left;">audio</td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>10.5</td>
+  </tr>
+  <tr>
+<td style="text-align:left;">video</td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.5</td>
+    <td>4.0</td>
+    <td>10.5</td>
+  </tr>
+</tbody></table>
+
+
+
+<p></p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-html-autoplay-attribute/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>What is HTML autofocus Attribute?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-html-autofocus-attribute/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-html-autofocus-attribute/#respond</comments>
+				<pubDate>Fri, 27 Sep 2019 02:13:03 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+
+		<guid isPermaLink="false">http://localhost/thecodedocs/?p=79</guid>
+				<description><![CDATA[autofocus is a boolean attribute and it makes sure that an element will get focus automatically as soon as page loads, unless the user overrides it. This attribute can only be defined by one form-associated component in a document. If there are multiple elements with autofocus attribute, the initial focus will be given to the<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/html/what-is-html-autofocus-attribute/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p><code>autofocus</code> is a boolean attribute and it makes sure that an element will get focus automatically as soon as page loads, unless the user overrides it.</p>
+
+
+
+<p>This attribute can only be defined by one form-associated component in a document. If there are multiple elements with <code>autofocus</code> attribute, the initial focus will be given to the first element with the set of attributes inserted, usually the first such element on the page.</p>
+
+
+
+<h3>Tag Support </h3>
+
+
+
+<p>You can use this attribute on <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Setting this property doesn&#8217;t set the focus to the associated element: it merely tells the browser to focus on it when the element is inserted in the document. Setting it after the insertion, which is most of the time after the document load, has no visible effect.</p></blockquote>
+
+
+
+<h3>Example </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;button type=&quot;button&quot; autofocus&gt;Click Me!&lt;/button&gt;
+
+&lt;input type=&quot;text&quot; name=&quot;name&quot; autofocus&gt;
+
+&lt;textarea autofocus&gt;
+	the textarea autofocus example.
+&lt;/textarea&gt;
+
+&lt;select autofocus&gt;
+  &lt;option value=&quot;value1&quot;&gt;Value 1&lt;/option&gt;
+  &lt;option value=&quot;value2&quot;&gt;Value 2&lt;/option&gt;
+&lt;/select&gt;</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+<p class="ciu_embed" data-feature="autofocus" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
+<a href="http://caniuse.com/#feat=autofocus">
+<picture><source type="image/webp" srcset="https://res.cloudinary.com/ireaderinokun/image/upload/v1569549863/caniuse-embed/autofocus-2019-9-27.webp"><source type="image/png" srcset="https://res.cloudinary.com/ireaderinokun/image/upload/v1569549863/caniuse-embed/autofocus-2019-9-27.png"><source type="image/jpeg" srcset="https://res.cloudinary.com/ireaderinokun/image/upload/v1569549863/caniuse-embed/autofocus-2019-9-27.jpg"><img src="https://res.cloudinary.com/ireaderinokun/image/upload/v1569549863/caniuse-embed/autofocus-2019-9-27.png" alt="Data on support for the autofocus feature across the major browsers from caniuse.com">
+</picture>
+</a></p>
+
+
+
+<p></p>
+
+
+
+<p></p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-html-autofocus-attribute/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>What is HTML autocomplete Attribute?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-html-autocomplete-attribute/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-html-autocomplete-attribute/#respond</comments>
+				<pubDate>Thu, 26 Sep 2019 02:04:40 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+
+		<guid isPermaLink="false">http://localhost/thecodedocs/?p=63</guid>
+				<description><![CDATA[The autocomplete attribute indicates that an &#60;input&#62;, &#60;textarea&#62; or &#60;form&#62; tag shout have autocomplete on or off. Autocomplete enables the value to be predicted by the browser. The browser should show suggestions to fill in the field when a user begins typing in a field depending on previously typed numbers, but they may also come<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/html/what-is-html-autocomplete-attribute/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>The autocomplete attribute indicates that an <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> or <code>&lt;form&gt;</code> tag shout have autocomplete on or off.</p>
+
+
+
+<p>Autocomplete enables the value to be predicted by the browser. The browser should show suggestions to fill in the field when a user begins typing in a field depending on previously typed numbers, but they may also come from pre-configured values.</p>
+
+
+
+<p>For example, for autocomplete purposes, a browser may allow the user to save their name, address, phone number, and email addresses.</p>
+
+
+
+<h3>Tag Support</h3>
+
+
+
+<p>You can use autocomplete attribute with  <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> or <code>&lt;form&gt;</code> tag.</p>
+
+
+
+<h3>input/textarea Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;input type=&quot;number&quot; name=&quot;mobile&quot; id=&quot;mobile&quot; autocomplete=&quot;off&quot;&gt;
+&lt;textarea name=&quot;cc-number&quot; id=&quot;message&quot; autocomplete=&quot;on&quot;&gt;&lt;/textarea&gt;</pre></div>
+
+
+
+<h3>Form Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;form action=&quot;action.php&quot; method=&quot;get&quot; autocomplete=&quot;on&quot;&gt;
+  First name:&lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;&lt;br&gt;
+  E-mail: &lt;input type=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+<p class="ciu_embed" data-feature="input-autocomplete-onoff" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
+<a href="http://caniuse.com/#feat=input-autocomplete-onoff">
+<picture><source type="image/webp" srcset="https://res.cloudinary.com/ireaderinokun/image/upload/v1569462731/caniuse-embed/input-autocomplete-onoff-2019-9-26.webp"><source type="image/png" srcset="https://res.cloudinary.com/ireaderinokun/image/upload/v1569462731/caniuse-embed/input-autocomplete-onoff-2019-9-26.png"><source type="image/jpeg" srcset="https://res.cloudinary.com/ireaderinokun/image/upload/v1569462731/caniuse-embed/input-autocomplete-onoff-2019-9-26.jpg"><img src="https://res.cloudinary.com/ireaderinokun/image/upload/v1569462731/caniuse-embed/input-autocomplete-onoff-2019-9-26.png" alt="Data on support for the input-autocomplete-onoff feature across the major browsers from caniuse.com">
+</picture>
+</a></p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-html-autocomplete-attribute/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>What is HTML async Attribute?</title>
+		<link>https://rajnishcoder.github.io/buginit/html/what-is-html-async-attribute/</link>
+				<comments>https://rajnishcoder.github.io/buginit/html/what-is-html-async-attribute/#respond</comments>
+				<pubDate>Wed, 25 Sep 2019 01:32:56 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[HTML Attributes]]></category>
+
+		<guid isPermaLink="false">http://localhost/thecodedocs/?p=59</guid>
+				<description><![CDATA[The async attribute specifies that the script will be executed asynchronously as soon as it is available. And It is a boolean attribute. The async attribute is only for external scripts usage and it can be used only if the src attribute is present. Tag Support You can use the async attribute with &#60;script&#62; tag.<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/html/what-is-html-async-attribute/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>The <code>async</code> attribute specifies that the script will be executed asynchronously as soon as it is available. And It is a boolean attribute.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>The <code>async</code> attribute is only for external scripts usage and it can be used only if the src attribute is present.</p></blockquote>
+
+
+
+<h3>Tag Support</h3>
+
+
+
+<p>You can use the <code>async</code> attribute with <code>&lt;script&gt;</code> tag. </p>
+
+
+
+<h3>Example </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;htmlmixed&quot;,&quot;mime&quot;:&quot;text/html&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">&lt;script src=&quot;my_main.js&quot; async&gt;&lt;/script&gt; </pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+<table class="browserSupport">
+<tbody>
+<tr>
+<th style="width:20%;font-size:16px;text-align:left;">Attribute</th>
+<th style="width:16%;" class="bsChrome" title="Chrome"></th>
+<th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+<th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+<th style="width:16%;" class="bsSafari" title="Safari"></th>
+<th style="width:16%;" class="bsOpera" title="Opera"></th>
+</tr>
+<tr>
+<td style="text-align:left;">async</td>
+<td>Yes</td>
+<td>10.0</td>
+<td>3.6</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/html/what-is-html-async-attribute/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

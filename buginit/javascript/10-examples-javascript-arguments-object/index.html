@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148904923-1"></script>
+
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	
+
+    
+	<link rel="shortcut icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+    
+ 
+
+	<title>10 Examples of JavaScript Arguments Object – Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://rajnishcoder.github.io/buginit/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-bootstrap-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fontawesome-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/custom/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" type="text/css" media="all">
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body id="blog" class="darkTheme">  
+    
+    	<div class="main_container">
+        	
+            	<header class="header_wrapper" itemscope itemtype="http://schema.org/WPHeader">
+                
+				
+                
+             	 	
+                    
+           		
+                <div id="primary_menu" class="blue_bg">
+					<div class="container" style="padding: 0">
+						<div id="logo" class="pull-left logo" itemscope itemtype="http://schema.org/Organization">
+							<a href="https://rajnishcoder.github.io/buginit/" itemprop="url" rel="home" style="float:left">
+																<p itemprop="name" class="site-title">
+								Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</p>   
+								<div class="buginitLogoWrap">
+									<img itemprop="logo" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/images/logo.svg">
+								</div>
+							</a>   
+							<h3 itemprop="description" class="site-description"> </h3>						</div>
+						<nav id="primary-menu" class="main-navigation navmenu pull-left" role="navigation">
+								  
+									<ul class="menu clearfix">
+											<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+<ul class="children">
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+									</ul>
+														</nav>
+					</div>
+                </div>    
+  
+         </header>
+  			 
+       
+            <div class="clearboth"></div>
+			
+            
+            				     
+            	<div class="breadcrumbs">
+					<div class="container">
+						<div id="breadcrumbs" itemprop="breadcrumb"><a href="https://rajnishcoder.github.io/buginit">Home</a> » <a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a> » <span class="current">10 Examples of JavaScript Arguments Object</span></div>                    </div>
+                </div>
+           
+              
+     	 
+            <div class="middle_wrapper">
+            	<div class="container mainContainer">
+                	<div> 
+ <script src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/js/caniuse-embed.min.js"></script>
+
+	<div class="col-md-8 col-sm-8 postInner">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+    	
+		        
+	 <article id="post-478" itemscope="" itemtype="http://schema.org/BlogPosting">
+	
+            	
+    <div class="article-content">    
+
+	<header class="entry-header">
+  	<h1 class="entry-title" itemprop="headline">10 Examples of JavaScript Arguments Object</h1>    
+     <span class="category" itemprop="articleSection"><i class="fa fa-bookmark"></i><a href="https://rajnishcoder.github.io/buginit/category/javascript/" rel="category tag">JavaScript</a></span><span class="tags"> <i class="fa fa-tags"></i><a href="https://rajnishcoder.github.io/buginit/tag/guides/" rel="tag">Guides</a>, <a href="https://rajnishcoder.github.io/buginit/tag/javascript/" rel="tag">JavaScript</a>, <a href="https://rajnishcoder.github.io/buginit/tag/objects/" rel="tag">Objects</a></span><span class="date"><i class="fa fa-clock-o"></i><a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" title="6:34 pm" rel="bookmark"><time itemprop="datePublished" datetime="2019-12-01T18:34:53+00:00">December 1, 2019</time></a></span><span itemprop="author"><i class="fa fa-user"></i><span class="author"><a href="https://rajnishcoder.github.io/buginit/author/rajnishcoder/" title="View all posts by Rajnish Rajput" rel="">Rajnish Rajput</a></span></span> <span class="comments" itemprop="interactionCount"> <i class="fa fa-comment"></i><a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comments" title="2 Comments" rel="comments">2 Comments</a></span> 
+      
+               <div id="above_post_add" class="advertisment">
+                       </div>
+            
+      <div class="clearboth"></div>
+ 	</header>
+
+	<div class="entry-content">
+		
+<p>In this article, we will learn what is <a href="https://buginit.com/category/javascript/">JavaScript</a> arguments object and how to use it with 10 different types of examples and usages.</p>
+
+
+
+<p>In short, JavaScript arguments object is <a href="https://buginit.com/tag/arrays/">Array</a>-like <a href="https://buginit.com/tag/objects/">object</a> that is accessible from inside the functions that contain the values of all the arguments passed to that function while calling.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note:</strong> If you’re writing ES6 compatible code, then <a href="https://buginit.com/javascript/understanding-the-rest-operator-in-javascript/">rest parameters</a> should be preferred.</p></blockquote>
+
+
+
+<blockquote class="wp-block-quote"><p>Note: “Array-like” means that <code>arguments</code> has a <code>length</code> property and properties indexed from zero, but it doesn’t have <code>Array</code>‘s built-in methods like <code>forEach()</code> and <code>map()</code>. </p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments#Description" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<p>Remember that javascript arguments object is a local variable that is available inside only a non-<a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function</a>. And it is not an array. It is similar to an array but doesn’t contain any array properties except <code>length</code>.</p>
+
+
+
+<p>For deep drive in <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function see this article</a></p>
+
+
+
+<h2>#1 Simple Example</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function test(a, b, c) {
+  console.log(arguments[0]);
+  // expected output: 1
+
+  console.log(arguments[1]);
+  // expected output: 2
+
+  console.log(arguments[2]);
+  // expected output: 3
+}
+
+test(1, 2, 3);</pre></div>
+
+
+
+<h4>Explanation</h4>
+
+
+
+<p>In the above example, I have created a function called <code>test</code> with three arguments <code>a</code>, <code>b</code> and <code>c</code> and accessing them using <code>arguments</code> object on the position of <code>0</code>, <code>1</code> and <code>2</code> as you can see the log inside the function in the above example.</p>
+
+
+
+<h3>#2 How the arguments object looks like?</h3>
+
+
+
+<p>Wanna see how it looks like?</p>
+
+
+
+<p>Let’s go inside the <code>arguments</code> object below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function test(a, b, c) {
+  console.log(arguments);
+}
+test(1, 2, 3); 
+// Output:- Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]</pre></div>
+
+
+
+<p>Let’s open that array-like object</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+  0: 1
+  1: 2
+  2: 3
+  callee: ƒ test(a, b, c)
+  length: 3
+  Symbol(Symbol.iterator): ƒ values()
+  __proto__: Object</pre></div>
+
+
+
+<p>Did you noticed the <code>__proto__</code> is an object So, basically <code>arguments</code> object contains: </p>
+
+
+
+<p>the <code>parameters</code> of its function as an array, </p>
+
+
+
+<p>the <code>length</code> of that array.</p>
+
+
+
+<p>and some other functions like <code>callee</code> and <code>Symbol</code>. Let’s dig more into it.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>Arguments(2) [1, 2, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+  0: 1
+  1: 2
+  callee: ƒ test(a, b)
+    arguments: null
+    caller: null
+    length: 2
+    name: "test"
+    prototype: {constructor: ƒ}
+    __proto__: ƒ ()
+    [[FunctionLocation]]: VM110:1
+    [[Scopes]]: Scopes[2]
+  length: 2
+  Symbol(Symbol.iterator): ƒ values()
+    arguments: (...)
+    caller: (...)
+    length: 0
+    name: "values"
+    __proto__: ƒ ()
+    [[Scopes]]: Scopes[0]
+  __proto__: Object</pre></div>
+
+
+
+<p>The <code>callee</code> function contains the information related to the function like <code>name</code> and <code>arguments</code> length.</p>
+
+
+
+<p>As MDN says that the <code>callee</code> function is a reference to the currently executing function that the arguments belong to.</p>
+
+
+
+<p>And As, I’m no expert in this so, don’t know why it contains the <code>Symbol</code> well if you know let me know.</p>
+
+
+
+<h3>#3 Changing Values</h3>
+
+
+
+<p>You can set or reassign each value of <code>argument</code> object. See the example below: </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function test(a, b, c) {
+  arguments[0] = 'TEST';
+  console.log(arguments[0]);
+}
+
+test(1, 2, 3); // TEST
+</pre></div>
+
+
+
+<p>In the above example, I passed <code>1</code> as the first argument and change it inside the function to <code>TEST</code> and it logs the <code>arguments[0]</code>.  <strong>Please see #6 for more.</strong></p>
+
+
+
+<h3>#4 Convert it to a real array.</h3>
+
+
+
+<p>As I already told you <code>arguments</code> <a href="https://buginit.com/tag/objects/">object</a> is not an <a href="https://buginit.com/tag/arrays/">array</a> but it can be converted to a real array.</p>
+
+
+
+<h4>#4.1 Using <code>Array.prototype</code></h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function test(a, b, c) {
+  var args = Array.prototype.slice.call(arguments);
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<p>The output of the above example is <code>[1, 2, 3]</code> See the output of console below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>(3) [1, 2, 3]
+  0: 1
+  1: 2
+  2: 3
+  length: 3
+  __proto__: Array(0)</pre></div>
+
+
+
+<p>Did you noticed this time the <code>__proto__</code> is the type of array, we have converted it to the real array.</p>
+
+
+
+<h4>#4.2 Using array <a href="https://buginit.com/javascript/all-you-need-to-know-about-template-literals/">literal</a></h4>
+
+
+
+<p>Using the array <a href="https://buginit.com/javascript/all-you-need-to-know-about-template-literals/">literal</a> is a shorter way than the above example I showed. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function test(a, b, c) {
+  var args = [].slice.call(arguments); 
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<h4>#4.3 Using Array.from()</h4>
+
+
+
+<p>You can also use array <code>.form()</code> method to convert the array-like <a href="https://buginit.com/tag/objects/">object</a> to a real array as I show in the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function test(a, b, c) {
+  var args = Array.from(arguments);
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<h4>#4.4 Using spread syntax</h4>
+
+
+
+<p>Of course, You can use spread syntax to convert it into an array, like the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function test(a, b, c) {
+  var args = [...arguments];
+  console.log(args);
+}
+test(1, 2, 3); // [1, 2, 3]</pre></div>
+
+
+
+<p>The JavaScript arguments object is useful when you have dynamic parameters to received or you just don’t know the function called with more parameters than the function is gonna formally received.</p>
+
+
+
+<h3>#5 Usages </h3>
+
+
+
+<p>For example if I say that, create a function that accepts any number of string parameters and returns the longest one?</p>
+
+
+
+<h4>#5.1 Finding the longest</h4>
+
+
+
+<p>See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function getLongestString() {
+  var longest = '';
+  for (var i=0; i < arguments.length; i++) {
+    if (arguments[i].length > longest.length) {
+      longest = arguments[i];
+    }
+  }
+  return longest;
+}</pre></div>
+
+
+
+<h4>#5.2 Generate the HTML list</h4>
+
+
+
+<p>I have one more example for you. I’m gonna define a function that creates the <a href="https://buginit.com/category/html/">HTML</a> list. Given below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function list(type) {
+  var html = '<' + type + 'l><li>';
+  var args = Array.prototype.slice.call(arguments, 1);
+  html += args.join('</li><li>');
+  html += '</li></' + type + 'l>'; // end list
+
+  return html;
+}</pre></div>
+
+
+
+<p>you can pass any number of arguments in the <code>list</code> function that I created in the above example and also which type of list you want <code>ol</code> or <code>ul</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>var listHTML = list('u', 'One', 'Two', 'Three');
+/* listHTML is:
+"<ul><li>One</li><li>Two</li><li>Three</li></ul>"
+*/</pre></div>
+
+
+
+<p>I know, I know maybe you are thinking that I can do this using <a href="https://buginit.com/javascript/understanding-the-rest-operator-in-javascript/">rest parameters</a>. Yes, of course, you can do that and there are many different ways to do that but we are talking about <code>arguments</code> object so I’m sticking with it. </p>
+
+
+
+<p>And, if you have a better example let me know in the comment section.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>You can always use <code>arguments.lenth</code> to count how many arguments this function is receiving. </p></blockquote>
+
+
+
+<h3>#6 Careful with updating values </h3>
+
+
+
+<p>While you are using the <code>arguments</code> object, please be careful with update values as it also change the value of your parameters too. I mean see the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting='{"mode":"javascript","mime":"text/javascript","theme":"material","lineNumbers":true,"lineWrapping":false,"readOnly":true}'>function func(a) { 
+  a = 99; // updating a also updates arguments[0]
+  console.log(arguments[0]);
+}
+func(10); // 99</pre></div>
+
+
+
+<p>In the above example, I accept the <code>a</code> as a first parameter and pass the value <code>10</code> and reassign the <code>a</code> inside a function, So it also gonna change arguments on <code>0</code> position<code>arguments[0]</code>.</p>
+
+
+
+<p>And Its also works reverse like if I change <code>arguments[0]</code> it is gonna change <code>a</code>. So be careful when you are changing.</p>
+
+
+
+<p>But, mdn docs say that it changes the value only in strict mode, but I tested it on my latest chrome console it also changes value normally without strict mode. Maybe they did not update their docs or chrome dev updated their JavaScript engines. It’s still a mystery. </p>
+
+
+
+<p>I don’t know but it changes the value so careful with it.</p>
+
+
+
+<p>That’s all for now, Thank you so much for reading this long post, please share and support. For more about <a href="https://buginit.com/category/css/">CSS</a> or <a href="https://buginit.com/category/javascript/">JavaScript</a> </p>
+     
+           <div id="below_post_add" class="advertisment">
+      	  	  </div>
+	  
+	  <div class="relatedPostWrap">
+		  <h4>You Might Interested In</h4>
+		  <ul class="relatedPostList">
+			  							<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/" rel="bookmark" title="Permanent Link to 4 Examples of Replace All in JavaScript You Should Know">
+									4 Examples of Replace All in JavaScript You Should Know								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" rel="bookmark" title="Permanent Link to 4 ways to remove duplicate array javascript">
+									4 ways to remove duplicate array javascript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/" rel="bookmark" title="Permanent Link to 4 Examples of JavaScript sort without mutating array">
+									4 Examples of JavaScript sort without mutating array								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/" rel="bookmark" title="Permanent Link to Understanding Try Catch Finally JavaScript">
+									Understanding Try Catch Finally JavaScript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/" rel="bookmark" title="Permanent Link to JS try catch Optional catch binding update in ES10/2019">
+									JS try catch Optional catch binding update in ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/" rel="bookmark" title="Permanent Link to New Stable Sort Array in Javascript: ES10/2019">
+									New Stable Sort Array in Javascript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/" rel="bookmark" title="Permanent Link to Well formed JSON stringify JavaScript: ES10/2019">
+									Well formed JSON stringify JavaScript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/" rel="bookmark" title="Permanent Link to JavaScript Trim: trimStart and trimEnd method ES10/2019">
+									JavaScript Trim: trimStart and trimEnd method ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/" rel="bookmark" title="Permanent Link to JavaScript fromEntries method ES10">
+									JavaScript fromEntries method ES10								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/7-examples-javascript-dynamic-import-es10/" rel="bookmark" title="Permanent Link to 7 Examples of JavaScript Dynamic Import ES10">
+									7 Examples of JavaScript Dynamic Import ES10								</a>
+							</li>
+									  </ul>
+	  </div>
+      
+	  
+	 
+
+
+
+  	</div>
+ 
+  
+	<footer class="entry-footer">
+			</footer>
+	
+    </div>
+    
+	</article>
+          
+           
+            <div class="clearfix"></div>
+            <div style="height:30px;"></div>
+            <div class="clearfix"></div>
+  
+        
+        	<div class="post-links">
+               <div class="alignleft"> <i class="fa fa-angle-double-left"></i> <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" rel="next">4 ways to remove duplicate array javascript</a></div>               <div class="alignright"><a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/" rel="prev">4 Examples of JavaScript sort without mutating array</a> <i class="fa fa-angle-double-right"></i></div>			</div>
+       	 
+			
+<div id="comments" class="comments-area">
+			<h2 class="comments-title">
+			2 thoughts on “<span>10 Examples of JavaScript Arguments Object</span>”		</h2>
+   
+            <ul class="commentlist comment_section">
+                     
+     <li class="comment_block" id="comment-20">
+     
+         <div class="col-md-10 col-sm-10">
+            <div class=" col-md-2 col-sm-2"><img alt="" src="http://1.gravatar.com/avatar/aac1a244ceb5ea8a89701a0a3d299d47?s=44&d=mm&r=g" srcset="http://1.gravatar.com/avatar/aac1a244ceb5ea8a89701a0a3d299d47?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
+            <div class="col-md-10 col-sm-10 no-padding">
+                <h3><cite><b class="fn">Lacus</b> </cite>             </h3>
+            <span><a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-20"><time datetime="2020-01-02T10:24:30+00:00">January 2, 2020 at 10:24 am</time></a></span>
+                    
+                        
+            <p> 		</p><p>When I was a kid, I had a math teacher who explained and demonstrated this way. In the 43-person class, 3 children understood it. It was a great experience to go to separate classes and study math because I didn’t understand anything from his classes.</p>
+                      
+             
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" data-commentid="20" data-postid="478" data-belowelement="comment-20" data-respondelement="respond" aria-label="Reply to Lacus">Reply</a></div>
+      <div class="clearfix"></div>
+          
+       
+          
+          </li>                 
+                                 
+	<ul class="children">
+     
+     <li class="comment_block" id="comment-21">
+     
+         <div class="col-md-10 col-sm-10">
+            <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
+            <div class="col-md-10 col-sm-10 no-padding">
+                <h3><cite><b class="fn"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></b> <span>Post author</span></cite>             </h3>
+            <span><a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-21"><time datetime="2020-01-04T03:18:33+00:00">January 4, 2020 at 3:18 am</time></a></span>
+                    
+                        
+            <p> 		</p><p>Thank you for your beautiful comment @Lacus</p>
+<p>As I’m not a good teacher but, I’m requesting to you if you can explain to me which part you didn’t get it or where you had the problem to understand it. So I can improve the article and it will also help others to understands it.</p>
+                      
+             
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" data-commentid="21" data-postid="478" data-belowelement="comment-21" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
+      <div class="clearfix"></div>
+          
+       
+          
+          </li>                 
+                                 
+	
+</ul>
+
+            </ul>
+		
+       
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/buginit/javascript/10-examples-javascript-arguments-object/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://rajnishcoder.github.io/buginit/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="478" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+</div>
+		</main>
+	</div>
+  </div>  
+
+  
+    
+ 						
+    
+       <div class="sidebar col-md-4 col-sm-4">
+            <aside id="search-2" class="widget widget_search" itemscope itemtype="http://schema.org/WPSideBar"><form role="search" method="get" class="search-form" action="https://rajnishcoder.github.io/buginit/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search">
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries" itemscope itemtype="http://schema.org/WPSideBar">		<h3 class="widget-title heading" itemprop="about">Recent Posts</h3>		<ul>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/">4 Examples of Replace All in JavaScript You Should Know</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/">4 ways to remove duplicate array javascript</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" aria-current="page">10 Examples of JavaScript Arguments Object</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/">4 Examples of JavaScript sort without mutating array</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/css/center-image-in-div/">CSS Center Image In div example with explanation</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments" itemscope itemtype="http://schema.org/WPSideBar"><h3 class="widget-title heading" itemprop="about">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-21">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link">Lacus</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-20">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-23">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link">Johnny</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-22">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/#comment-15">Smooth Scroll CSS</a></li></ul></aside>       </div>
+     
+  
+	 	</div> 
+          </div> 
+            </div> 
+             
+          
+            
+   <footer class="footer_wrapper" itemscope itemtype="http://schema.org/WPFooter">
+                 	
+            <div class="container">
+									<div id="footer-widget-area">    
+						<aside id="archives-2" class="widget widget_archive col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Archives</h3>		<ul>
+				<li><a href="https://rajnishcoder.github.io/buginit/2019/12/">December 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/11/">November 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/10/">October 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/09/">September 2019</a></li>
+		</ul>
+			</div></aside><aside id="categories-2" class="widget widget_categories col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Categories</h3>		<ul>
+				<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+		</ul>
+			</div></aside><aside id="meta-2" class="widget widget_meta col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Meta</h3>			<ul>
+						<li><a href="https://rajnishcoder.github.io/buginit/wp-login.php">Log in</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/feed/">Entries feed</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</div></aside>						<div class="clearboth"></div>
+					</div>
+				                <div class="clearboth"></div>
+            </div>
+            	<div class="copy_right">
+                    <div class="container"> 
+						<div class="row">
+							<div class="col-md-4">
+								<h3>Navigation</h3>
+								<ul itemscope itemtype="https://schema.org/SiteNavigationElement" id="menu-header-menu" class="menu"><li id="menu-item-359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-359"><a href="https://buginit.com/" itemprop="url"><span itemprop="name">Home</span></a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="https://rajnishcoder.github.io/buginit/about/" itemprop="url"><span itemprop="name">About</span></a></li>
+<li id="menu-item-361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a href="https://rajnishcoder.github.io/buginit/contact-us/" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
+<li id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a href="https://rajnishcoder.github.io/buginit/privacy-policy-2/" itemprop="url"><span itemprop="name">Privacy Policy</span></a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a href="https://rajnishcoder.github.io/buginit/html/" itemprop="url"><span itemprop="name">Learn HTML</span></a></li>
+</ul>							</div>
+							<div class="col-md-4">
+								<h3>Support Us</h3>
+								<a href="https://www.patreon.com/join/buginit" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Support on Patreon
+								</a>
+								<a href="https://www.paypal.me/rajnishprogrammer/5" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Through Paypal
+								</a>
+							</div>
+							<div class="col-md-4">
+								<h3>Follow Us</h3>								
+								<div class="footerFollowMain">
+									<ul class="footerFollowList">
+										<li class="fb"><a href="https://www.facebook.com/buginit" target="_blank"></a></li>
+										<li class="twitter"><a href="https://twitter.com/buginit" target="_blank"></a></li>
+									</ul>
+									
+								</div>
+							</div>
+						</div>
+						<div style="text-align:center">© 2020 All Rights Reserved. v1.1.2</div>
+						
+              		</div>
+            	</div> 
+             
+			<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/menu/script.js"></script>
+	     </footer> 	  
+
+	</div>
+	<div class="themeSwitcher" onclick="darkSwitcher(this)">
+		<i class="fa fa-adjust"></i>
+	</div>
+	<div id="dark" class="dark"></div>
+	<script>
+		// for darkmode
+		console.log(localStorage.getItem("isDark"));
+		
+		function darkSwitcher(ele) {
+			var isDark = JSON.parse(localStorage.getItem("isDark"));
+			console.log('1', isDark);
+			
+			var body = document.getElementsByTagName('body')[0];
+			if (isDark == true) {
+				console.log('2', isDark);
+				
+				body.classList.add('darkTheme');
+				document.getElementById('dark').classList.add('dark')
+				localStorage.setItem("isDark", "false");
+				console.log(localStorage.getItem("isDark"), isDark);
+				
+			} else {
+				console.log('in if else');
+				body.classList.remove('darkTheme');
+				document.getElementById('dark').classList.remove('dark')
+				localStorage.setItem("isDark", "true");
+				console.log(localStorage.getItem("isDark"));
+			}
+			// if (ele && body.classList.contains('darkTheme')) {
+			// } else {
+			// }
+		}
+	</script>
+    
+	
+
+    </body>
+    </html>

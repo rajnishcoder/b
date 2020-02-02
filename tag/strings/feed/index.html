@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Strings &#8211; Buginit &#8211; HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+	<atom:link href="https://rajnishcoder.github.io/buginit/tag/strings/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rajnishcoder.github.io/buginit/</link>
+	<description></description>
+	<lastBuildDate>Sat, 14 Dec 2019 16:36:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>4 Examples of Replace All in JavaScript You Should Know</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/#respond</comments>
+				<pubDate>Sat, 14 Dec 2019 16:36:30 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=525</guid>
+				<description><![CDATA[In this article, we will learn about replace all in JavaScript with 6 types of examples simple to RegExp (regular expression). There are a lot of ways to replace the value in JavaScript. But, JavaScript already has an inbuilt array method replace but, with using simple, It only replaced the first matched value. For example<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn about replace all in <a href="https://buginit.com/category/javascript/">JavaScript</a> with 6 types of examples simple to RegExp (regular expression).</p>
+
+
+
+<p>There are a lot of ways to replace the value in <a href="https://buginit.com/category/javascript/">JavaScript</a>.</p>
+
+
+
+<p>But, JavaScript already has an inbuilt <a href="https://buginit.com/tag/arrays/">array</a> method <code>replace</code> but, with using simple, It only replaced the first matched value. For example below:</p>
+
+
+
+<h3>#1 Simple Example </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var a = 'can i replace all the replace word with no using replace method';
+a = a.replace('replace', 'no')
+// OUTPUT: &quot;can i no all the replace word with no using replace method&quot;</pre></div>
+
+
+
+<p>As you saw in the above example, there are 3 <strong>replace</strong> words in the given sentence and I tried to replace the <strong>replace word</strong> with <strong>no</strong> and it replaced the first word only.</p>
+
+
+
+<h4>#1.1 Replace number</h4>
+
+
+
+<p>As <a href="https://buginit.com/tag/strings/">strings</a> in the above example, it works well with numbers too. For example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var b = 'here we are gonna replace 2 with 3 so we need more 2';
+b = b.replace('2', '3')
+// OUTPUT: &quot;here we are gonna replace 3 with 3 so we need more 2&quot;</pre></div>
+
+
+
+<p>Did you see it replaced only first <code>2</code> in the given sentence?</p>
+
+
+
+<h3>Definition</h3>
+
+
+
+<blockquote class="wp-block-quote"><p>So, the <code>replace</code> method in <a href="https://buginit.com/category/javascript/">JavaScript</a> returns a new <a href="https://buginit.com/tag/strings/">string</a> with some or all matches of a <code>pattern</code> replaced by a <code>replacement</code>. The <code>pattern</code> can be a <a href="https://buginit.com/tag/strings/">string</a> or a RegExp (Regular Expression).</p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace" target="_blank" rel="noreferrer noopener" aria-label="source (opens in a new tab)">source</a></cite></blockquote>
+
+
+
+<p>Wait, you said <strong>all matches</strong> in definition but, <code>replace</code> method is replacing only the first match? what&#8217;s going on?</p>
+
+
+
+<p>Let me explain to you, In the <code>replace</code> method the first parameter you can pass is a <code>pattern</code> and in the <code>pattern</code> you can pass  <a href="https://buginit.com/tag/strings/">string</a> or a RegExp (Regular Expression).</p>
+
+
+
+<p>So whenever you pass a string, it is going to replace the first match in the string with the <strong>replacement</strong> that you passed in the second parameter of the <code>replace</code> method.</p>
+
+
+
+<p>And If you want to replace all the matching matches you have to pass the RegExp.</p>
+
+
+
+<p>Let&#8217;s see how in the below example:</p>
+
+
+
+<h3>#2 Replace all</h3>
+
+
+
+<h4>#2.1 Replace all in JavaScript </h4>
+
+
+
+<p>We can also replace all matched values in the <code>replace</code> method using RegExp, For example:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var c = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+
+var regex = /dog/gi;
+
+c = c.replace(regex, 'ferret');
+// output: &quot;The quick brown fox jumps over the lazy ferret. If the ferret reacted, was it really lazy?&quot;</pre></div>
+
+
+
+<p>Did you noticed this time with RegExp <code>replace</code> method replaced all the matching <code>dog</code> words with <code>ferret</code>.</p>
+
+
+
+<h4>Explanation</h4>
+
+
+
+<p>In the variable <code>p</code> we had a string sentence.</p>
+
+
+
+<p>The variable called <code>regex</code> we stored the RegExp pattern to match <code>dog</code>.</p>
+
+
+
+<p>Inside <code>regex</code> the two forward slashes indicate the start and end of the regular expression. </p>
+
+
+
+<p><code>g</code> is a flag that indicates it is a global search so it will not return after the first match.</p>
+
+
+
+<p><code>i</code> is a flag same as <code>g</code> but it means <strong>insensitive </strong>(case insensitive match).</p>
+
+
+
+<h4> #2.2 Sensitive replace all in JavaScript  </h4>
+
+
+
+<p>As I think RegExp is powerful and you can modify RegExp as your needs. Here we are gonna modify RegExp for the sensitive match case.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var d = 'The quick brown fox jumps over the lazy dog. If the Dog reacted, was it really lazy?';
+
+var regex = /dog/g;
+
+d = d.replace(regex, 'ferret');
+// output: The quick brown fox jumps over the lazy ferret. If the Dog reacted, was it really lazy?</pre></div>
+
+
+
+<p>I made the second capital <code>D</code> in the second <code>Dog</code> word and remove the <code>i</code> flag from the <code>regex</code> that indicates the <strong>insensitive </strong>match.</p>
+
+
+
+<p>See the output in the above example. It only replaced the first <code>dog</code> word because the second <code>dog</code> word contains capital <code>D</code>. That simple!</p>
+
+
+
+<h4>#2.3 Creating Dynamic RegExp</h4>
+
+
+
+<p>Just in case, If you want to match a dynamic keyword with RegExp. Here you can do like the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var find = 'abc';
+str = 'a very nice abcline here'
+var re = new RegExp(find, 'g');
+
+str.replace(re, '');
+// Output: &quot;a very nice line here&quot;</pre></div>
+
+
+
+<p>In the above example, I have created a variable called <code>find</code> that can contain dynamic value.</p>
+
+
+
+<h4>#2.4 Generic replace all method</h4>
+
+
+
+<p>In the below example I&#8217;m gonna create a generic replace all method that takes a string in the first parameter and value to find in the second parameter and the replacement value in the third parameter.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>function replaceAll(str, find, replace) {
+    return str.replace(new RegExp(find, 'g'), replace);
+}
+
+replaceAll('the line of', 'of', 'here')
+// Output: &quot;the line here&quot;</pre></div>
+
+
+
+<blockquote class="wp-block-quote"><p> <strong>Note:</strong> Regular expressions contain special (meta) characters, and as such it is dangerous to blindly pass an argument in the <code>find</code> function above without pre-processing it to escape those characters. This is covered in the <a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">Mozilla Developer Network</a>&#8216;s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_Special_Characters" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">JavaScript Guide on Regular Expressions</a>,  </p></blockquote>
+
+
+
+<h3>Conclusion </h3>
+
+
+
+<p><code>replace</code> method replaced first matched value if you passed the string in the first parameter but if you use RegExp you can replace all matches and you can customize <code>match</code> as your needs.</p>
+
+
+
+<p>Thank you for reading, please share with love. If you got the typo or any other mistake please let me know.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Well formed JSON stringify JavaScript: ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/#respond</comments>
+				<pubDate>Wed, 06 Nov 2019 01:10:30 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=387</guid>
+				<description><![CDATA[In this article, we will learn the new well-formed JSON stringify JavaScript method introduced in ES10/2019 with examples and comparisons with the old one. RFC 8259 section 8.1&#160;requires JSON text exchanged outside the scope of a closed ecosystem to be encoded using UTF-8, but&#160;JSON.stringify&#160;can return strings including code points that have no representation in UTF-8<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will learn the new well-formed JSON <a href="https://buginit.com/tag/strings/">stringify</a> <a href="https://buginit.com/category/javascript/">JavaScript</a> method introduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a> with examples and comparisons with the old one.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tools.ietf.org/html/rfc8259#section-8.1" target="_blank">RFC 8259 section 8.1</a>&nbsp;requires JSON text exchanged outside the scope of a closed ecosystem to be encoded using UTF-8, but&nbsp;<code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tc39.github.io/ecma262/#sec-json.stringify" target="_blank">JSON.stringify</a></code>&nbsp;can return strings including code points that have no representation in UTF-8 (specifically, surrogate code points U+D800 through U+DFFF). And contrary to&nbsp;<a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tc39.github.io/ecma262/#sec-json.stringify" target="_blank">the description of&nbsp;</a><code><a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://tc39.github.io/ecma262/#sec-json.stringify" target="_blank">JSON.stringify</a></code>, such strings are not &#8220;in UTF-16&#8221; because &#8220;isolated UTF-16 code units in the range D800₁₆..DFFF₁₆ are ill-formed&#8221; per&nbsp;<a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://unicode.org/versions/Unicode10.0.0/ch03.pdf#G7404" target="_blank">The Unicode Standard, Version 10.0.0, Section 3.4</a>&nbsp;at definition D91 and excluded from being &#8220;in UTF-16&#8221; per definition D89. </p><cite><a href="https://github.com/tc39/proposal-well-formed-stringify#well-formed-jsonstringify" target="_blank" rel="noreferrer noopener" aria-label="Read more about proposal (opens in a new tab)">Read more about proposal</a></cite></blockquote>
+
+
+
+<p>Previously <code>JSON.stringify</code>&nbsp;method has been&nbsp;defined to return unformed&nbsp; Unicode <a href="https://buginit.com/tag/strings/">strings</a> if there&nbsp;are&nbsp;any&nbsp;lone&nbsp;surrogates&nbsp;in&nbsp;the&nbsp;input, for example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('\uD800');
+// '&quot;�&quot;'</pre></div>
+
+
+
+<p>But now, because Lone UTF-16 surrogates cannot be encoded as UTF-8, that&#8217;s why the proposal, <strong>well-formed JSON.stringify</strong> changed the JSON.stringify so that it generates escape sequences for lone surrogates,  making its output valid Unicode (and representable in UTF-8) for example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('\uD800');
+// '&quot;\\ud800&quot;'</pre></div>
+
+
+
+<p>As you saw above the new JSON stringify JavaScript method returns the valid stringified Unicode.</p>
+
+
+
+<blockquote class="wp-block-quote"><p><strong>Note</strong> that&nbsp;<code>JSON.parse(stringified)</code>&nbsp;still produces the same results as before. </p></blockquote>
+
+
+
+<p>This feature is a small fix that was long overdue in JavaScript. It’s one less thing to worry about as a JavaScript developer <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f600.png" alt="😀" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+
+
+
+<h3>Example</h3>
+
+
+
+<p>Non-BMP characters still serialize to surrogate pairs.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('𝌆')
+// → '&quot;𝌆&quot;'
+JSON.stringify('\uD834\uDF06')
+// → '&quot;𝌆&quot;'</pre></div>
+
+
+
+<p>Unpaired surrogate code units will serialize to escape sequences.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">JSON.stringify('\uDF06\uD834')
+// → '&quot;\\udf06\\ud834&quot;'
+JSON.stringify('\uDEAD')
+// → '&quot;\\udead&quot;'</pre></div>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">Well-formed JSON.stringify()</td>
+         <td>72</td>
+         <td>?</td>
+         <td>64</td>
+         <td>Yes</td>
+         <td>?</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>Thanks for reading, Share with love.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>JavaScript Trim: trimStart and trimEnd method ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/#respond</comments>
+				<pubDate>Fri, 01 Nov 2019 01:34:52 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=366</guid>
+				<description><![CDATA[In this article, we will talk about two JavaScript trim methods: trimStart() and trimEnd() those are intorduced in ES10/2019 and will understand it with the help of examples. JavaScript trim methods are used to remove spaces from string and specially trimStart() method is used to remove spaces from the start of the string. For example:<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this article, we will talk about two <a href="https://buginit.com/category/javascript/">JavaScript</a> trim methods: <code>trimStart()</code> and <code>trimEnd()</code> those are intorduced in <a href="https://buginit.com/tag/es10/">ES10/2019</a> and will understand it with the help of examples.</p>
+
+
+
+<p>JavaScript trim methods are used to <strong>remove spaces from string</strong> and specially <code>trimStart()</code> method is used to remove spaces from the start of the <a href="https://buginit.com/tag/strings/">string</a>. For example:</p>
+
+
+
+<h3>#1 trimStart Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimStart());
+// expected output: &quot;Hello buginit.com   &quot;;
+</pre></div>
+
+
+
+<p>In the above example we have a variable called <code>greeting</code> that holds a string value that has spaces in start and the end. Then we used <code>trimStart()</code> to remove the spaces from the start of the string.</p>
+
+
+
+<p>Do you know there is an alias of  <code>trimStart()</code>  is called <code>trimLeft()</code> that also works the same as <code>trimStart()</code>. For example:</p>
+
+
+
+<h3>#2 trimLeft Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimLeft());
+// expected output: &quot;Hello buginit.com   &quot;;</pre></div>
+
+
+
+<h3 id="Syntax">Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">str.trimStart();
+str.trimLeft();</pre></div>
+
+
+
+<h4>Return value of trimStart</h4>
+
+
+
+<p>It returns a new string with removed whitespace from its beginning (left end).</p>
+
+
+
+<h3>#3 One more example of trimStart </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var str = '   foo  ';
+
+console.log(str.length); // 8
+
+str = str.trimStart();
+console.log(str.length); // 5
+console.log(str);        // 'foo  '</pre></div>
+
+
+
+<h3>trimEnd Method</h3>
+
+
+
+<p>Javascript trimEnd method is used to remove spaces from the end of the string. For example: </p>
+
+
+
+<h3>#4 trimEnd Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimEnd());
+// expected output: &quot;   Hello buginit.com&quot;;</pre></div>
+
+
+
+<p>In the above example we have a variable called <code>greeting</code> that holds a string value that has spaces in start and the end. Then we used <code>trimEnd()</code> to remove the spaces from the end of the string.</p>
+
+
+
+<p><code>trimEnd()</code> also has an alias is called <code>trimRight()</code> that also works the same as <code>trimEnd()</code>. For example:</p>
+
+
+
+<h3>#5 trimRight Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var greeting = '   Hello buginit.com   ';
+console.log(greeting);
+// expected output: &quot;   Hello buginit.com   &quot;;
+console.log(greeting.trimRight());
+// expected output: &quot;   Hello buginit.com&quot;;</pre></div>
+
+
+
+<h3>Syntax</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">str.trimEnd();
+str.trimRight();</pre></div>
+
+
+
+<h4>Return value of trimEnd </h4>
+
+
+
+<p>It returns a new string with removed whitespace from its end (right end).</p>
+
+
+
+<h3>#5 One more Example of trimEnd </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">var str = '   foo  ';
+
+console.log(str.length); // 8
+
+str = str.trimEnd();
+console.log(str.length); // 6
+console.log(str);        // '   foo'</pre></div>
+
+
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">MDN</a></p>
+
+
+
+<h3>Support</h3>
+
+
+
+<table class="browserSupport">
+   <tbody>
+      <tr>
+         <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+         <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+         <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+         <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+         <th style="width:16%;" class="bsSafari" title="Safari"></th>
+         <th style="width:16%;" class="bsOpera" title="Opera"></th>
+      </tr>
+      <tr>
+         <td style="text-align:left;">trimStart()</td>
+         <td>66</td>
+         <td>?</td>
+         <td>61</td>
+         <td>?</td>
+         <td>53</td>
+      </tr>
+      <tr>
+         <td style="text-align:left;">trimEnd()</td>
+         <td>66</td>
+         <td>?</td>
+         <td>61</td>
+         <td>?</td>
+         <td>53</td>
+      </tr>
+   </tbody>
+</table>
+
+
+
+<p>That&#8217;s all, If I have missed anything else please let me know. Share it with love. </p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Reference to JavaScript matchAll method ES10/2019</title>
+		<link>https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/</link>
+				<comments>https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/#respond</comments>
+				<pubDate>Wed, 23 Oct 2019 15:16:08 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[Advanced JS]]></category>
+		<category><![CDATA[ES10/2019]]></category>
+		<category><![CDATA[Guides]]></category>
+		<category><![CDATA[Strings]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=347</guid>
+				<description><![CDATA[We can use JavaScript matchAll method on any string and it returns all the matching results as an iterator that works easily with for...of loops and has properties like index, input and groups. It will return an empty iterator object if nothing matched. Simple Example As I said before JavaScript matchAll method will return an iterator of<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>We can use <a href="https://buginit.com/category/javascript/">JavaScript</a> matchAll method on any string and it returns all the matching results as an iterator that works easily with <code>for...of</code> loops and has properties like <code>index</code>, <code>input</code> and <code>groups</code>. It will return an empty iterator object if nothing matched.</p>
+
+
+
+<h3>Simple Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">const regex = /t(e)(st(\d?))/g;
+const string = 'test1test2';
+const matches = string.matchAll(regex);
+for (const match of matches) {
+  console.log(match);
+}
+// [&quot;test1&quot;, &quot;e&quot;, &quot;st1&quot;, &quot;1&quot;, index: 0, input: &quot;test1test2&quot;, groups: undefined]
+// [&quot;test2&quot;, &quot;e&quot;, &quot;st2&quot;, &quot;2&quot;, index: 5, input: &quot;test1test2&quot;, groups: undefined]
+</pre></div>
+
+
+
+<p>As I said before JavaScript matchAll method will return an iterator of each match with properties like <code>index</code>, <code>input</code> and <code>groups</code> as shown below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">[&quot;test1&quot;, &quot;e&quot;, &quot;st1&quot;, &quot;1&quot;, index: 0, input: &quot;test1test2&quot;, groups: undefined]
+[&quot;test2&quot;, &quot;e&quot;, &quot;st2&quot;, &quot;2&quot;, index: 5, input: &quot;test1test2&quot;, groups: undefined]</pre></div>
+
+
+
+<h2>Syntax</h2>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">myStr.matchAll(regexp)</pre></div>
+
+
+
+<h2>Parameters</h2>
+
+
+
+<p>It receives only one parameter <code>regexp</code>. A regular expression object. If you pass the non-RegExp object, It will automatically convert it to a RegExp by using <code>new RegExp(obj)</code>.</p>
+
+
+
+<h2>Additional properties</h2>
+
+
+
+<p>1. <code>index</code>:- The index of the first result found in the original string.</p>
+
+
+
+<p>2. <code>input</code>:- A complete copy of original string.</p>
+
+
+
+<p>3. <code>groups</code>:- It contained the result of any named capturing groups or will return <code>undefined</code> if no named capturing groups were defined.</p>
+
+
+
+<h2>Without Iterator Example</h2>
+
+
+
+<p>With the below example you can get a simple array as a result.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre class="CodeMirror cm-s-material" data-setting="{&quot;mode&quot;:&quot;javascript&quot;,&quot;mime&quot;:&quot;text/javascript&quot;,&quot;theme&quot;:&quot;material&quot;,&quot;lineNumbers&quot;:true,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:true}">let regexp = /t(e)(st(\d?))/g;
+let str = 'test1test2';
+
+let array = [...str.matchAll(regexp)];
+
+console.log(array[0]);
+// expected output: 
+// [&quot;test1&quot;, &quot;e&quot;, &quot;st1&quot;, &quot;1&quot;, index: 0, input: &quot;test1test2&quot;, groups: undefined]
+
+console.log(array[1]);
+// expected output: 
+// [&quot;test2&quot;, &quot;e&quot;, &quot;st2&quot;, &quot;2&quot;, index: 5, input: &quot;test1test2&quot;, groups: undefined]</pre></div>
+
+
+
+<p>In the above example, we used <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">object destructuring</a> to create an array from an iterator. to read more about object destructuring:- <a href="https://buginit.com/javascript/javascript-destructuring-es6-the-complete-guide/">JavaScript Destructuring ES6: The Complete Guide</a></p>
+
+
+
+<p>For more <a rel="noreferrer noopener" aria-label="MDN (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll" target="_blank">MDN</a></p>
+
+
+
+<p>That&#8217;s all I have got, I hope you understood, If I have missed anything else please let me know. Share it with love.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-matchAll-method-buginit.com_.jpg" alt="JavaScript matchAll method buginit.com" class="wp-image-349" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-matchAll-method-buginit.com_.jpg 600w, https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/JavaScript-matchAll-method-buginit.com_-300x214.jpg 300w" sizes="(max-width: 600px) 100vw, 600px" /></figure></div>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/javascript/reference-to-javascript-matchall-method-es10/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+	</channel>
+</rss>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Animation &#8211; Buginit &#8211; HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+	<atom:link href="https://rajnishcoder.github.io/buginit/tag/animation/feed/" rel="self" type="application/rss+xml" />
+	<link>http://rajnishcoder.github.io/buginit/</link>
+	<description></description>
+	<lastBuildDate>Sun, 03 Nov 2019 13:33:43 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>Smooth Scroll CSS</title>
+		<link>https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/</link>
+				<comments>https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/#comments</comments>
+				<pubDate>Sun, 03 Nov 2019 13:33:43 +0000</pubDate>
+		<dc:creator><![CDATA[Rajnish Rajput]]></dc:creator>
+				<category><![CDATA[CSS]]></category>
+		<category><![CDATA[Animation]]></category>
+
+		<guid isPermaLink="false">https://buginit.com/?p=374</guid>
+				<description><![CDATA[In this Smooth Scroll CSS tutorial, I will show you how to do a smooth scrolling using pure CSS with an easy and single line of code, also drive you in detail of the document. As a web developer, I also used to do smooth scrolling on many websites as it looks so good when<p class="readmore-p"><a class="readmore" href="https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/">Read More</a></p>]]></description>
+								<content:encoded><![CDATA[
+<p>In this Smooth Scroll CSS tutorial, I will show you how to do a smooth scrolling using pure <a href="https://buginit.com/category/css/">CSS</a> with an easy and single line of code, also drive you in detail of the document.</p>
+
+
+
+<p>As a web developer, I also used to do smooth scrolling on many websites as it looks so good when you scroll. But a year ago I used to do it with a very long code of <a href="https://buginit.com/category/javascript/">JavaScript</a> as below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>// Select all links with hashes
+$('a[href*=&quot;#&quot;]')
+  // Remove links that don't actually link to anything
+  .not('[href=&quot;#&quot;]')
+  .not('[href=&quot;#0&quot;]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      &amp;&amp; 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(&quot;:focus&quot;)) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</pre></div>
+
+
+
+<p>I always felt weird to include this much code just for Smooth Scroll CSS But, now there is an easy and shortest way to do that. So I decided to wrote an article about it. Here is you can do that using pure CSS.</p>
+
+
+
+<p>The&nbsp;<code>scroll-behavior</code>&nbsp;property in CSS specifies how the user goes to the specific location in the current page <strong>smoothly </strong>OR <strong>straight jump</strong>.  The&nbsp;<code>scroll-behavior</code>&nbsp;property mainly accepts two values those basically switch the scroll behavior between <strong>smoothly </strong>OR <strong>straight jump</strong>. </p>
+
+
+
+<h3>Example</h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>.module { 
+  scroll-behavior: smooth; 
+}</pre></div>
+
+
+
+<h3> Syntax </h3>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>scroll-behavior: auto;
+scroll-behavior: smooth;</pre></div>
+
+
+
+<h3>Values </h3>
+
+
+
+<p><code>auto</code>:- The scrolling box scrolls instantly.</p>
+
+
+
+<p><code>smooth</code>:- This value makes the scroll smooth with a user-agent-defined timing.</p>
+
+
+
+<blockquote class="wp-block-quote"><p>Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified&nbsp;on the&nbsp;<code>body</code>&nbsp;element will&nbsp;<em>not</em>&nbsp;propagate to the viewport. and User agents are allowed to ignore this property.</p><cite><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior" target="_blank" rel="noreferrer noopener" aria-label="source MDN (opens in a new tab)">source MDN</a></cite></blockquote>
+
+
+
+<h3>Live Preview </h3>
+
+
+
+<script async="" src="//jsfiddle.net/rajnishcoder/L1scv3oy/1/embed/result,html,css/dark/"></script>
+
+
+
+<h3>Browser Support</h3>
+
+
+
+<p>Browser support is&nbsp;around 75%, and coming to Edge 76 soon. </p>
+
+
+
+<table class="browserSupport">
+  <tbody><tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Property</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td style="text-align:left;">scroll-behavior</td>
+    <td>61.0</td>
+    <td><span class="deprecated">Not supported</span></td>
+    <td>36.0</td>
+    <td><span class="deprecated">Not supported</span></td>
+    <td>48.0</td>
+  </tr>
+</tbody></table>
+
+
+
+<p class="ciu_embed" data-feature="css-scroll-behavior" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
+<a href="http://caniuse.com/#feat=css-scroll-behavior">
+<picture>
+<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-scroll-behavior.webp">
+<img src="https://caniuse.bitsofco.de/image/css-scroll-behavior.png" alt="Data on support for the css-scroll-behavior feature across the major browsers from caniuse.com">
+</picture>
+</a>
+</p>
+
+
+
+<p>More Info at <a rel="noreferrer noopener" aria-label="csswg (opens in a new tab)" href="https://drafts.csswg.org/cssom-view/#smooth-scrolling" target="_blank">csswg</a>, <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/cssomviewsmoothscrollapi/" target="_blank">Microsoft Edge Platform</a>, <a rel="noreferrer noopener" aria-label=" (opens in a new tab)" href="https://www.chromestatus.com/feature/5812155903377408" target="_blank">Chrome Platform Status</a> </p>
+
+
+
+<p>That&#8217;s all, Thanks for reading. <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /> Share with love.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/feed/</wfw:commentRss>
+		<slash:comments>2</slash:comments>
+							</item>
+	</channel>
+</rss>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148904923-1"></script>
+
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	
+
+    
+	<link rel="shortcut icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+    
+ 
+
+	<title>4 ways to remove duplicate array javascript – Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://rajnishcoder.github.io/buginit/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-bootstrap-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fontawesome-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/custom/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" type="text/css" media="all">
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body id="blog" class="darkTheme">  
+    
+    	<div class="main_container">
+        	
+            	<header class="header_wrapper" itemscope itemtype="http://schema.org/WPHeader">
+                
+				
+                
+             	 	
+                    
+           		
+                <div id="primary_menu" class="blue_bg">
+					<div class="container" style="padding: 0">
+						<div id="logo" class="pull-left logo" itemscope itemtype="http://schema.org/Organization">
+							<a href="https://rajnishcoder.github.io/buginit/" itemprop="url" rel="home" style="float:left">
+																<p itemprop="name" class="site-title">
+								Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</p>   
+								<div class="buginitLogoWrap">
+									<img itemprop="logo" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/images/logo.svg">
+								</div>
+							</a>   
+							<h3 itemprop="description" class="site-description"> </h3>						</div>
+						<nav id="primary-menu" class="main-navigation navmenu pull-left" role="navigation">
+								  
+									<ul class="menu clearfix">
+											<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+<ul class="children">
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+									</ul>
+														</nav>
+					</div>
+                </div>    
+  
+         </header>
+  			 
+       
+            <div class="clearboth"></div>
+			
+            
+            				     
+            	<div class="breadcrumbs">
+					<div class="container">
+						<div id="breadcrumbs" itemprop="breadcrumb"><a href="https://rajnishcoder.github.io/buginit">Home</a> » <a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a> » <span class="current">4 ways to remove duplicate array javascript</span></div>                    </div>
+                </div>
+           
+              
+     	 
+            <div class="middle_wrapper">
+            	<div class="container mainContainer">
+                	<div> 
+ <script src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/js/caniuse-embed.min.js"></script>
+
+	<div class="col-md-8 col-sm-8 postInner">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+    	
+		        
+	 <article id="post-502" itemscope="" itemtype="http://schema.org/BlogPosting">
+	
+            	
+    <div class="article-content">    
+
+	<header class="entry-header">
+  	<h1 class="entry-title" itemprop="headline">4 ways to remove duplicate array javascript</h1>    
+     <span class="category" itemprop="articleSection"><i class="fa fa-bookmark"></i><a href="https://rajnishcoder.github.io/buginit/category/javascript/" rel="category tag">JavaScript</a></span><span class="tags"> <i class="fa fa-tags"></i><a href="https://rajnishcoder.github.io/buginit/tag/arrays/" rel="tag">Arrays</a>, <a href="https://rajnishcoder.github.io/buginit/tag/javascript/" rel="tag">JavaScript</a>, <a href="https://rajnishcoder.github.io/buginit/tag/tips-tricks/" rel="tag">Tips & Tricks</a></span><span class="date"><i class="fa fa-clock-o"></i><a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" title="2:48 am" rel="bookmark"><time itemprop="datePublished" datetime="2019-12-07T02:48:25+00:00">December 7, 2019</time></a></span><span itemprop="author"><i class="fa fa-user"></i><span class="author"><a href="https://rajnishcoder.github.io/buginit/author/rajnishcoder/" title="View all posts by Rajnish Rajput" rel="">Rajnish Rajput</a></span></span> <span class="comments" itemprop="interactionCount"> <i class="fa fa-comment"></i><a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comments" title="2 Comments" rel="comments">2 Comments</a></span> 
+      
+               <div id="above_post_add" class="advertisment">
+                       </div>
+            
+      <div class="clearboth"></div>
+ 	</header>
+
+	<div class="entry-content">
+		
+<p>In this article, we will learn 4 ways with examples of removing duplicate array in <a href="https://buginit.com/category/javascript/">JavaScript</a>. and also how to retrieve duplicate values.</p>
+
+
+
+<p><a href="https://buginit.com/tag/arrays/">Array</a> is a very common concept in any programming language. If you do programming you have to deal it with on a regular basis.</p>
+
+
+
+<p>Let’s  start with the quick and easy one.</p>
+
+
+
+<h2>#1 Using Set Object</h2>
+
+
+
+<p>You can use <code>Set</code> object to remove duplicate array in JavaScript, <strong><code>Set</code> is a global object that allows you to store unique values no matter if they are primitive values or object references.</strong> <a rel="noreferrer noopener" aria-label="mdn (opens in a new tab)" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank">source mdn</a></p>
+
+
+
+<p>See the example below, how we can use the set object to remove duplicate array in <a href="https://buginit.com/category/javascript/">JavaScript</a>.</p>
+
+
+
+<p>Let’s assume we have a duplicate fruits array <code>var fruits = ["banana", "apple", "orange", "watermelon", "apple", "orange", "grape", "apple"];</code></p>
+
+
+
+<h4>#1.1 Using Array.from with <code>Set</code></h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = ["banana", "apple", "orange", "watermelon", "apple", "orange", "grape", "apple"];
+
+var uniqueFruits = Array.from(new Set(fruits));
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<h4>Explanation</h4>
+
+
+
+<p>Set is an object so it returns a new <code>Set</code> object with unique values, that’s why I used <code>Array.from</code> to convert it to an <a href="https://buginit.com/tag/arrays/">array</a>.</p>
+
+
+
+<p>You can use any technique to convert it, </p>
+
+
+
+<p>In the below example I’ll show you to do it with <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">spread syntax</a></p>
+
+
+
+<h4>#1.2 Using <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">Spread Syntax</a> with <code>Set</code></h4>
+
+
+
+<p>Here we are going to remove duplicate array in javascript using spread syntax. </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = ["banana", "apple", "orange", "watermelon", "apple", "orange", "grape", "apple"];
+
+var uniqueFruits = [...new Set(fruits)];
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<p>If you want to learn about <a href="https://buginit.com/javascript/here-is-the-powerful-guide-of-spread-operator-syntax/">spread syntax here is the guide</a>.</p>
+
+
+
+<h3>#2 Using indexOf</h3>
+
+
+
+<p><code>indexOf</code> is a naive but smart way to remove duplicate array in JavaScript. When I did not know about <code>Set</code> object or have limitations to use the ES5, The first thing came in my mind is <code>indexOf</code> because personally I like this method and use it widely when playing with arrays.</p>
+
+
+
+<h4>#2.1 Using function</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = ["banana", "apple", "orange", "watermelon", "apple", "orange", "grape", "apple"];
+
+uniqueFruits = fruits.filter(function(item, pos) {
+    return fruits.indexOf(item) == pos;
+})
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<p>In the above example, I iterate over the <code>fruits</code> array with using <code>filter</code> method and checked if the first position <code>fruits.indexOf(item)</code> of this element in the array is equal to the current position <code>pos</code>. It is obvious that, these two positions are different for duplicate elements.</p>
+
+
+
+<h4>#2.2 Using arrow function</h4>
+
+
+
+<p>Here is the cool and sort way if you can use an <a href="https://buginit.com/javascript/an-advanced-guide-of-arrow-function-javascript/">arrow function</a> instead of a plain function, In the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = ["banana", "apple", "orange", "watermelon", "apple", "orange", "grape", "apple"];
+
+uniqueFruits = fruits.filter((item, pos) => fruits.indexOf(item) == pos)
+console.log(uniqueFruits); 
+// Output: [“banana”, “apple”, “orange”, “watermelon”, “grape”]</pre></div>
+
+
+
+<h2>Bonus </h2>
+
+
+
+<h3>Retrieving the duplicate values </h3>
+
+
+
+<p>Also, we can retrieve all the duplicate values using <code>indexOf</code> with <code>filter</code>. See the example below:</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>var fruits = ["banana", "apple", "orange", "watermelon", "apple", "orange", "grape", "apple"];
+
+var duplicates = fruits.filter((item, pos) => fruits.indexOf(item) != pos)
+console.log(duplicates); 
+// Output: ["apple", "orange", "apple"]</pre></div>
+
+
+
+<p>Thanks for reading, share and comment if you liked it. Let me know if I did any mistake in the article and what’s your favorite way?</p>
+     
+           <div id="below_post_add" class="advertisment">
+      	  	  </div>
+	  
+	  <div class="relatedPostWrap">
+		  <h4>You Might Interested In</h4>
+		  <ul class="relatedPostList">
+			  							<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/" rel="bookmark" title="Permanent Link to 4 Examples of Replace All in JavaScript You Should Know">
+									4 Examples of Replace All in JavaScript You Should Know								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" rel="bookmark" title="Permanent Link to 10 Examples of JavaScript Arguments Object">
+									10 Examples of JavaScript Arguments Object								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/" rel="bookmark" title="Permanent Link to 4 Examples of JavaScript sort without mutating array">
+									4 Examples of JavaScript sort without mutating array								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/css/get-attribute-value-css/" rel="bookmark" title="Permanent Link to How To Get Attribute Value using CSS.">
+									How To Get Attribute Value using CSS.								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/" rel="bookmark" title="Permanent Link to Understanding Try Catch Finally JavaScript">
+									Understanding Try Catch Finally JavaScript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/" rel="bookmark" title="Permanent Link to JS try catch Optional catch binding update in ES10/2019">
+									JS try catch Optional catch binding update in ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/" rel="bookmark" title="Permanent Link to New Stable Sort Array in Javascript: ES10/2019">
+									New Stable Sort Array in Javascript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/" rel="bookmark" title="Permanent Link to Well formed JSON stringify JavaScript: ES10/2019">
+									Well formed JSON stringify JavaScript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/" rel="bookmark" title="Permanent Link to JavaScript Trim: trimStart and trimEnd method ES10/2019">
+									JavaScript Trim: trimStart and trimEnd method ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-fromentries-method-es10/" rel="bookmark" title="Permanent Link to JavaScript fromEntries method ES10">
+									JavaScript fromEntries method ES10								</a>
+							</li>
+									  </ul>
+	  </div>
+      
+	  
+	 
+
+
+
+  	</div>
+ 
+  
+	<footer class="entry-footer">
+			</footer>
+	
+    </div>
+    
+	</article>
+          
+           
+            <div class="clearfix"></div>
+            <div style="height:30px;"></div>
+            <div class="clearfix"></div>
+  
+        
+        	<div class="post-links">
+               <div class="alignleft"> <i class="fa fa-angle-double-left"></i> <a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/" rel="next">4 Examples of Replace All in JavaScript You Should Know</a></div>               <div class="alignright"><a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" rel="prev">10 Examples of JavaScript Arguments Object</a> <i class="fa fa-angle-double-right"></i></div>			</div>
+       	 
+			
+<div id="comments" class="comments-area">
+			<h2 class="comments-title">
+			2 thoughts on “<span>4 ways to remove duplicate array javascript</span>”		</h2>
+   
+            <ul class="commentlist comment_section">
+                     
+     <li class="comment_block" id="comment-22">
+     
+         <div class="col-md-10 col-sm-10">
+            <div class=" col-md-2 col-sm-2"><img alt="" src="http://0.gravatar.com/avatar/09a947d82800cd3d0d0a294d200bad64?s=44&d=mm&r=g" srcset="http://0.gravatar.com/avatar/09a947d82800cd3d0d0a294d200bad64?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
+            <div class="col-md-10 col-sm-10 no-padding">
+                <h3><cite><b class="fn">Johnny</b> </cite>             </h3>
+            <span><a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-22"><time datetime="2019-12-15T00:19:42+00:00">December 15, 2019 at 12:19 am</time></a></span>
+                    
+                        
+            <p> 		</p><p>The problem with other examples is that it returns unique values. You might sometimes need the other duplicate values especially when working with data.<br>
+Also I don’t think they allow deep copy. For example you have an array within an array, you will instead copy a reference of the inner array</p>
+                      
+             
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" data-commentid="22" data-postid="502" data-belowelement="comment-22" data-respondelement="respond" aria-label="Reply to Johnny">Reply</a></div>
+      <div class="clearfix"></div>
+          
+       
+          
+          </li>                 
+                                 
+	<ul class="children">
+     
+     <li class="comment_block" id="comment-23">
+     
+         <div class="col-md-10 col-sm-10">
+            <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
+            <div class="col-md-10 col-sm-10 no-padding">
+                <h3><cite><b class="fn"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></b> <span>Post author</span></cite>             </h3>
+            <span><a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-23"><time datetime="2019-12-15T03:00:34+00:00">December 15, 2019 at 3:00 am</time></a></span>
+                    
+                        
+            <p> 		</p><p>Yes If you want a deep copy of array or object you have to use <code>JSON</code> technique.</p>
+<p><code>var arr = [2,3,7,5,3,7,1,3, [1,2,3]];</code><br>
+<code>var deepCopy = JSON.parse(JSON.stringify(arr));</code></p>
+<p><a href="https://buginit.com/javascript/javascript-sort-without-mutating-array/#deepClone" rel="nofollow ugc">for more see the deep cloning an array</a></p>
+                      
+             
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" data-commentid="23" data-postid="502" data-belowelement="comment-23" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
+      <div class="clearfix"></div>
+          
+       
+          
+          </li>                 
+                                 
+	
+</ul>
+
+            </ul>
+		
+       
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/buginit/javascript/remove-duplicate-array-javascript/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://rajnishcoder.github.io/buginit/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="502" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+</div>
+		</main>
+	</div>
+  </div>  
+
+  
+    
+ 						
+    
+       <div class="sidebar col-md-4 col-sm-4">
+            <aside id="search-2" class="widget widget_search" itemscope itemtype="http://schema.org/WPSideBar"><form role="search" method="get" class="search-form" action="https://rajnishcoder.github.io/buginit/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search">
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries" itemscope itemtype="http://schema.org/WPSideBar">		<h3 class="widget-title heading" itemprop="about">Recent Posts</h3>		<ul>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/">4 Examples of Replace All in JavaScript You Should Know</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" aria-current="page">4 ways to remove duplicate array javascript</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/">10 Examples of JavaScript Arguments Object</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/">4 Examples of JavaScript sort without mutating array</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/css/center-image-in-div/">CSS Center Image In div example with explanation</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments" itemscope itemtype="http://schema.org/WPSideBar"><h3 class="widget-title heading" itemprop="about">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-21">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link">Lacus</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-20">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-23">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link">Johnny</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-22">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/#comment-15">Smooth Scroll CSS</a></li></ul></aside>       </div>
+     
+  
+	 	</div> 
+          </div> 
+            </div> 
+             
+          
+            
+   <footer class="footer_wrapper" itemscope itemtype="http://schema.org/WPFooter">
+                 	
+            <div class="container">
+									<div id="footer-widget-area">    
+						<aside id="archives-2" class="widget widget_archive col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Archives</h3>		<ul>
+				<li><a href="https://rajnishcoder.github.io/buginit/2019/12/">December 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/11/">November 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/10/">October 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/09/">September 2019</a></li>
+		</ul>
+			</div></aside><aside id="categories-2" class="widget widget_categories col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Categories</h3>		<ul>
+				<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+		</ul>
+			</div></aside><aside id="meta-2" class="widget widget_meta col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Meta</h3>			<ul>
+						<li><a href="https://rajnishcoder.github.io/buginit/wp-login.php">Log in</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/feed/">Entries feed</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</div></aside>						<div class="clearboth"></div>
+					</div>
+				                <div class="clearboth"></div>
+            </div>
+            	<div class="copy_right">
+                    <div class="container"> 
+						<div class="row">
+							<div class="col-md-4">
+								<h3>Navigation</h3>
+								<ul itemscope itemtype="https://schema.org/SiteNavigationElement" id="menu-header-menu" class="menu"><li id="menu-item-359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-359"><a href="https://buginit.com/" itemprop="url"><span itemprop="name">Home</span></a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="https://rajnishcoder.github.io/buginit/about/" itemprop="url"><span itemprop="name">About</span></a></li>
+<li id="menu-item-361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a href="https://rajnishcoder.github.io/buginit/contact-us/" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
+<li id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a href="https://rajnishcoder.github.io/buginit/privacy-policy-2/" itemprop="url"><span itemprop="name">Privacy Policy</span></a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a href="https://rajnishcoder.github.io/buginit/html/" itemprop="url"><span itemprop="name">Learn HTML</span></a></li>
+</ul>							</div>
+							<div class="col-md-4">
+								<h3>Support Us</h3>
+								<a href="https://www.patreon.com/join/buginit" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Support on Patreon
+								</a>
+								<a href="https://www.paypal.me/rajnishprogrammer/5" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Through Paypal
+								</a>
+							</div>
+							<div class="col-md-4">
+								<h3>Follow Us</h3>								
+								<div class="footerFollowMain">
+									<ul class="footerFollowList">
+										<li class="fb"><a href="https://www.facebook.com/buginit" target="_blank"></a></li>
+										<li class="twitter"><a href="https://twitter.com/buginit" target="_blank"></a></li>
+									</ul>
+									
+								</div>
+							</div>
+						</div>
+						<div style="text-align:center">© 2020 All Rights Reserved. v1.1.2</div>
+						
+              		</div>
+            	</div> 
+             
+			<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/menu/script.js"></script>
+	     </footer> 	  
+
+	</div>
+	<div class="themeSwitcher" onclick="darkSwitcher(this)">
+		<i class="fa fa-adjust"></i>
+	</div>
+	<div id="dark" class="dark"></div>
+	<script>
+		// for darkmode
+		console.log(localStorage.getItem("isDark"));
+		
+		function darkSwitcher(ele) {
+			var isDark = JSON.parse(localStorage.getItem("isDark"));
+			console.log('1', isDark);
+			
+			var body = document.getElementsByTagName('body')[0];
+			if (isDark == true) {
+				console.log('2', isDark);
+				
+				body.classList.add('darkTheme');
+				document.getElementById('dark').classList.add('dark')
+				localStorage.setItem("isDark", "false");
+				console.log(localStorage.getItem("isDark"), isDark);
+				
+			} else {
+				console.log('in if else');
+				body.classList.remove('darkTheme');
+				document.getElementById('dark').classList.remove('dark')
+				localStorage.setItem("isDark", "true");
+				console.log(localStorage.getItem("isDark"));
+			}
+			// if (ele && body.classList.contains('darkTheme')) {
+			// } else {
+			// }
+		}
+	</script>
+    
+	
+
+    </body>
+    </html>

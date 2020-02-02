@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js" itemscope itemtype="http://schema.org/Blog">
+<head>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148904923-1"></script>
+
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	
+
+    
+	<link rel="shortcut icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/favicon.ico" type="image/x-icon">
+    
+ 
+
+	<title>How to debug JavaScript like a pro. – Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</title>
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//s.w.org">
+
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="https://rajnishcoder.github.io/buginit/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-bootstrap-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-style-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fontawesome-css" href="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/custom/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="simple-east-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" type="text/css" media="all">
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body id="blog" class="darkTheme">  
+    
+    	<div class="main_container">
+        	
+            	<header class="header_wrapper" itemscope itemtype="http://schema.org/WPHeader">
+                
+				
+                
+             	 	
+                    
+           		
+                <div id="primary_menu" class="blue_bg">
+					<div class="container" style="padding: 0">
+						<div id="logo" class="pull-left logo" itemscope itemtype="http://schema.org/Organization">
+							<a href="https://rajnishcoder.github.io/buginit/" itemprop="url" rel="home" style="float:left">
+																<p itemprop="name" class="site-title">
+								Buginit – HTML, CSS, and JavaScript Tutorials, References, Articles and Stuff</p>   
+								<div class="buginitLogoWrap">
+									<img itemprop="logo" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/images/logo.svg">
+								</div>
+							</a>   
+							<h3 itemprop="description" class="site-description"> </h3>						</div>
+						<nav id="primary-menu" class="main-navigation navmenu pull-left" role="navigation">
+								  
+									<ul class="menu clearfix">
+											<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+<ul class="children">
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+									</ul>
+														</nav>
+					</div>
+                </div>    
+  
+         </header>
+  			 
+       
+            <div class="clearboth"></div>
+			
+            
+            				     
+            	<div class="breadcrumbs">
+					<div class="container">
+						<div id="breadcrumbs" itemprop="breadcrumb"><a href="https://rajnishcoder.github.io/buginit">Home</a> » <a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a> » <span class="current">How to debug JavaScript like a pro.</span></div>                    </div>
+                </div>
+           
+              
+     	 
+            <div class="middle_wrapper">
+            	<div class="container mainContainer">
+                	<div> 
+ <script src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/js/caniuse-embed.min.js"></script>
+
+	<div class="col-md-8 col-sm-8 postInner">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+    	
+		        
+	 <article id="post-133" itemscope="" itemtype="http://schema.org/BlogPosting">
+	
+            	
+    <div class="article-content">    
+
+	<header class="entry-header">
+  	<h1 class="entry-title" itemprop="headline">How to debug JavaScript like a pro.</h1>    
+     <span class="category" itemprop="articleSection"><i class="fa fa-bookmark"></i><a href="https://rajnishcoder.github.io/buginit/category/javascript/" rel="category tag">JavaScript</a></span><span class="tags"> <i class="fa fa-tags"></i><a href="https://rajnishcoder.github.io/buginit/tag/javascript/" rel="tag">JavaScript</a>, <a href="https://rajnishcoder.github.io/buginit/tag/tips-tricks/" rel="tag">Tips & Tricks</a></span><span class="date"><i class="fa fa-clock-o"></i><a href="https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/" title="2:13 pm" rel="bookmark"><time itemprop="datePublished" datetime="2019-10-02T14:13:52+00:00">October 2, 2019</time></a></span><span itemprop="author"><i class="fa fa-user"></i><span class="author"><a href="https://rajnishcoder.github.io/buginit/author/rajnishcoder/" title="View all posts by Rajnish Rajput" rel="">Rajnish Rajput</a></span></span> <span class="comments" itemprop="interactionCount"> <i class="fa fa-comment"></i><a href="https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/#comments" title="2 Comments" rel="comments">2 Comments</a></span> 
+      
+               <div id="above_post_add" class="advertisment">
+                       </div>
+            
+      <div class="clearboth"></div>
+ 	</header>
+
+	<div class="entry-content">
+		
+<p>First of all, I want to tell you, yes there are good and bad ways to <code>console.log</code> in <a href="https://buginit.com/category/javascript/">JavaScript</a> that can make your life easier as a JavaScript developer. So let’s get started on how to debug javascript?</p>
+
+
+
+<p>Let’s imagine we have 3 objects to log like below.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>const foo = { name: 'tom',   age: 30, nervous: false };
+const bar = { name: 'dick',  age: 40, nervous: false };
+const baz = { name: 'harry', age: 50, nervous: true };</pre></div>
+
+
+
+<h4>Bad Code 💩</h4>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>console.log(foo);
+console.log(bar);
+console.log(baz);</pre></div>
+
+
+
+<p>In the above approach, the problem is we don’t have the variables name to see which one is which? Inside console.</p>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.log_.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.log_.png" alt="" class="wp-image-135" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.log_.png 753w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.log_-300x78.png 300w" sizes="(max-width: 753px) 100vw, 753px"></a><figcaption>Normal/basic console.log</figcaption></figure>
+
+
+
+<h4>Good Code ✅</h4>
+
+
+
+<p>But there is a trick called <em><strong>Computed Property Names</strong></em> </p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>console.log({ foo, bar, baz });</pre></div>
+
+
+
+<p>It reduces the code but also shows exactly which variable defines the data.</p>
+
+
+
+<ul><li>one line of code.</li><li>one console log.</li><li>and all the specified information.</li></ul>
+
+
+
+<p></p>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/computed-log.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/computed-log.png" alt="" class="wp-image-136" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/computed-log.png 751w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/computed-log-300x85.png 300w" sizes="(max-width: 751px) 100vw, 751px"></a><figcaption> <em><strong>Computed Property Names</strong></em> console.log output</figcaption></figure>
+
+
+
+<p>But guess what? There are already too many console logs and your log is important that you want to make it stand out. So, you can also add some custom CSS styles to your logs by using a percent sign (%).</p>
+
+
+
+<p><code>console.log('%c Here we go!!!', 'color: yellow; font-weight: bold;')</code></p>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/colored-log.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/colored-log.png" alt="" class="wp-image-138" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/colored-log.png 752w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/colored-log-300x84.png 300w" sizes="(max-width: 752px) 100vw, 752px"></a><figcaption>Colored and bold console.log output</figcaption></figure>
+
+
+
+<p>Now we get that yellow and bold console log.</p>
+
+
+
+<p>One more important thing just to use the <code>console.table()</code> when you have an array of objects. This is very useful when you have to print arrays in the console.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>// Console.table(...)
+console.table([foo, bar, baz])</pre></div>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_.png" alt="" class="wp-image-140" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_.png 908w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_-300x178.png 300w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.table_-768x456.png 768w" sizes="(max-width: 908px) 100vw, 908px"></a><figcaption>console.table() output</figcaption></figure>
+
+
+
+<p>Tracking time in console, let’s imagine you want to know how much time your loop/code is actually taking.</p>
+
+
+
+<div class="wp-block-codemirror-blocks-code-block code-block"><pre>console.time('loopTime')
+
+let i = 0;
+while (i < 1000000) { i ++ }
+
+console.timeEnd('loopTime')</pre></div>
+
+
+
+<figure class="wp-block-image"><a href="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_.png" target="_blank" rel="noreferrer noopener"><img src="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_.png" alt="" class="wp-image-141" srcset="https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_.png 908w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_-300x69.png 300w,https://rajnishcoder.github.io/buginit/wp-content/uploads/2019/10/console.time_-768x178.png 768w" sizes="(max-width: 908px) 100vw, 908px"></a><figcaption>console.time() output</figcaption></figure>
+
+
+
+<p>I hope you are now a debugging expert. If you find this article helpful share it.</p>
+     
+           <div id="below_post_add" class="advertisment">
+      	  	  </div>
+	  
+	  <div class="relatedPostWrap">
+		  <h4>You Might Interested In</h4>
+		  <ul class="relatedPostList">
+			  							<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/" rel="bookmark" title="Permanent Link to 4 Examples of Replace All in JavaScript You Should Know">
+									4 Examples of Replace All in JavaScript You Should Know								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/" rel="bookmark" title="Permanent Link to 4 ways to remove duplicate array javascript">
+									4 ways to remove duplicate array javascript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/" rel="bookmark" title="Permanent Link to 10 Examples of JavaScript Arguments Object">
+									10 Examples of JavaScript Arguments Object								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/" rel="bookmark" title="Permanent Link to 4 Examples of JavaScript sort without mutating array">
+									4 Examples of JavaScript sort without mutating array								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/css/get-attribute-value-css/" rel="bookmark" title="Permanent Link to How To Get Attribute Value using CSS.">
+									How To Get Attribute Value using CSS.								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/try-catch-finally-javascript/" rel="bookmark" title="Permanent Link to Understanding Try Catch Finally JavaScript">
+									Understanding Try Catch Finally JavaScript								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/js-try-catch-optional-catch-binding-es10/" rel="bookmark" title="Permanent Link to JS try catch Optional catch binding update in ES10/2019">
+									JS try catch Optional catch binding update in ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/stable-sort-array-javascript-es10/" rel="bookmark" title="Permanent Link to New Stable Sort Array in Javascript: ES10/2019">
+									New Stable Sort Array in Javascript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/well-formed-json-stringify-javascript-es10/" rel="bookmark" title="Permanent Link to Well formed JSON stringify JavaScript: ES10/2019">
+									Well formed JSON stringify JavaScript: ES10/2019								</a>
+							</li>
+														<li>
+								<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-trim-trimstart-trimend-method-es10/" rel="bookmark" title="Permanent Link to JavaScript Trim: trimStart and trimEnd method ES10/2019">
+									JavaScript Trim: trimStart and trimEnd method ES10/2019								</a>
+							</li>
+									  </ul>
+	  </div>
+      
+	  
+	 
+
+
+
+  	</div>
+ 
+  
+	<footer class="entry-footer">
+			</footer>
+	
+    </div>
+    
+	</article>
+          
+           
+            <div class="clearfix"></div>
+            <div style="height:30px;"></div>
+            <div class="clearfix"></div>
+  
+        
+        	<div class="post-links">
+               <div class="alignleft"> <i class="fa fa-angle-double-left"></i> <a href="https://rajnishcoder.github.io/buginit/javascript/javascript-destructuring-es6-the-complete-guide/" rel="next">JavaScript Destructuring ES6: The Complete Guide</a></div>               <div class="alignright"><a href="https://rajnishcoder.github.io/buginit/html/what-is-html-cols-attribute/" rel="prev">What is HTML cols Attribute?</a> <i class="fa fa-angle-double-right"></i></div>			</div>
+       	 
+			
+<div id="comments" class="comments-area">
+			<h2 class="comments-title">
+			2 thoughts on “<span>How to debug JavaScript like a pro.</span>”		</h2>
+   
+            <ul class="commentlist comment_section">
+                     
+     <li class="comment_block" id="comment-2">
+     
+         <div class="col-md-10 col-sm-10">
+            <div class=" col-md-2 col-sm-2"><img alt="" src="http://1.gravatar.com/avatar/77a959874213636e213b85b6bca8473b?s=44&d=mm&r=g" srcset="http://1.gravatar.com/avatar/77a959874213636e213b85b6bca8473b?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
+            <div class="col-md-10 col-sm-10 no-padding">
+                <h3><cite><b class="fn"><a href="https://instagram.com/codingwitharman" rel="external nofollow ugc" class="url">Arman Khan</a></b> </cite>             </h3>
+            <span><a href="https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/#comment-2"><time datetime="2019-11-08T05:05:12+00:00">November 8, 2019 at 5:05 am</time></a></span>
+                    
+                        
+            <p> 		</p><p>Great article!✨🙌</p>
+                      
+             
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/" data-commentid="2" data-postid="133" data-belowelement="comment-2" data-respondelement="respond" aria-label="Reply to Arman Khan">Reply</a></div>
+      <div class="clearfix"></div>
+          
+       
+          
+          </li>                 
+                                 
+	<ul class="children">
+     
+     <li class="comment_block" id="comment-3">
+     
+         <div class="col-md-10 col-sm-10">
+            <div class=" col-md-2 col-sm-2"><img alt="" src="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=44&d=mm&r=g" srcset="http://2.gravatar.com/avatar/ec0f070934554a93b657b65db2a1ccfe?s=88&d=mm&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"></div>
+            <div class="col-md-10 col-sm-10 no-padding">
+                <h3><cite><b class="fn"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></b> <span>Post author</span></cite>             </h3>
+            <span><a href="https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/#comment-3"><time datetime="2019-11-08T06:32:28+00:00">November 8, 2019 at 6:32 am</time></a></span>
+                    
+                        
+            <p> 		</p><p>Thank you so much, Appreciated!!! 🙂</p>
+                      
+             
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-2"><a rel="nofollow" class="comment-reply-link" href="https://rajnishcoder.github.io/buginit/javascript/how-to-debug-javascript-like-a-pro/" data-commentid="3" data-postid="133" data-belowelement="comment-3" data-respondelement="respond" aria-label="Reply to Rajnish Rajput">Reply</a></div>
+      <div class="clearfix"></div>
+          
+       
+          
+          </li>                 
+                                 
+	
+</ul>
+
+            </ul>
+		
+       
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/buginit/javascript/how-to-debug-javascript-like-a-pro/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://rajnishcoder.github.io/buginit/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="133" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p></form>	</div>
+	
+</div>
+		</main>
+	</div>
+  </div>  
+
+  
+    
+ 						
+    
+       <div class="sidebar col-md-4 col-sm-4">
+            <aside id="search-2" class="widget widget_search" itemscope itemtype="http://schema.org/WPSideBar"><form role="search" method="get" class="search-form" action="https://rajnishcoder.github.io/buginit/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search">
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries" itemscope itemtype="http://schema.org/WPSideBar">		<h3 class="widget-title heading" itemprop="about">Recent Posts</h3>		<ul>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/replace-all-in-javascript/">4 Examples of Replace All in JavaScript You Should Know</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/">4 ways to remove duplicate array javascript</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/">10 Examples of JavaScript Arguments Object</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/javascript/javascript-sort-without-mutating-array/">4 Examples of JavaScript sort without mutating array</a>
+									</li>
+											<li>
+					<a href="https://rajnishcoder.github.io/buginit/css/center-image-in-div/">CSS Center Image In div example with explanation</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments" itemscope itemtype="http://schema.org/WPSideBar"><h3 class="widget-title heading" itemprop="about">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-21">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link">Lacus</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/10-examples-javascript-arguments-object/#comment-20">10 Examples of JavaScript Arguments Object</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-23">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link">Johnny</span> on <a href="https://rajnishcoder.github.io/buginit/javascript/remove-duplicate-array-javascript/#comment-22">4 ways to remove duplicate array javascript</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://buginit.com" rel="external nofollow ugc" class="url">Rajnish Rajput</a></span> on <a href="https://rajnishcoder.github.io/buginit/css/smooth-scroll-css/#comment-15">Smooth Scroll CSS</a></li></ul></aside>       </div>
+     
+  
+	 	</div> 
+          </div> 
+            </div> 
+             
+          
+            
+   <footer class="footer_wrapper" itemscope itemtype="http://schema.org/WPFooter">
+                 	
+            <div class="container">
+									<div id="footer-widget-area">    
+						<aside id="archives-2" class="widget widget_archive col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Archives</h3>		<ul>
+				<li><a href="https://rajnishcoder.github.io/buginit/2019/12/">December 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/11/">November 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/10/">October 2019</a></li>
+	<li><a href="https://rajnishcoder.github.io/buginit/2019/09/">September 2019</a></li>
+		</ul>
+			</div></aside><aside id="categories-2" class="widget widget_categories col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Categories</h3>		<ul>
+				<li class="cat-item cat-item-2"><a href="https://rajnishcoder.github.io/buginit/category/css/">CSS</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://rajnishcoder.github.io/buginit/category/html/">HTML</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://rajnishcoder.github.io/buginit/category/html/html-attributes/">HTML Attributes</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://rajnishcoder.github.io/buginit/category/javascript/">JavaScript</a>
+</li>
+		</ul>
+			</div></aside><aside id="meta-2" class="widget widget_meta col-md-4"><div class="widget-content"><h3 class="widget-title heading" itemprop="about">Meta</h3>			<ul>
+						<li><a href="https://rajnishcoder.github.io/buginit/wp-login.php">Log in</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/feed/">Entries feed</a></li>
+			<li><a href="https://rajnishcoder.github.io/buginit/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</div></aside>						<div class="clearboth"></div>
+					</div>
+				                <div class="clearboth"></div>
+            </div>
+            	<div class="copy_right">
+                    <div class="container"> 
+						<div class="row">
+							<div class="col-md-4">
+								<h3>Navigation</h3>
+								<ul itemscope itemtype="https://schema.org/SiteNavigationElement" id="menu-header-menu" class="menu"><li id="menu-item-359" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-359"><a href="https://buginit.com/" itemprop="url"><span itemprop="name">Home</span></a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-360"><a href="https://rajnishcoder.github.io/buginit/about/" itemprop="url"><span itemprop="name">About</span></a></li>
+<li id="menu-item-361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-361"><a href="https://rajnishcoder.github.io/buginit/contact-us/" itemprop="url"><span itemprop="name">Contact Us</span></a></li>
+<li id="menu-item-362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362"><a href="https://rajnishcoder.github.io/buginit/privacy-policy-2/" itemprop="url"><span itemprop="name">Privacy Policy</span></a></li>
+<li id="menu-item-544" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-544"><a href="https://rajnishcoder.github.io/buginit/html/" itemprop="url"><span itemprop="name">Learn HTML</span></a></li>
+</ul>							</div>
+							<div class="col-md-4">
+								<h3>Support Us</h3>
+								<a href="https://www.patreon.com/join/buginit" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Support on Patreon
+								</a>
+								<a href="https://www.paypal.me/rajnishprogrammer/5" target="_blank" rel="nofollow" style="float:left;font-size: 16px; line-height:20px;clear:both">
+									Through Paypal
+								</a>
+							</div>
+							<div class="col-md-4">
+								<h3>Follow Us</h3>								
+								<div class="footerFollowMain">
+									<ul class="footerFollowList">
+										<li class="fb"><a href="https://www.facebook.com/buginit" target="_blank"></a></li>
+										<li class="twitter"><a href="https://twitter.com/buginit" target="_blank"></a></li>
+									</ul>
+									
+								</div>
+							</div>
+						</div>
+						<div style="text-align:center">© 2020 All Rights Reserved. v1.1.2</div>
+						
+              		</div>
+            	</div> 
+             
+			<script type="text/javascript" src="https://rajnishcoder.github.io/buginit/wp-content/themes/buginit/assets/menu/script.js"></script>
+	     </footer> 	  
+
+	</div>
+	<div class="themeSwitcher" onclick="darkSwitcher(this)">
+		<i class="fa fa-adjust"></i>
+	</div>
+	<div id="dark" class="dark"></div>
+	<script>
+		// for darkmode
+		console.log(localStorage.getItem("isDark"));
+		
+		function darkSwitcher(ele) {
+			var isDark = JSON.parse(localStorage.getItem("isDark"));
+			console.log('1', isDark);
+			
+			var body = document.getElementsByTagName('body')[0];
+			if (isDark == true) {
+				console.log('2', isDark);
+				
+				body.classList.add('darkTheme');
+				document.getElementById('dark').classList.add('dark')
+				localStorage.setItem("isDark", "false");
+				console.log(localStorage.getItem("isDark"), isDark);
+				
+			} else {
+				console.log('in if else');
+				body.classList.remove('darkTheme');
+				document.getElementById('dark').classList.remove('dark')
+				localStorage.setItem("isDark", "true");
+				console.log(localStorage.getItem("isDark"));
+			}
+			// if (ele && body.classList.contains('darkTheme')) {
+			// } else {
+			// }
+		}
+	</script>
+    
+	
+
+    </body>
+    </html>
